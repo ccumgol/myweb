@@ -1,0 +1,36 @@
+# -- Main Menu --
+[[main]]
+  name = "소개"
+  pageRef = "about"
+  weight = 10
+
+[[main]]
+  name = "활동 / 프로젝트"
+  pageRef = "projects"
+  weight = 20
+
+[[main]]
+  name = "강연 안내"
+  pageRef = "lectures"
+  weight = 30
+
+[[main]]
+  name = "블로그"
+  pageRef = "blog"
+  weight = 40
+
+[[main]]
+  name = "문의"
+  pageRef = "contact"
+  weight = 50
+
+# -- Footer Menu --
+[[footer]]
+  name = "블로그"
+  pageRef = "blog"
+  weight = 10
+
+[[footer]]
+  name = "문의"
+  pageRef = "contact"
+  weight = 20

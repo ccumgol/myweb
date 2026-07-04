@@ -1,0 +1,8 @@
+# Hugo default folders
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Operating System Files
+.DS_Store
+Thumbs.db
