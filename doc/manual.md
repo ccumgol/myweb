@@ -91,7 +91,7 @@ Blowfish 테마 및 커스텀 숏코드를 활용할 수 있습니다.
 - **커스텀 카드 숏코드 (신규 추가):**
   그리드 레이아웃과 조합하여 반응형 카드 섹션을 구성할 수 있습니다.
   ```markdown
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 my-8">
     {{< card title="카드 제목" text="카드 상세 내용 설명" >}}
   </div>
   ```
