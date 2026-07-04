@@ -77,7 +77,7 @@ draft: false # 임시저장 여부
 ```
 
 ### 2. 버튼 및 레이아웃 숏코드(Shortcode) 활용
-Blowfish 테마에서 제공하는 특화 숏코드를 활용할 수 있습니다.
+Blowfish 테마 및 커스텀 숏코드를 활용할 수 있습니다.
 - **버튼 숏코드:**
   ```markdown
   {{< button href="https://example.com" target="_blank" >}}링크 버튼 텍스트{{< /button >}}
@@ -87,4 +87,11 @@ Blowfish 테마에서 제공하는 특화 숏코드를 활용할 수 있습니�
   {{< lead >}}
   가장 강조하고 싶은 메시지를 입력합니다.
   {{< /lead >}}
+  ```
+- **커스텀 카드 숏코드 (신규 추가):**
+  그리드 레이아웃과 조합하여 반응형 카드 섹션을 구성할 수 있습니다.
+  ```markdown
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+    {{< card title="카드 제목" text="카드 상세 내용 설명" >}}
+  </div>
   ```

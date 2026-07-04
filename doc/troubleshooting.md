@@ -28,3 +28,20 @@ error calling GetRemote: access denied: "img/avatar.png" is not whitelisted in p
 - **변경 경로:** `assets/img/avatar.png`
 
 이로써 `resources.Get`이 해당 이미지를 로컬 리소스로 성공적으로 인식하게 되었으며, 빌드가 정상적으로 완료되고 정상 동작함을 확인했습니다.
+
+---
+
+## 2. 홈 화면 UI 레이아웃 튜닝 및 최근 글 가독성 개선
+
+### 🚨 요구 사항 및 현상
+1. 프로필 하단에 메인 카피가 중복으로 노출되는 문제.
+2. CTA(Call To Action) 버튼들의 정렬이 중앙이 아닌 좌측 정렬인 문제.
+3. 핵심 가치 리스트가 세로형 텍스트 형태로만 노출되어 시각적 주목도가 떨어지고 반응형 정렬이 불가능한 구조.
+4. '최근 글' 제목이 좌측 정렬이고, 각 글의 제목 텍스트 크기가 크며, 단어 수와 리딩 타임(분) 정보가 과도하게 노출되어 레이아웃이 복잡해 보임.
+
+### ✅ 해결 및 튜닝 방법
+- **메인 카피 중복 제거 및 버튼 중앙정렬:** [_index.md](file:///Users/gihyunpark/Desktop/Playground/myweb/content/_index.md)에서 중복되는 `lead` 숏코드 카피를 지우고, 버튼 컨테이너에 Tailwind의 `justify-center`를 적용해 중앙 정렬을 맞췄습니다.
+- **반응형 핵심 가치 카드 제작:** [card.html](file:///Users/gihyunpark/Desktop/Playground/myweb/layouts/shortcodes/card.html) 숏코드를 신규 개발하고, [_index.md](file:///Users/gihyunpark/Desktop/Playground/myweb/content/_index.md)에 grid 레이아웃(`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`)을 적용해 화면 폭에 맞춰 카드 수가 3개 -> 2개 -> 1개로 유연하게 반응하도록 구축했습니다.
+- **최근 글 제목 중앙 정렬:** 테마 템플릿을 오버라이딩하기 위해 [main.html](file:///Users/gihyunpark/Desktop/Playground/myweb/layouts/partials/recent-articles/main.html)을 생성하고 h2 태그에 `text-center` 클래스를 주입했습니다.
+- **글제목 크기 축소:** 아티클 링크 파셜을 오버라이딩하여 [simple.html](file:///Users/gihyunpark/Desktop/Playground/myweb/layouts/partials/article-link/simple.html) 파일의 제목 폰트 크기를 `text-xl`에서 `text-lg`로 일괄 다운사이징했습니다.
+- **단어 수 & 리딩 타임 비활성화:** [params.toml](file:///Users/gihyunpark/Desktop/Playground/myweb/config/_default/params.toml) 설정 파일의 `showReadingTime` 및 `showWordCount` 값을 `false`로 지정하여 요약 메타정보를 숨겼습니다.
