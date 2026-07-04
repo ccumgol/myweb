@@ -21,7 +21,7 @@ myweb/
 ├── .gitmodules              # 테마 submodule 정보 관리
 ├── assets/
 │   └── img/
-│       └── avatar.png       # 저자 프로필 이미지 (Hugo 최적화 적용)
+│       └── avatar.webp      # 저자 프로필 이미지 (Hugo 최적화 적용)
 ├── config/
 │   └── _default/
 │       ├── hugo.toml        # 기본 Hugo 환경 설정 (한국어 설정 포함)
