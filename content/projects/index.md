@@ -1,9 +1,10 @@
 ---
 title: "활동 / 프로젝트"
 description: "AI 교육, 사역 행정 지원, JIWU Mission Network의 주요 활동과 프로젝트를 소개합니다."
+showDate: false
+showAuthor: false
 ---
 
-# 활동 / 프로젝트 (Projects)
 
 세상을 더 밝게 비추고, 사역과 일상을 돕기 위해 진행하고 있는 핵심 프로젝트들입니다.
 
