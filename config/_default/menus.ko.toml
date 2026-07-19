@@ -15,6 +15,11 @@
   weight = 30
 
 [[main]]
+  name = "성경공부"
+  pageRef = "bible-study"
+  weight = 35
+
+[[main]]
   name = "블로그"
   pageRef = "blog"
   weight = 40
