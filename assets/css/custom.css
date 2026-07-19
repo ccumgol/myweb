@@ -520,6 +520,20 @@ h1, h2, h3,
   color: var(--accent-text) !important;
 }
 
+/* ---- Bible-study lesson commentary lists: hide bullet before ■ ---- */
+.prose ul.no-marker {
+  list-style: none;
+  padding-inline-start: 1.25em;
+}
+
+.prose ul.no-marker > li {
+  padding-inline-start: 0;
+}
+
+.prose ul.no-marker > li::marker {
+  content: "";
+}
+
 /* ---- 5. Gentle entrance motion (hero only) ---- */
 @media (prefers-reduced-motion: no-preference) {
   .hp-hero [data-rise] {
