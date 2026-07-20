@@ -15,7 +15,7 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 
 > 6 그는 근본 하나님의 본체시나 하나님과 동등됨을 취할 것으로 여기지 아니하시고
 >
-> 6 Who, being in the form of God, thought it not robbery to be equal with God :
+> 6 who, though he was in the form of God, did not count equality with God a thing to be grasped,
 
 - ■ v.6 그는 근본 하나님과 본체시나 : 예수님은 하나님과 근본적으로 동일하신 분이심, 삼위일체의 하나님
 
@@ -35,8 +35,8 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 3 만물이 그로 말미암아 지은 바 되었으니 지은 것이 하나도 그가 없이는 된 것이 없느니라
 >
 > John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
-> 2 The same was in the beginning with God.
-> 3 All things were made by him ; and without him was not any thing made that was made.
+> 2 He was in the beginning with God.
+> 3 All things were made through him, and without him was not any thing made that was made.
 
 - ■ 요1:1-3
 
@@ -51,8 +51,8 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 4 이에 엘리야가 모세와 함께 그들에게 나타나 예수와 더불어 말하거늘
 >
 > Mark 9:2 And after six days Jesus taketh with him Peter, and James, and John, and leadeth them up into an high mountain apart by themselves : and he was transfigured before them.
-> 3 And his raiment became shining, exceeding white as snow ; so as no fuller on earth can white them.
-> 4 And there appeared unto them Elias with Moses : and they were talking with Jesus.
+> 3 and his clothes became radiant, intensely white, as no one on earth could bleach them.
+> 4 And there appeared to them Elijah with Moses, and they were talking with Jesus.
 
 - ■ 막9:2-4
 
@@ -65,9 +65,9 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 2 이 모든 날 마지막에는 아들을 통하여 우리에게 말씀하셨으니 이 아들을 만유의 상속자로 세우시고 또 그로 말미암아 모든 세계를 지으셨느니라
 > 3 이는 하나님의 영광의 광채시요 그 본체의 형상이시라 그의 능력의 말씀으로 만물을 붙드시며 죄를 정결하게 하는 일을 하시고 높은 곳에 계신 지극히 크신 이의 우편에 앉으셨느니라
 >
-> Hebrew 1:1 God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets,
-> 2 Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds ;
-> 3 Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high ;
+> 히 1:1 Long ago, at many times and in many ways, God spoke to our fathers by the prophets,
+> 2 but in these last days he has spoken to us by his Son, whom he appointed the heir of all things, through whom also he created the world.
+> 3 He is the radiance of the glory of God and the exact imprint of his nature, and he upholds the universe by the word of his power. After making purification for sins, he sat down at the right hand of the Majesty on high,
 
 - ■ 히1:1-3
 
@@ -84,8 +84,8 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 8 사람의 모양으로 나타나사 자기를 낮추시고 죽기까지 복종하셨으니 곧 십자가에 죽으심이라
 >
 > 빌 2:6 Who, being in the form of God, thought it not robbery to be equal with God :
-> 7 But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men :
-> 8 And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.
+> 7 but emptied himself, by taking the form of a servant, being born in the likeness of men.
+> 8 And being found in human form, he humbled himself by becoming obedient to the point of death, even death on a cross.
 
 - ■ v.6 하나님과 동등됨을 취할 것으로 여기시지 않으심 : 하나님과 동등하신 분이셨지만 타락한 인간의 구원을 위해서 동등됨을 보류하시고 종의 형체를 취하셨음
 
@@ -115,7 +115,7 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 
 > 마 8:20 예수께서 이르시되 여우도 굴이 있고 공중의 새도 거처가 있으되 인자는 머리 둘 곳이 없다 하시더라
 >
-> 마 8:20 And Jesus saith unto him, The foxes have holes, and the birds of the air have nests ; but the Son of man hath not where to lay his head.
+> 마 8:20 And Jesus said to him, "Foxes have holes, and birds of the air have nests, but the Son of Man has nowhere to lay his head."
 
 - ■ 마8:20 거처도 없이 떠돌아 다니심
 
@@ -142,15 +142,15 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 36 한 사람이 달려가서 해면에 신 포도주를 적시어 갈대에 꿰어 마시게 하고 이르되 가만 두라 엘리야가 와서 그를 내려 주나 보자 하더라
 > 37 예수께서 큰 소리를 지르시고 숨지시니라
 >
-> 막 15:29 And they that passed by railed on him, wagging their heads, and saying, Ah, thou that destroyest the temple, and buildest it in three days,
-> 30 Save thyself, and come down from the cross.
-> 31 Likewise also the chief priests mocking said among themselves with the scribes, He saved others ; himself he cannot save.
-> 32 Let Christ the King of Israel descend now from the cross, that we may see and believe. And they that were crucified with him reviled him.
-> 33 And when the sixth hour was come, there was darkness over the whole land until the ninth hour.
-> 34 And at the ninth hour Jesus cried with a loud voice, saying, Eloi, Eloi, lama sabachthani ? which is, being interpreted, My God, my God, why hast thou forsaken me ?
-> 35 And some of them that stood by, when they heard it, said, Behold, he calleth Elias.
-> 36 And one ran and filled a spunge full of vinegar, and put it on a reed, and gave him to drink, saying, Let alone ; let us see whether Elias will come to take him down.
-> 37 And Jesus cried with a loud voice, and gave up the ghost.
+> 막 15:29 And those who passed by derided him, wagging their heads and saying, "Aha! You who would destroy the temple and rebuild it in three days,
+> 30 save yourself, and come down from the cross!"
+> 31 So also the chief priests with the scribes mocked him to one another, saying, "He saved others; he cannot save himself.
+> 32 Let the Christ, the King of Israel, come down now from the cross that we may see and believe." Those who were crucified with him also reviled him.
+> 33 And when the sixth hour had come, there was darkness over the whole land until the ninth hour.
+> 34 And at the ninth hour Jesus cried with a loud voice, "Eloi, Eloi, lema sabachthani?" which means, "My God, my God, why have you forsaken me?"
+> 35 And some of the bystanders hearing it said, "Behold, he is calling Elijah."
+> 36 And someone ran and filled a sponge with sour wine, put it on a reed and gave it to him to drink, saying, "Wait, let us see whether Elijah will come to take him down."
+> 37 And Jesus uttered a loud cry and breathed his last.
 
 - ■ 막15:29-37 인간들에 의하여 십자가에 매달려 돌아가심
 
@@ -175,8 +175,8 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 15 헤롯이 또한 그렇게 하여 그를 우리에게 도로 보내었도다 보라 그가 행한 일에는 죽일 일이 없느니라
 >
 > 눅 23:13 And Pilate, when he had called together the chief priests and the rulers and the people,
-> 14 Said unto them, Ye have brought this man unto me, as one that perverteth the people : and, behold, I, having examined him before you, have found no fault in this man touching those things whereof ye accuse him :
-> 15 No, nor yet Herod : for I sent you to him ; and, lo, nothing worthy of death is done unto him.
+> 14 and said to them, "You brought me this man as one who was misleading the people. And after examining him before you, behold, I did not find this man guilty of any of your charges against him.
+> 15 Neither did Herod, for he sent him back to us. Look, nothing deserving death has been done by him.
 
 - ■ 눅23:13-15 빌라도와 헤롯의 평결 : 예수님이 무죄임
 
@@ -205,9 +205,9 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 10 하늘에 있는 자들과 땅에 있는 자들과 땅 아래에 있는 자들로 모든 무릎을 예수의 이름에 꿇게 하시고
 > 11 모든 입으로 예수 그리스도를 주라 시인하여 하나님 아버지께 영광을 돌리게 하셨느니라
 >
-> 9 Wherefore God also hath highly exalted him, and given him a name which is above every name :
-> 10 That at the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth ;
-> 11 And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.
+> 9 Therefore God has highly exalted him and bestowed on him the name that is above every name,
+> 10 so that at the name of Jesus every knee should bow, in heaven and on earth and under the earth,
+> 11 and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.
 
 - ■ v.9 철저히 낮아지신 예수님을 하나님께서 지극히 높이셔서 모든 이름 위에 뛰어난 이름을 주셔서 모든 피조물로 하여금 그의 앞에 무릎을 꿇고 경배하도록 하셨음
 
@@ -222,13 +222,13 @@ summary: "빌립보서 2:5-11을 본문으로, 하나님의 본체이신 예수�
 > 6 **여기 계시지 않고 살아나셨느니라** 갈릴리에 계실 때에 너희에게 어떻게 말씀하셨는지를 기억하라
 > 7 이르시기를 인자가 죄인의 손에 넘겨져 십자가에 못 박히고 제삼일에 다시 살아나야 하리라 하셨느니라 한대
 >
-> 눅 24:1 Now upon the first day of the week, very early in the morning, they came unto the sepulchre, bringing the spices which they had prepared, and certain others with them.
-> 2 And they found the stone rolled away from the sepulchre.
-> 3 And they entered in, and found not the body of the Lord Jesus.
-> 4 And it came to pass, as they were much perplexed thereabout, behold, two men stood by them in shining garments :
-> 5 And as they were afraid, and bowed down their faces to the earth, they said unto them, Why seek ye the living among the dead ?
-> 6 He is not here, but is risen : remember how he spake unto you when he was yet in Galilee,
-> 7 Saying, The Son of man must be delivered into the hands of sinful men, and be crucified, and the third day rise again.
+> 눅 24:1 But on the first day of the week, at early dawn, they went to the tomb, taking the spices they had prepared.
+> 2 And they found the stone rolled away from the tomb,
+> 3 but when they went in they did not find the body of the Lord Jesus.
+> 4 While they were perplexed about this, behold, two men stood by them in dazzling apparel.
+> 5 And as they were frightened and bowed their faces to the ground, the men said to them, "Why do you seek the living among the dead?
+> 6 He is not here, but has risen. Remember how he told you, while he was still in Galilee,
+> 7 that the Son of Man must be delivered into the hands of sinful men and be crucified and on the third day rise."
 
 - ■ 눅24:1-7 모두가 끝이라 생각을 하였지만 미리 말씀하신대로 예수님께서는 사흘만에 부활하셨음
 {.no-marker}

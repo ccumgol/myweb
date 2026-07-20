@@ -16,12 +16,12 @@ summary: "베드로전서 4:1-5:14을 본문으로, 고난의 유익과 거룩�
 > 5 그들이 산 자와 죽은 자를 심판하기로 예비하신 이에게 사실대로 고하리라
 > 6 이를 위하여 죽은 자들에게도 복음이 전파되었으니 이는 육체로는 사람으로 심판을 받으나 영으로는 하나님을 따라 살게 하려 함이라
 >
-> 1 Forasmuch then as Christ hath suffered for us in the flesh, arm yourselves likewise with the same mind : for he that hath suffered in the flesh hath ceased from sin ;
-> 2 That he no longer should live the rest of his time in the flesh to the lusts of men, but to the will of God.
-> 3 For the time past of our life may suffice us to have wrought the will of the Gentiles, when we walked in lasciviousness, lusts, excess of wine, revellings, banquetings, and abominable idolatries :
-> 4 Wherein they think it strange that ye run not with them to the same excess of riot, speaking evil of you:
-> 5 Who shall give account to him that is ready to judge the quick and the dead.
-> 6 For for this cause was the gospel preached also to them that are dead, that they might be judged according to men in the flesh, but live according to God in the spirit.
+> 1 Since therefore Christ suffered in the flesh, arm yourselves with the same way of thinking, for whoever has suffered in the flesh has ceased from sin,
+> 2 so as to live for the rest of the time in the flesh no longer for human passions but for the will of God.
+> 3 For the time that is past suffices for doing what the Gentiles want to do, living in sensuality, passions, drunkenness, orgies, drinking parties, and lawless idolatry.
+> 4 With respect to this they are surprised when you do not join them in the same flood of debauchery, and they malign you;
+> 5 but they will give account to him who is ready to judge the living and the dead.
+> 6 For this is why the gospel was preached even to those who are dead, that though judged in the flesh the way people are, they might live in the spirit the way God does.
 
 - ■ v.1-2 육체의 고난을 통해 성화의 단계를 살 수 있음: 오직 하나님의 뜻을 좇아 육체의 남은 때를 살게 하려 함이라
 
@@ -54,19 +54,19 @@ summary: "베드로전서 4:1-5:14을 본문으로, 고난의 유익과 거룩�
 > 18 또 의인이 겨우 구원을 받으면 경건하지 아니한 자와 죄인은 어디에 서리요
 > 19 그러므로 하나님의 뜻대로 고난을 받는 자들은 또한 선을 행하는 가운데에 그 영혼을 미쁘신 창조주께 의탁할지어다
 >
-> 7 But the end of all things is at hand : be ye therefore sober, and watch unto prayer.
-> 8 And above all things have fervent charity among yourselves : for charity shall cover the multitude of sins.
-> 9 Use hospitality one to another without grudging.
-> 10 As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God.
-> 11 If any man speak, let him speak as the oracles of God ; if any man minister, let him do it as of the ability which God giveth : that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen.
-> 12 Beloved, think it not strange concerning the fiery trial which is to try you, as though some strange thing happened unto you :
-> 13 But rejoice, inasmuch as ye are partakers of Christ's sufferings ; that, when his glory shall be revealed, ye may be glad also with exceeding joy.
-> 14 If ye be reproached for the name of Christ, happy are ye; for the spirit of glory and of God resteth upon you : on their part he is evil spoken of, but on your part he is glorified.
-> 15 But let none of you suffer as a murderer, or as a thief, or as an evildoer, or as a busybody in other men's matters.
-> 16 Yet if any man suffer as a Christian, let him not be ashamed ; but let him glorify God on this behalf.
-> 17 For the time is come that judgment must begin at the house of God : and if it first begin at us, what shall the end be of them that obey not the gospel of God ?
-> 18 And if the righteous scarcely be saved, where shall the ungodly and the sinner appear ?
-> 19 Wherefore let them that suffer according to the will of God commit the keeping of their souls to him in well doing, as unto a faithful Creator.
+> 7 The end of all things is at hand; therefore be self-controlled and sober-minded for the sake of your prayers.
+> 8 Above all, keep loving one another earnestly, since love covers a multitude of sins.
+> 9 Show hospitality to one another without grumbling.
+> 10 As each has received a gift, use it to serve one another, as good stewards of God's varied grace:
+> 11 whoever speaks, as one who speaks oracles of God; whoever serves, as one who serves by the strength that God supplies—in order that in everything God may be glorified through Jesus Christ. To him belong glory and dominion forever and ever. Amen.
+> 12 Beloved, do not be surprised at the fiery trial when it comes upon you to test you, as though something strange were happening to you.
+> 13 But rejoice insofar as you share Christ's sufferings, that you may also rejoice and be glad when his glory is revealed.
+> 14 If you are insulted for the name of Christ, you are blessed, because the Spirit of glory and of God rests upon you.
+> 15 But let none of you suffer as a murderer or a thief or an evildoer or as a meddler.
+> 16 Yet if anyone suffers as a Christian, let him not be ashamed, but let him glorify God in that name.
+> 17 For it is time for judgment to begin at the household of God; and if it begins with us, what will be the outcome for those who do not obey the gospel of God?
+> 18 And "If the righteous is scarcely saved, what will become of the ungodly and the sinner?"
+> 19 Therefore let those who suffer according to God's will entrust their souls to a faithful Creator while doing good.
 
 - ■ v.7 만물의 마지막이 가까왔으니 그러므로 너희는 정신을 차리고 근신하여 기도하라
 
@@ -108,12 +108,12 @@ summary: "베드로전서 4:1-5:14을 본문으로, 고난의 유익과 거룩�
 > 5 젊은 자들아 이와 같이 장로들에게 순종하고 다 서로 겸손으로 허리를 동이라 하나님은 교만한 자를 대적하시되 겸손한 자들에게는 은혜를 주시느니라
 > 6 그러므로 하나님의 능하신 손 아래에서 겸손하라 때가 되면 너희를 높이시리라
 >
-> 1 The elders which are among you I exhort, who am also an elder, and a witness of the sufferings of Christ, and also a partaker of the glory that shall be revealed :
-> 2 Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly ; not for filthy lucre, but of a ready mind ;
-> 3 Neither as being lords over God's heritage, but being ensamples to the flock.
-> 4 And when the chief Shepherd shall appear, ye shall receive a crown of glory that fadeth not away.
-> 5 Likewise, ye younger, submit yourselves unto the elder. Yea, all of you be subject one to another, and be clothed with humility : for God resisteth the proud, and giveth grace to the humble.
-> 6 Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time :
+> 1 So I exhort the elders among you, as a fellow elder and a witness of the sufferings of Christ, as well as a partaker in the glory that is going to be revealed:
+> 2 shepherd the flock of God that is among you, exercising oversight, not under compulsion, but willingly, as God would have you; not for shameful gain, but eagerly;
+> 3 not domineering over those in your charge, but being examples to the flock.
+> 4 And when the chief Shepherd appears, you will receive the unfading crown of glory.
+> 5 Likewise, you who are younger, be subject to the elders. Clothe yourselves, all of you, with humility toward one another, for "God opposes the proud but gives grace to the humble."
+> 6 Humble yourselves, therefore, under the mighty hand of God so that at the proper time he may exalt you,
 
 - ■ v.1-4 너희 중 장로(교회 직분보다 그냥 연장자)들에게 권하노니
 
@@ -145,17 +145,17 @@ summary: "베드로전서 4:1-5:14을 본문으로, 고난의 유익과 거룩�
 > 13 택하심을 함께 받은 바벨론에 있는 교회가 너희에게 문안하고 내 아들 마가도 그리하느니라
 > 14 너희는 사랑의 입맞춤으로 서로 문안하라 ○그리스도 안에 있는 너희 모든 이에게 평강이 있을지어다
 >
-> 7 Casting all your care upon him ; for he careth for you.
-> 8 Be sober, be vigilant ; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour :
-> 9 Whom resist stedfast in the faith, knowing that the same afflictions are accomplished in your brethren that are in the world.
-> 10 But the God of all grace, who hath called us unto his eternal glory by Christ Jesus, after that ye have suffered a while, make you perfect, stablish, strengthen, settle you.
-> 11 To him be glory and dominion for ever and ever. Amen.
+> 7 casting all your anxieties on him, because he cares for you.
+> 8 Be sober-minded; be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour.
+> 9 Resist him, firm in your faith, knowing that the same kinds of suffering are being experienced by your brotherhood throughout the world.
+> 10 And after you have suffered a little while, the God of all grace, who has called you to his eternal glory in Christ, will himself restore, confirm, strengthen, and establish you.
+> 11 To him be the dominion forever and ever. Amen.
 >
 > 문안과 축복(♬ 187, 483)
 >
-> 12 By Silvanus, a faithful brother unto you, as I suppose, I have written briefly, exhorting, and testifying that this is the true grace of God wherein ye stand.
-> 13 The church that is at Babylon, elected together with you, saluteth you ; and so doth Marcus my son.
-> 14 Greet ye one another with a kiss of charity. Peace be with you all that are in Christ Jesus. Amen.
+> 12 By Silvanus, a faithful brother as I regard him, I have written briefly to you, exhorting and declaring that this is the true grace of God. Stand firm in it.
+> 13 She who is at Babylon, who is likewise chosen, sends you greetings, and so does Mark, my son.
+> 14 Greet one another with the kiss of love. Peace to all of you who are in Christ.
 
 - ■ v.7 너희 염려를 다 주께 맡겨 버리라 이는 저가 너희를 권고하심이니라
 

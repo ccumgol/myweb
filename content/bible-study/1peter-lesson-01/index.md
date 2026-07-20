@@ -42,18 +42,18 @@ summary: "베드로전서 1:1-2:10을 본문으로, 흩어진 나그네인 성�
 > 11 자기 속에 계신 그리스도의 영이 그 받으실 고난과 후에 받으실 영광을 미리 증언하여 누구를 또는 어떠한 때를 지시하시는지 상고하니라
 > 12 이 섬긴 바가 자기를 위한 것이 아니요 너희를 위한 것임이 계시로 알게 되었으니 이것은 하늘로부터 보내신 성령을 힘입어 복음을 전하는 자들로 이제 너희에게 알린 것이요 천사들도 살펴 보기를 원하는 것이니라
 >
-> 1 Peter, an apostle of Jesus Christ, to the strangers scattered throughout Pontus, Galatia, Cappadocia, Asia, and Bithynia,
-> 2 Elect according to the foreknowledge of God the Father, through sanctification of the Spirit, unto obedience and sprinkling of the blood of Jesus Christ : Grace unto you, and peace, be multiplied.
-> 3 Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead,
-> 4 To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,
-> 5 Who are kept by the power of God through faith unto salvation ready to be revealed in the last time.
-> 6 Wherein ye greatly rejoice, though now for a season, if need be, ye are in heaviness through manifold temptations :
-> 7 That the trial of your faith, being much more precious than of gold that perisheth, though it be tried with fire, might be found unto praise and honour and glory at the appearing of Jesus Christ :
-> 8 Whom having not seen, ye love ; in whom, though now ye see him not, yet believing, ye rejoice with joy unspeakable and full of glory :
-> 9 Receiving the end of your faith, even the salvation of your souls.
-> 10 Of which salvation the prophets have enquired and searched diligently, who prophesied of the grace that should come unto you :
-> 11 Searching what, or what manner of time the Spirit of Christ which was in them did signify, when it testified beforehand the sufferings of Christ, and the glory that should follow.
-> 12 Unto whom it was revealed, that not unto themselves, but unto us they did minister the things, which are now reported unto you by them that have preached the gospel unto you with the Holy Ghost sent down from heaven ; which things the angels desire to look into.
+> 1 Peter, an apostle of Jesus Christ, To those who are elect exiles of the Dispersion in Pontus, Galatia, Cappadocia, Asia, and Bithynia,
+> 2 according to the foreknowledge of God the Father, in the sanctification of the Spirit, for obedience to Jesus Christ and for sprinkling with his blood: May grace and peace be multiplied to you.
+> 3 Blessed be the God and Father of our Lord Jesus Christ! According to his great mercy, he has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead,
+> 4 to an inheritance that is imperishable, undefiled, and unfading, kept in heaven for you,
+> 5 who by God's power are being guarded through faith for a salvation ready to be revealed in the last time.
+> 6 In this you rejoice, though now for a little while, if necessary, you have been grieved by various trials,
+> 7 so that the tested genuineness of your faith—more precious than gold that perishes though it is tested by fire—may be found to result in praise and glory and honor at the revelation of Jesus Christ.
+> 8 Though you have not seen him, you love him. Though you do not now see him, you believe in him and rejoice with joy that is inexpressible and filled with glory,
+> 9 obtaining the outcome of your faith, the salvation of your souls.
+> 10 Concerning this salvation, the prophets who prophesied about the grace that was to be yours searched and inquired carefully,
+> 11 inquiring what person or time the Spirit of Christ in them was indicating when he predicted the sufferings of Christ and the subsequent glories.
+> 12 It was revealed to them that they were serving not themselves but you, in the things that have now been announced to you through those who preached the good news to you by the Holy Spirit sent from heaven, things into which angels long to look.
 
 - ■ v.1 본도, 갈라디아, 갑바도기아, 아시아와 비두니아에 흩어진 나그네: 네로 황제의 핍박을 피해 팔레스틴을 떠나 각 처로 흩어져 살던 그리스도인(핍박을 당하고 있는 상태)
 
@@ -101,19 +101,19 @@ summary: "베드로전서 1:1-2:10을 본문으로, 흩어진 나그네인 성�
 > 24 그러므로 모든 육체는 풀과 같고 그 모든 영광은 풀의 꽃과 같으니 풀은 마르고 꽃은 떨어지되
 > 25 오직 주의 말씀은 세세토록 있도다 하였으니 너희에게 전한 복음이 곧 이 말씀이니라
 >
-> 13 Wherefore gird up the loins of your mind, be sober, and hope to the end for the grace that is to be brought unto you at the revelation of Jesus Christ ;
-> 14 As obedient children, not fashioning yourselves according to the former lusts in your ignorance :
-> 15 But as he which hath called you is holy, so be ye holy in all manner of conversation ;
-> 16 Because it is written, Be ye holy ; for I am holy.
-> 17 And if ye call on the Father, who without respect of persons judgeth according to every man's work, pass the time of your sojourning here in fear :
-> 18 Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold, from your vain conversation received by tradition from your fathers ;
-> 19 But with the precious blood of Christ, as of a lamb without blemish and without spot :
-> 20 Who verily was foreordained before the foundation of the world, but was manifest in these last times for you,
-> 21 Who by him do believe in God, that raised him up from the dead, and gave him glory ; that your faith and hope might be in God.
-> 22 Seeing ye have purified your souls in obeying the truth through the Spirit unto unfeigned love of the brethren, see that ye love one another with a pure heart fervently :
-> 23 Being born again, not of corruptible seed, but of incorruptible, by the word of God, which liveth and abideth for ever.
-> 24 For all flesh is as grass, and all the glory of man as the flower of grass. The grass withereth, and the flower thereof falleth away :
-> 25 But the word of the Lord endureth for ever. And this is the word which by the gospel is preached unto you.
+> 13 Therefore, preparing your minds for action, and being sober-minded, set your hope fully on the grace that will be brought to you at the revelation of Jesus Christ.
+> 14 As obedient children, do not be conformed to the passions of your former ignorance,
+> 15 but as he who called you is holy, you also be holy in all your conduct,
+> 16 since it is written, "You shall be holy, for I am holy."
+> 17 And if you call on him as Father who judges impartially according to each one's deeds, conduct yourselves with fear throughout the time of your exile,
+> 18 knowing that you were ransomed from the futile ways inherited from your forefathers, not with perishable things such as silver or gold,
+> 19 but with the precious blood of Christ, like that of a lamb without blemish or spot.
+> 20 He was foreknown before the foundation of the world but was made manifest in the last times for the sake of you
+> 21 who through him are believers in God, who raised him from the dead and gave him glory, so that your faith and hope are in God.
+> 22 Having purified your souls by your obedience to the truth for a sincere brotherly love, love one another earnestly from a pure heart,
+> 23 since you have been born again, not of perishable seed but of imperishable, through the living and abiding word of God;
+> 24 for "All flesh is like grass and all its glory like the flower of grass. The grass withers, and the flower falls,
+> 25 but the word of the Lord remains forever." And this word is the good news that was preached to you.
 
 - ■ v.13-16 근신함으로 거룩한 삶을 추구하라 - 선행
 
@@ -135,16 +135,16 @@ summary: "베드로전서 1:1-2:10을 본문으로, 흩어진 나그네인 성�
 > 9 그러나 너희는 택하신 족속이요 왕 같은 제사장들이요 거룩한 나라요 그의 소유가 된 백성이니 이는 너희를 어두운 데서 불러 내어 그의 기이한 빛에 들어가게 하신 이의 아름다운 덕을 선포하게 하려 하심이라
 > 10 너희가 전에는 백성이 아니더니 이제는 하나님의 백성이요 전에는 긍휼을 얻지 못하였더니 이제는 긍휼을 얻은 자니라
 >
-> 벧후2:1 Wherefore laying aside all malice, and all guile, and hypocrisies, and envies, and all evil speakings,
-> 2 As newborn babes, desire the sincere milk of the word, that ye may grow thereby :
-> 3 If so be ye have tasted that the Lord is gracious.
-> 4 To whom coming, as unto a living stone, disallowed indeed of men, but chosen of God, and precious,
-> 5 Ye also, as lively stones, are built up a spiritual house, an holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ.
-> 6 Wherefore also it is contained in the scripture, Behold, I lay in Sion a chief corner stone, elect, precious : and he that believeth on him shall not be confounded.
-> 7 Unto you therefore which believe he is precious : but unto them which be disobedient, the stone which the builders disallowed, the same is made the head of the corner,
-> 8 And a stone of stumbling, and a rock of offence, even to them which stumble at the word, being disobedient : whereunto also they were appointed.
-> 9 But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people ; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light :
-> 10 Which in time past were not a people, but are now the people of God : which had not obtained mercy, but now have obtained mercy.
+> 벧후2:1 So put away all malice and all deceit and hypocrisy and envy and all slander.
+> 2 Like newborn infants, long for the pure spiritual milk, that by it you may grow up into salvation—
+> 3 if indeed you have tasted that the Lord is good.
+> 4 As you come to him, a living stone rejected by men but in the sight of God chosen and precious,
+> 5 you yourselves like living stones are being built up as a spiritual house, to be a holy priesthood, to offer spiritual sacrifices acceptable to God through Jesus Christ.
+> 6 For it stands in Scripture: "Behold, I am laying in Zion a stone, a cornerstone chosen and precious, and whoever believes in him will not be put to shame."
+> 7 So the honor is for you who believe, but for those who do not believe, "The stone that the builders rejected has become the cornerstone,"
+> 8 and "A stone of stumbling, and a rock of offense." They stumble because they disobey the word, as they were destined to do.
+> 9 But you are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light.
+> 10 Once you were not a people, but now you are God's people; once you had not received mercy, but now you have received mercy.
 
 - ■ v.1 모든 악독과 모든 궤휼과 외식과 시기와 모든 비방하는 말을 버리고
 

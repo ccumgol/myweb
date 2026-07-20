@@ -12,8 +12,8 @@ summary: "베드로전서 2:11-3:22을 본문으로, 거룩한 나그네인 그�
 > 11 사랑하는 자들아 거류민과 나그네 같은 너희를 권하노니 영혼을 거슬러 싸우는 육체의 정욕을 제어하라
 > 12 너희가 이방인 중에서 행실을 선하게 가져 너희를 악행한다고 비방하는 자들로 하여금 너희 선한 일을 보고 오시는 날에 하나님께 영광을 돌리게 하려 함이라
 >
-> 11 Dearly beloved, I beseech you as strangers and pilgrims, abstain from fleshly lusts, which war against the soul ;
-> 12 Having your conversation honest among the Gentiles : that, whereas they speak against you as evildoers, they may by your good works, which they shall behold, glorify God in the day of visitation.
+> 11 Beloved, I urge you as sojourners and exiles to abstain from the passions of the flesh, which wage war against your soul.
+> 12 Keep your conduct among the Gentiles honorable, so that when they speak against you as evildoers, they may see your good deeds and glorify God on the day of visitation.
 
 - ■ v.11 영혼을 거스려 싸우는 육체의 정욕을 제어하라
 
@@ -36,19 +36,19 @@ summary: "베드로전서 2:11-3:22을 본문으로, 거룩한 나그네인 그�
 > 24 친히 나무에 달려 그 몸으로 우리 죄를 담당하셨으니 이는 우리로 죄에 대하여 죽고 의에 대하여 살게 하려 하심이라 그가 채찍에 맞음으로 너희는 나음을 얻었나니
 > 25 너희가 전에는 양과 같이 길을 잃었더니 이제는 너희 영혼의 목자와 감독 되신 이에게 돌아왔느니라
 >
-> 13 Submit yourselves to every ordinance of man for the Lord's sake : whether it be to the king, as supreme ;
-> 14 Or unto governors, as unto them that are sent by him for the punishment of evildoers, and for the praise of them that do well.
-> 15 For so is the will of God, that with well doing ye may put to silence the ignorance of foolish men :
-> 16 As free, and not using your liberty for a cloke of maliciousness, but as the servants of God.
-> 17 Honour all men. Love the brotherhood. Fear God. Honour the king.
-> 18 Servants, be subject to your masters with all fear ; not only to the good and gentle, but also to the froward.
-> 19 For this is thankworthy, if a man for conscience toward God endure grief, suffering wrongfully.
-> 20 For what glory is it, if, when ye be buffeted for your faults, ye shall take it patiently ? but if, when ye do well, and suffer for it, ye take it patiently, this is acceptable with God.
-> 21 For even hereunto were ye called : because Christ also suffered for us, leaving us an example, that ye should follow his steps :
-> 22 Who did no sin, neither was guile found in his mouth :
-> 23 Who, when he was reviled, reviled not again ; when he suffered, he threatened not ; but committed himself to him that judgeth righteously :
-> 24 Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness : by whose stripes ye were healed.
-> 25 For ye were as sheep going astray ; but are now returned unto the Shepherd and Bishop of your souls.
+> 13 Be subject for the Lord's sake to every human institution, whether it be to the emperor as supreme,
+> 14 or to governors as sent by him to punish those who do evil and to praise those who do good.
+> 15 For this is the will of God, that by doing good you should put to silence the ignorance of foolish people.
+> 16 Live as people who are free, not using your freedom as a cover-up for evil, but living as servants of God.
+> 17 Honor everyone. Love the brotherhood. Fear God. Honor the emperor.
+> 18 Servants, be subject to your masters with all respect, not only to the good and gentle but also to the unjust.
+> 19 For this is a gracious thing, when, mindful of God, one endures sorrows while suffering unjustly.
+> 20 For what credit is it if, when you sin and are beaten for it, you endure? But if when you do good and suffer for it you endure, this is a gracious thing in the sight of God.
+> 21 For to this you have been called, because Christ also suffered for you, leaving you an example, so that you might follow in his steps.
+> 22 He committed no sin, neither was deceit found in his mouth.
+> 23 When he was reviled, he did not revile in return; when he suffered, he did not threaten, but continued entrusting himself to him who judges justly.
+> 24 He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.
+> 25 For you were straying like sheep, but have now returned to the Shepherd and Overseer of your souls.
 
 - ■ v.13-17 인간에 세운 모든 제도(합법적인 권세)를 주를 위하여 순복하되
 
@@ -90,18 +90,18 @@ summary: "베드로전서 2:11-3:22을 본문으로, 거룩한 나그네인 그�
 > 11 악에서 떠나 선을 행하고 화평을 구하며 그것을 따르라
 > 12 주의 눈은 의인을 향하시고 그의 귀는 의인의 간구에 기울이시되 주의 얼굴은 악행하는 자들을 대하시느니라 하였느니라
 >
-> 1 Likewise, ye wives, be in subjection to your own husbands ; that, if any obey not the word, they also may without the word be won by the conversation of the wives ;
-> 2 While they behold your chaste conversation coupled with fear.
-> 3 Whose adorning let it not be that outward adorning of plaiting the hair, and of wearing of gold, or of putting on of apparel ;
-> 4 But let it be the hidden man of the heart, in that which is not corruptible, even the ornament of a meek and quiet spirit, which is in the sight of God of great price.
-> 5 For after this manner in the old time the holy women also, who trusted in God, adorned themselves, being in subjection unto their own husbands :
-> 6 Even as Sara obeyed Abraham, calling him lord : whose daughters ye are, as long as ye do well, and are not afraid with any amazement.
-> 7 Likewise, ye husbands, dwell with them according to knowledge, giving honour unto the wife, as unto the weaker vessel, and as being heirs together of the grace of life ; that your prayers be not hindered.
-> 8 Finally, be ye all of one mind, having compassion one of another, love as brethren, be pitiful, be courteous :
-> 9 Not rendering evil for evil, or railing for railing : but contrariwise blessing ; knowing that ye are thereunto called, that ye should inherit a blessing.
-> 10 For he that will love life, and see good days, let him refrain his tongue from evil, and his lips that they speak no guile :
-> 11 Let him eschew evil, and do good ; let him seek peace, and ensue it.
-> 12 For the eyes of the Lord are over the righteous, and his ears are open unto their prayers : but the face of the Lord is against them that do evil.
+> 1 Likewise, wives, be subject to your own husbands, so that even if some do not obey the word, they may be won without a word by the conduct of their wives,
+> 2 when they see your respectful and pure conduct.
+> 3 Do not let your adorning be external—the braiding of hair and the putting on of gold jewelry, or the clothing you wear—
+> 4 but let your adorning be the hidden person of the heart with the imperishable beauty of a gentle and quiet spirit, which in God's sight is very precious.
+> 5 For this is how the holy women who hoped in God used to adorn themselves, by submitting to their own husbands,
+> 6 as Sarah obeyed Abraham, calling him lord. And you are her children, if you do good and do not fear anything that is frightening.
+> 7 Likewise, husbands, live with your wives in an understanding way, showing honor to the woman as the weaker vessel, since they are heirs with you of the grace of life, so that your prayers may not be hindered.
+> 8 Finally, all of you, have unity of mind, sympathy, brotherly love, a tender heart, and a humble mind.
+> 9 Do not repay evil for evil or reviling for reviling, but on the contrary, bless, for to this you were called, that you may obtain a blessing.
+> 10 For "Whoever desires to love life and see good days, let him keep his tongue from evil and his lips from speaking deceit;
+> 11 let him turn away from evil and do good; let him seek peace and pursue it.
+> 12 For the eyes of the Lord are on the righteous, and his ears are open to their prayer. But the face of the Lord is against those who do evil."
 
 - ■ v.1 아내 된 자들아 이와 같이 자기 남편에게 순복하라
 
@@ -149,16 +149,16 @@ summary: "베드로전서 2:11-3:22을 본문으로, 거룩한 나그네인 그�
 > 21 물은 예수 그리스도께서 부활하심으로 말미암아 이제 너희를 구원하는 표니 곧 세례라 이는 육체의 더러운 것을 제하여 버림이 아니요 하나님을 향한 선한 양심의 간구니라
 > 22 그는 하늘에 오르사 하나님 우편에 계시니 천사들과 권세들과 능력들이 그에게 복종하느니라
 >
-> 13 And who is he that will harm you, if ye be followers of that which is good ?
-> 14 But and if ye suffer for righteousness' sake, happy are ye: and be not afraid of their terror, neither be troubled ;
-> 15 But sanctify the Lord God in your hearts : and be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear :
-> 16 Having a good conscience ; that, whereas they speak evil of you, as of evildoers, they may be ashamed that falsely accuse your good conversation in Christ.
-> 17 For it is better, if the will of God be so, that ye suffer for well doing, than for evil doing.
-> 18 For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit :
-> 19 By which also he went and preached unto the spirits in prison ;
-> 20 Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water.
-> 21 The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ :
-> 22 Who is gone into heaven, and is on the right hand of God ; angels and authorities and powers being made subject unto him.
+> 13 Now who is there to harm you if you are zealous for what is good?
+> 14 But even if you should suffer for righteousness' sake, you will be blessed. Have no fear of them, nor be troubled,
+> 15 but in your hearts honor Christ the Lord as holy, always being prepared to make a defense to anyone who asks you for a reason for the hope that is in you; yet do it with gentleness and respect,
+> 16 having a good conscience, so that, when you are slandered, those who revile your good behavior in Christ may be put to shame.
+> 17 For it is better to suffer for doing good, if that should be God's will, than for doing evil.
+> 18 For Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit,
+> 19 in which he went and proclaimed to the spirits in prison,
+> 20 because they formerly did not obey, when God's patience waited in the days of Noah, while the ark was being prepared, in which a few, that is, eight persons, were brought safely through water.
+> 21 Baptism, which corresponds to this, now saves you, not as a removal of dirt from the body but as an appeal to God for a good conscience, through the resurrection of Jesus Christ,
+> 22 who has gone into heaven and is at the right hand of God, with angels, authorities, and powers having been subjected to him.
 
 - ■ v.13 열심으로 선을 행하면
 
