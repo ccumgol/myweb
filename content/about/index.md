@@ -15,7 +15,7 @@ showDate: false
 
 - **JIWU Mission Network** 대표
 - **편한IT** 운영자 (AI 및 스마트 사역 행정 강사)
-- 스마트 행정 워크플로우(Notion, MS Teams 등) 및 AI 실무 교육 전문가
+- 스마트 행정 워크플로우(Notion 등) 및 AI 실무 교육 전문가
 - 비영리 단체 및 미자립 교회를 위한 디지털 전환(DX) 컨설팅
 
 ---
