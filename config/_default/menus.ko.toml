@@ -5,29 +5,19 @@
   weight = 10
 
 [[main]]
-  name = "활동 / 프로젝트"
-  pageRef = "projects"
-  weight = 20
-
-[[main]]
-  name = "강연 안내"
+  name = "강연 · 문의"
   pageRef = "lectures"
-  weight = 30
+  weight = 20
 
 [[main]]
   name = "성경공부"
   pageRef = "bible-study"
-  weight = 35
+  weight = 30
 
 [[main]]
   name = "블로그"
   pageRef = "blog"
   weight = 40
-
-[[main]]
-  name = "문의"
-  pageRef = "contact"
-  weight = 50
 
 # -- Footer Menu --
 [[footer]]
@@ -37,5 +27,5 @@
 
 [[footer]]
   name = "문의"
-  pageRef = "contact"
+  pageRef = "lectures"
   weight = 20
