@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ partial "quarter-styles.html" . }}
+<div class="qcorner">
+
+  <header>
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title | emojify }}</h1>
+  </header>
+
+  <div class="mt-4 max-w-prose">{{ .Content }}</div>
+
+  {{/* ---------- interactive map ---------- */}}
+  {{ $mapcoins := slice }}
+  {{ range site.Data.quarters }}
+    {{ if .abbr }}
+      {{ $mapcoins = $mapcoins | append (dict "abbr" .abbr "slug" .slug "title" .title_ko "series" .series_ko "year" .year "image" .image "url" (printf "/coins/quarter/%s/" .slug)) }}
+    {{ end }}
+  {{ end }}
+
+  <section class="q-map-wrap">
+    <div>{{ partial "quarter-us-svg.html" . }}</div>
+    <aside class="q-panel" id="q-panel">
+      <p class="ph">🗺️ 지도에서 주(州)를 클릭하면 그 주의 쿼터가 여기에 나타납니다. (50개 주 · 국립공원 시리즈)</p>
+    </aside>
+  </section>
+  <script>window.__qcoins = {{ $mapcoins | jsonify | safeJS }};</script>
+  <script src="{{ "js/quarter-map.js" | relURL }}" defer></script>
+
+  {{/* ---------- series galleries ---------- */}}
+  {{ $order := slice "50개 주" "D.C. & 미국 준주" "미국의 아름다운 국립공원" "미국의 여성들" "건국 250주년" }}
+  {{ range $s := $order }}
+    {{ $coins := where site.Data.quarters "series_ko" $s }}
+    {{ if $coins }}
+    {{ $program := (index $coins 0).program }}
+    <section class="q-series" id="series-{{ $program }}">
+      <h2>{{ $s }} <span class="cnt">· {{ len $coins }}종</span></h2>
+      <div class="q-grid">
+        {{ range $coins }}
+          <a class="q-card" href="{{ printf "/coins/quarter/%s/" .slug | relURL }}">
+            <img src="{{ .image | relURL }}" loading="lazy" alt="{{ .title_ko }} 쿼터">
+            <div class="t">{{ .title_ko }}</div>
+            <div class="m">{{ .year }}</div>
+          </a>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  {{ end }}
+
+</div>
+{{ end }}

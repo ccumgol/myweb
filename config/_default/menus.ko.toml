@@ -15,6 +15,42 @@
   weight = 30
 
 [[main]]
+  name = "동전으로 배우는 미국"
+  pageRef = "coins"
+  identifier = "coins"
+  weight = 35
+
+  [[main]]
+    name = "Quarter · 50개 주 (1999-2008)"
+    parent = "coins"
+    url = "/coins/quarter/#series-50state"
+    weight = 1
+
+  [[main]]
+    name = "Quarter · D.C. & 준주 (2009)"
+    parent = "coins"
+    url = "/coins/quarter/#series-territories"
+    weight = 2
+
+  [[main]]
+    name = "Quarter · 국립공원 (2010-2021)"
+    parent = "coins"
+    url = "/coins/quarter/#series-atb"
+    weight = 3
+
+  [[main]]
+    name = "Quarter · 미국의 여성들 (2022-2025)"
+    parent = "coins"
+    url = "/coins/quarter/#series-women"
+    weight = 4
+
+  [[main]]
+    name = "Quarter · 건국 250주년 (2026)"
+    parent = "coins"
+    url = "/coins/quarter/#series-semiquincentennial-2026"
+    weight = 5
+
+[[main]]
   name = "블로그"
   pageRef = "blog"
   weight = 40

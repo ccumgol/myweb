@@ -1,0 +1,19 @@
+{{/* Content adapter: create one page per coin from data/quarters.json (Notion-synced). */}}
+{{ range $c := site.Data.quarters }}
+  {{ $page := dict
+      "path" $c.slug
+      "title" $c.title_ko
+      "params" (dict
+          "coin" $c
+          "seriesKo" $c.series_ko
+          "coinYear" $c.year
+          "showBreadcrumbs" true
+          "showDate" false
+          "showAuthor" false
+          "showReadingTime" false
+          "showTableOfContents" false
+      )
+      "content" (dict "mediaType" "text/markdown" "value" $c.body_ko)
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
