@@ -36,7 +36,7 @@
       <div class="q-grid">
         {{ range $coins }}
           <a class="q-card" href="{{ printf "/coins/quarter/%s/" .slug | relURL }}">
-            <img src="{{ .image | relURL }}" loading="lazy" alt="{{ .title_ko }} 쿼터">
+            <img class="nozoom" src="{{ .image | relURL }}" loading="lazy" alt="{{ .title_ko }} 쿼터">
             <div class="t">{{ .title_ko }}</div>
             <div class="m">{{ .year }}</div>
           </a>

@@ -51,7 +51,7 @@
     list.forEach(function (c) {
       html +=
         '<a class="q-pcoin" href="' + esc(c.url) + '">' +
-        '<img src="' + esc(c.image) + '" loading="lazy" alt="">' +
+        '<img class="nozoom" src="' + esc(c.image) + '" loading="lazy" alt="">' +
         '<span>' +
         '<span class="s">' + esc(seriesShort[c.series] || c.series) + '</span><br>' +
         '<span class="t">' + esc(c.title) + '</span> ' +
