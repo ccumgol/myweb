@@ -2,26 +2,26 @@ disabled = false
 locale = "ko"
 label = "한국어"
 weight = 1
-title = "박기현 · JIWU Mission Network"
+title = "꿈골닷넷 · 박기현"
 
 [params]
-  displayName = "KO"
-  isoCode = "ko-KR"
-  rtl = false
-  dateFormat = "2006년 1월 2일"
-  description = "하나님의 마음을 품고 세상을 밝히는 JIWU Mission Network 대표 박기현의 사역과 AI 교육(편한IT) 안내 및 자료 공간입니다."
+displayName = "KO"
+isoCode = "ko-KR"
+rtl = false
+dateFormat = "2006년 1월 2일"
+description = "꿈골닷넷, 하나님의 마음을 품고 세상을 밝히는 JIWU Mission Network 대표 박기현의 사역과 AI 교육(편한IT) 안내 및 자료 공간입니다."
 
 [params.author]
-  name = "박기현"
-  email = "ccumgol@gmail.com"
-  image = "img/portrait.webp"
-  imageQuality = 96
-  headline = "하나님의 마음을 품고 밝은 세상을 만들어 가는 꿈을 가진 박기현입니다."
-  bio = "하나님의 마음을 품은 사람들을 양성하고, 선한 사람들의 따뜻한 네트워크에 AI 기술이라는 유용한 도구를 더해 나갑니다."
-  links = [
-    { email = "mailto:ccumgol@gmail.com" },
-    { youtube = "https://youtube.com/ccumgol" },
-    { facebook = "https://facebook.com/ccumgol" },
-    { instagram = "https://instagram.com/ccumgol" },
-    { x-twitter = "https://x.com/ccumgol" }
-  ]
+name = "박기현"
+email = "ccumgol@gmail.com"
+image = "img/portrait.webp"
+imageQuality = 96
+headline = "하나님의 마음을 품고 밝은 세상을 만들어 가는 꿈을 가진 박기현입니다."
+bio = "하나님의 마음을 품은 사람들을 양성하고, 선한 사람들의 따뜻한 네트워크에 AI 기술이라는 유용한 도구를 더해 나갑니다."
+links = [
+  { email = "mailto:ccumgol@gmail.com" },
+  { youtube = "https://youtube.com/ccumgol" },
+  { facebook = "https://facebook.com/ccumgol" },
+  { instagram = "https://instagram.com/ccumgol" },
+  { x-twitter = "https://x.com/ccumgol" },
+]
