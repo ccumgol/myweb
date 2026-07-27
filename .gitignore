@@ -6,3 +6,6 @@
 # Operating System Files
 .DS_Store
 Thumbs.db
+
+# Temp translation work
+tmp_coins_en/

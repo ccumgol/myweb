@@ -8,6 +8,12 @@
 {{ $summary := $c.summary_ko }}{{ if $en }}{{ $summary = or $c.summary_en $c.summary_ko }}{{ end }}
 {{ $facts := $c.facts_list }}{{ if $en }}{{ $facts = or $c.facts_en $c.facts_list }}{{ end }}
 {{ $reverse := $c.reverse_design_ko }}{{ if $en }}{{ $reverse = or $c.reverse_design_en $c.reverse_design_ko }}{{ end }}
+{{ $sources := $c.sources }}
+{{ $imgcred := $c.image_credit }}
+{{ if $en }}
+  {{ $sources = replace $c.sources "미국 조폐국(U.S. Mint)·위키백과" "U.S. Mint · Wikipedia" }}
+  {{ $imgcred = "U.S. Mint · Wikimedia Commons (public domain)" }}
+{{ end }}
 <div class="qcorner">
   <article class="q-single mx-auto">
 
@@ -34,7 +40,7 @@
 
     <div class="q-rev">🪙 <b>{{ if $en }}Reverse design{{ else }}뒷면 디자인{{ end }}</b> — {{ $reverse }}</div>
 
-    <div class="q-cred">{{ $c.sources }} / {{ if $en }}Image{{ else }}이미지{{ end }}: {{ $c.image_credit }}</div>
+    <div class="q-cred">{{ $sources }} / {{ if $en }}Image{{ else }}이미지{{ end }}: {{ $imgcred }}</div>
 
     <div class="mt-8">
       <a class="q-back" href="{{ "/coins/quarter/" | relLangURL }}">← {{ if $en }}Browse more quarters{{ else }}다른 쿼터 더 보기{{ end }}</a>
