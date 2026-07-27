@@ -293,6 +293,25 @@ Blowfish 테마는 `img:not(.nozoom)` 즉 **모든 이미지에 medium-zoom(클�
 
 ---
 
+## 이슈 15. 다국어(한/영) 사이트 구성 시 만난 함정 3가지
+
+### 배경
+한국어(기본, `/`) + 영어(`/en/`) 2개 언어를 Blowfish로 구성. `config/_default/languages.ko.toml`과 짝으로 `languages.en.toml`, `menus.en.toml`을 추가. 언어 전환 버튼은 Blowfish 내장(`translations.html`)이 **번역본이 있는 페이지에서 자동 표시**된다.
+
+### 함정과 해결
+1. **콘텐츠 어댑터는 언어별로 따로 필요** — `content/coins/quarter/_content.gotmpl`(데이터→페이지 자동 생성)은 **기본 언어에만** 적용된다. 영어 페이지도 생성하려면 `_content.en.gotmpl`을 별도로 둬야 한다(내용은 `site.Language.Lang`로 분기해 동일하게 유지 가능). 이걸 안 하면 영문 상세 페이지가 하나도 안 생긴다.
+2. **링크는 `relURL`이 아니라 `relLangURL`** — `relURL "/coins/quarter/"`는 항상 `/coins/quarter/`를 주지만, 영어 페이지의 링크는 `/en/coins/quarter/`여야 한다. 언어 접두어가 필요한 내부 링크는 `relLangURL`로 만든다.
+3. **JS로 그리는 텍스트의 언어 처리 + 캐시** — 지도 패널처럼 JS(`quarter-map.js`)가 그리는 부분은 템플릿에서 **언어별로 이미 번역된 문자열을 데이터로 넘겨** JS는 그대로 출력하게 했다(JS 안에 한국어 매핑을 두지 않음). 또한 JS 파일을 수정하면 **브라우저가 옛 JS를 캐시**해 바뀐 내용이 안 보일 수 있다 — 서버가 주는 파일(`curl`)로 최종 확인하고, 검증은 하드 리로드로.
+
+### 교훈
+- 하드코딩된 템플릿 문구는 `{{ if eq .Site.Language.Lang "en" }}…{{ else }}…{{ end }}`로 분기하거나 i18n 테이블을 쓴다. 홈처럼 문구가 템플릿에 박혀 있으면 이중언어 분기를 넣어야 한다.
+- "안 바뀐 것처럼 보임"의 흔한 범인은 **브라우저 JS/CSS 캐시**다. 소스·서버 응답이 맞으면 프로덕션은 정상이다.
+
+### 남은 작업 (2단계)
+동전 137개 **상세 본문**은 데이터에 한국어(`body_ko`)만 있어, 영문 페이지는 UI(제목·배지·시리즈명·내비게이션)만 영문이고 본문은 한국어로 폴백된다. 데이터에 `title_en/summary_en/body_en/reverse_design_en/facts_en`를 채우면 완전 영문화된다. 템플릿·어댑터는 이미 `_en` 필드 우선(없으면 `_ko` 폴백)으로 준비됨.
+
+---
+
 ## 요약: 초보자에게 강조할 5가지
 
 1. **배포 실패의 1순위 용의자는 버전 차이다.** `HUGO_VERSION` 환경 변수를 항상 설정하라.

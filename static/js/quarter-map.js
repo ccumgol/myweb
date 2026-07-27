@@ -25,12 +25,6 @@
     byAbbr[a].sort(function (x, y) { return (x.year || 0) - (y.year || 0); });
   });
 
-  var seriesShort = {
-    "50개 주": "주",
-    "미국의 아름다운 국립공원": "국립공원",
-    "D.C. & 미국 준주": "준주"
-  };
-
   function headingName(list) {
     var s = list.find(function (c) { return c.series === "50개 주"; });
     if (s) return s.title;
@@ -53,7 +47,7 @@
         '<a class="q-pcoin" href="' + esc(c.url) + '">' +
         '<img class="nozoom" src="' + esc(c.image) + '" loading="lazy" alt="">' +
         '<span>' +
-        '<span class="s">' + esc(seriesShort[c.series] || c.series) + '</span><br>' +
+        '<span class="s">' + esc(c.seriesLabel || c.series) + '</span><br>' +
         '<span class="t">' + esc(c.title) + '</span> ' +
         '<span class="y">(' + esc(c.year) + ')</span>' +
         '</span></a>';

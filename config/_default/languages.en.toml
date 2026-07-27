@@ -1,0 +1,27 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 2
+title = "Gihyun Park · JIWU Mission Network"
+
+[params]
+  displayName = "EN"
+  isoCode = "en-US"
+  rtl = false
+  dateFormat = "January 2, 2006"
+  description = "The ministry of Gihyun Park and JIWU Mission Network, sharing people-centered mission, warm networks, and practical AI/IT education for small churches."
+
+[params.author]
+  name = "Gihyun Park"
+  email = "ccumgol@gmail.com"
+  image = "img/portrait.webp"
+  imageQuality = 96
+  headline = "Carrying God's heart to make the world a little brighter."
+  bio = "I raise people who carry God's heart, and add AI and IT as practical tools to the warm network of good-hearted people."
+  links = [
+    { email = "mailto:ccumgol@gmail.com" },
+    { youtube = "https://youtube.com/ccumgol" },
+    { facebook = "https://facebook.com/ccumgol" },
+    { instagram = "https://instagram.com/ccumgol" },
+    { x-twitter = "https://x.com/ccumgol" }
+  ]

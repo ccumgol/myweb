@@ -1,0 +1,52 @@
+# -- Main Menu (English) --
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 10
+
+[[main]]
+  name = "Talks & Contact"
+  pageRef = "lectures"
+  weight = 20
+
+[[main]]
+  name = "Learn America Through Coins"
+  pageRef = "coins"
+  identifier = "coins"
+  weight = 30
+
+  [[main]]
+    name = "Quarter · 50 States (1999-2008)"
+    parent = "coins"
+    url = "/en/coins/quarter/#series-50state"
+    weight = 1
+
+  [[main]]
+    name = "Quarter · D.C. & Territories (2009)"
+    parent = "coins"
+    url = "/en/coins/quarter/#series-territories"
+    weight = 2
+
+  [[main]]
+    name = "Quarter · National Parks (2010-2021)"
+    parent = "coins"
+    url = "/en/coins/quarter/#series-atb"
+    weight = 3
+
+  [[main]]
+    name = "Quarter · American Women (2022-2025)"
+    parent = "coins"
+    url = "/en/coins/quarter/#series-women"
+    weight = 4
+
+  [[main]]
+    name = "Quarter · Semiquincentennial (2026)"
+    parent = "coins"
+    url = "/en/coins/quarter/#series-semiquincentennial-2026"
+    weight = 5
+
+# -- Footer Menu (English) --
+[[footer]]
+  name = "Contact"
+  pageRef = "lectures"
+  weight = 10

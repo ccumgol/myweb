@@ -1,5 +1,9 @@
 {{ define "main" }}
 {{ partial "quarter-styles.html" . }}
+{{ $en := eq site.Language.Lang "en" }}
+{{ $seriesNames := dict "50개 주" "50 States" "D.C. & 미국 준주" "D.C. & Territories" "미국의 아름다운 국립공원" "National Parks" "미국의 여성들" "American Women" "건국 250주년" "Semiquincentennial" }}
+{{ $seriesShortEn := dict "50개 주" "State" "D.C. & 미국 준주" "Territory" "미국의 아름다운 국립공원" "Nat'l Park" "미국의 여성들" "Woman" "건국 250주년" "250th" }}
+{{ $seriesShortKo := dict "50개 주" "주" "D.C. & 미국 준주" "준주" "미국의 아름다운 국립공원" "국립공원" "미국의 여성들" "여성" "건국 250주년" "250주년" }}
 <div class="qcorner">
 
   <header>
@@ -12,14 +16,20 @@
   {{ $mapcoins := slice }}
   {{ range site.Data.quarters }}
     {{ if .abbr }}
-      {{ $mapcoins = $mapcoins | append (dict "abbr" .abbr "slug" .slug "title" .title_ko "series" .series_ko "year" .year "image" .image "url" (printf "/coins/quarter/%s/" .slug)) }}
+      {{ $t := .title_ko }}
+      {{ $sl := index $seriesShortKo .series_ko }}
+      {{ if $en }}
+        {{ $t = or .title_en .name_en .title_ko }}
+        {{ $sl = index $seriesShortEn .series_ko }}
+      {{ end }}
+      {{ $mapcoins = $mapcoins | append (dict "abbr" .abbr "slug" .slug "title" $t "series" .series_ko "seriesLabel" $sl "year" .year "image" .image "url" ((printf "/coins/quarter/%s/" .slug) | relLangURL)) }}
     {{ end }}
   {{ end }}
 
   <section class="q-map-wrap">
     <div>{{ partial "quarter-us-svg.html" . }}</div>
     <aside class="q-panel" id="q-panel">
-      <p class="ph">🗺️ 지도에서 주(州)를 클릭하면 그 주의 쿼터가 여기에 나타납니다. (50개 주 · 국립공원 시리즈)</p>
+      <p class="ph">{{ if $en }}🗺️ Click a state on the map to see its quarter here. (50 States · National Parks series){{ else }}🗺️ 지도에서 주(州)를 클릭하면 그 주의 쿼터가 여기에 나타납니다. (50개 주 · 국립공원 시리즈){{ end }}</p>
     </aside>
   </section>
   <script>window.__qcoins = {{ $mapcoins | jsonify | safeJS }};</script>
@@ -31,13 +41,15 @@
     {{ $coins := where site.Data.quarters "series_ko" $s }}
     {{ if $coins }}
     {{ $program := (index $coins 0).program }}
+    {{ $heading := $s }}{{ if $en }}{{ $heading = index $seriesNames $s }}{{ end }}
     <section class="q-series" id="series-{{ $program }}">
-      <h2>{{ $s }} <span class="cnt">· {{ len $coins }}종</span></h2>
+      <h2>{{ $heading }} <span class="cnt">· {{ len $coins }}{{ if $en }} coins{{ else }}종{{ end }}</span></h2>
       <div class="q-grid">
         {{ range $coins }}
-          <a class="q-card" href="{{ printf "/coins/quarter/%s/" .slug | relURL }}">
-            <img class="nozoom" src="{{ .image | relURL }}" loading="lazy" alt="{{ .title_ko }} 쿼터">
-            <div class="t">{{ .title_ko }}</div>
+          {{ $ct := .title_ko }}{{ if $en }}{{ $ct = or .title_en .name_en .title_ko }}{{ end }}
+          <a class="q-card" href="{{ printf "/coins/quarter/%s/" .slug | relLangURL }}">
+            <img class="nozoom" src="{{ .image | relURL }}" loading="lazy" alt="{{ $ct }}{{ if $en }} quarter{{ else }} 쿼터{{ end }}">
+            <div class="t">{{ $ct }}</div>
             <div class="m">{{ .year }}</div>
           </a>
         {{ end }}

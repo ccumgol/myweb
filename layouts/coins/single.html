@@ -1,23 +1,30 @@
 {{ define "main" }}
 {{ partial "quarter-styles.html" . }}
+{{ $en := eq site.Language.Lang "en" }}
 {{ $c := .Params.coin }}
+{{ $seriesNames := dict "50개 주" "50 States" "D.C. & 미국 준주" "D.C. & Territories" "미국의 아름다운 국립공원" "National Parks" "미국의 여성들" "American Women" "건국 250주년" "Semiquincentennial" }}
+{{ $title := .Title }}
+{{ $series := $c.series_ko }}{{ if $en }}{{ $series = index $seriesNames $c.series_ko }}{{ end }}
+{{ $summary := $c.summary_ko }}{{ if $en }}{{ $summary = or $c.summary_en $c.summary_ko }}{{ end }}
+{{ $facts := $c.facts_list }}{{ if $en }}{{ $facts = or $c.facts_en $c.facts_list }}{{ end }}
+{{ $reverse := $c.reverse_design_ko }}{{ if $en }}{{ $reverse = or $c.reverse_design_en $c.reverse_design_ko }}{{ end }}
 <div class="qcorner">
   <article class="q-single mx-auto">
 
-    <a class="q-back" href="{{ "/coins/quarter/" | relURL }}">← Quarter Series</a>
+    <a class="q-back" href="{{ "/coins/quarter/" | relLangURL }}">← Quarter Series</a>
 
     <div class="q-hero mt-2">
-      <img src="{{ $c.image | relURL }}" alt="{{ $c.title_ko }} 쿼터 뒷면">
+      <img src="{{ $c.image | relURL }}" alt="{{ $title }}{{ if $en }} quarter reverse{{ else }} 쿼터 뒷면{{ end }}">
     </div>
 
     <div class="mt-4">
-      <span class="q-badge">{{ $c.series_ko }} · {{ $c.year }}</span>
+      <span class="q-badge">{{ $series }} · {{ $c.year }}</span>
     </div>
-    <h1 class="mt-3 text-3xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title | emojify }}</h1>
+    <h1 class="mt-3 text-3xl font-extrabold text-neutral-900 dark:text-neutral">{{ $title | emojify }}</h1>
 
-    <p class="q-summary">{{ $c.summary_ko }}</p>
+    <p class="q-summary">{{ $summary }}</p>
 
-    {{ with $c.facts_list }}
+    {{ with $facts }}
     <div class="q-facts">
       {{ range . }}<span><b>{{ .k }}</b>{{ .v }}</span>{{ end }}
     </div>
@@ -25,12 +32,12 @@
 
     <div class="q-body max-w-prose">{{ .Content }}</div>
 
-    <div class="q-rev">🪙 <b>뒷면 디자인</b> — {{ $c.reverse_design_ko }}</div>
+    <div class="q-rev">🪙 <b>{{ if $en }}Reverse design{{ else }}뒷면 디자인{{ end }}</b> — {{ $reverse }}</div>
 
-    <div class="q-cred">{{ $c.sources }} / 이미지: {{ $c.image_credit }}</div>
+    <div class="q-cred">{{ $c.sources }} / {{ if $en }}Image{{ else }}이미지{{ end }}: {{ $c.image_credit }}</div>
 
     <div class="mt-8">
-      <a class="q-back" href="{{ "/coins/quarter/" | relURL }}">← 다른 쿼터 더 보기</a>
+      <a class="q-back" href="{{ "/coins/quarter/" | relLangURL }}">← {{ if $en }}Browse more quarters{{ else }}다른 쿼터 더 보기{{ end }}</a>
     </div>
 
   </article>
