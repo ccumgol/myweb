@@ -30,14 +30,14 @@
 .q-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:14px; margin-top:14px; }
 .q-card { background:var(--q-card); border:1px solid var(--q-line); border-radius:12px; padding:12px; text-align:center; text-decoration:none; color:inherit; transition:transform .12s ease, box-shadow .12s ease; }
 .q-card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,.08); }
-.q-card img { width:104px; height:104px; object-fit:contain; }
+.q-card img { width:104px; height:104px; object-fit:contain; display:block; margin-inline:auto; }
 .q-card .t { font-size:.82rem; font-weight:600; margin-top:6px; line-height:1.35; }
 .q-card .m { font-size:.72rem; color:var(--q-muted); margin-top:2px; }
 
 /* ---- single coin ---- */
 .q-single { max-width:720px; }
 .q-hero { text-align:center; background:var(--q-soft); border-radius:16px; padding:24px; }
-.q-hero img { width:230px; max-width:70%; height:auto; }
+.q-hero img { width:230px; max-width:70%; height:auto; display:block; margin-inline:auto; cursor:zoom-in; }
 .q-badge { display:inline-block; font-size:.78rem; font-weight:700; color:#fff; background:var(--q-accent); border-radius:999px; padding:3px 11px; }
 .q-summary { font-size:1.12rem; font-weight:600; margin:18px 0 6px; }
 .q-facts { display:flex; flex-wrap:wrap; gap:8px 18px; padding:14px 16px; background:var(--q-soft); border-radius:12px; margin:16px 0; font-size:.95rem; }
@@ -58,3 +58,20 @@
 .q-hub-desc { font-size:.9rem; color:var(--q-muted); margin-top:4px; line-height:1.5; }
 .q-hub-soon { opacity:.55; cursor:default; }
 </style>
+<script>
+/* Clear any stuck medium-zoom overlay when returning via browser bfcache
+   (fixes: big coin image lingering after back navigation). */
+(function () {
+  function clearZoom() {
+    document.querySelectorAll(".medium-zoom-overlay").forEach(function (el) { el.remove(); });
+    document.querySelectorAll(".medium-zoom-image--opened, .medium-zoom-image--hidden").forEach(function (img) {
+      img.classList.remove("medium-zoom-image--opened", "medium-zoom-image--hidden");
+      img.style.transform = "";
+      img.style.visibility = "";
+    });
+    document.documentElement.classList.remove("medium-zoom--opened");
+  }
+  window.addEventListener("pageshow", function (e) { if (e.persisted) clearZoom(); });
+  window.addEventListener("pagehide", clearZoom);
+})();
+</script>

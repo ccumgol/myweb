@@ -266,13 +266,30 @@ SVG 안에 `id="path67"`인 요소가 있었는데, 주(州)가 아니라 원본
 ### 원인
 Blowfish 테마는 `img:not(.nozoom)` 즉 **모든 이미지에 medium-zoom(클릭 확대)** 을 자동 적용한다. 확대된 상태에서 뒤로가기를 하면 브라우저 캐시(bfcache)에 확대 오버레이가 남아 잔상으로 보인다.
 
-### 해결
-- 상황에 따라 두 갈래:
-  - **확대가 필요 없으면**: 해당 이미지에 `nozoom` 클래스를 붙여 zoom 자체를 끈다.
-  - **확대(라이트박스)를 원하면**: zoom은 유지하되, `pageshow`(bfcache 복원) 이벤트에서 남아 있는 `.medium-zoom-overlay`/`--opened` 상태를 정리하는 스크립트를 추가한다.
+### 해결 (최종 채택)
+이미지의 **역할별로 확대 On/Off를 분리**했다:
+- **갤러리 썸네일·지도 패널 동전**(`.q-card img`, `.q-pcoin img`): `nozoom` 유지 → 클릭하면 **확대가 아니라 상세 페이지로 이동**해야 하므로 zoom을 끈다. (이걸 안 끄면 zoom이 링크 클릭을 가로채 큰 이미지만 뜨는 게 원래 증상이었다.)
+- **상세 페이지 대표 동전**(`.q-hero img`): `nozoom` 제거 → 클릭하면 **라이트박스로 확대**(모바일·데스크탑 공통). `cursor:zoom-in`으로 확대 가능함을 표시.
+- **뒤로가기 잔상 방지**: `layouts/partials/quarter-styles.html`에 스크립트 추가 — `pageshow`(bfcache 복원)/`pagehide`에서 남아 있는 `.medium-zoom-overlay`·`--opened`·`--hidden` 상태를 정리.
 
 ### 교훈
-- 테마가 전역으로 거는 기능(여기선 medium-zoom)은 커스텀 코너의 이미지에도 적용된다. 원하는 동작(확대 On/Off)을 정하고 `nozoom` 또는 bfcache 정리로 명시적으로 제어할 것.
+- 테마가 전역으로 거는 기능(여기선 `img:not(.nozoom)` medium-zoom)은 커스텀 코너 이미지에도 적용된다. **이미지가 "링크"인지 "확대 대상"인지**에 따라 zoom을 켜고 끄는 걸 명시적으로 제어할 것. 링크 안의 이미지에 zoom이 걸리면 클릭이 가로채진다.
+
+---
+
+## 이슈 14. (동전 코너) 모바일에서 갤러리 동전 그림이 왼쪽으로 치우침
+
+### 현상
+모바일에서 시리즈 갤러리의 동전 이미지가 카드 안에서 가운데가 아니라 왼쪽으로 쏠려 보임.
+
+### 원인
+`.q-card img`가 `display:block`인데 좌우 `margin`이 0이었다. 블록 이미지는 부모의 `text-align:center`로는 가운데 정렬되지 않는다(그건 인라인 요소용). 카드 폭이 넓은 모바일에서 특히 티가 났다.
+
+### 해결
+- `.q-card img`, `.q-hero img`에 `display:block; margin-inline:auto;` 추가 → 블록 이미지를 가운데 정렬. (측정: 좌우 여백 26px로 동일)
+
+### 교훈
+- **블록 이미지 가운데 정렬은 `margin:0 auto`(또는 `margin-inline:auto`)로 한다.** `text-align:center`는 인라인/인라인블록에만 먹는다.
 
 ---
 
