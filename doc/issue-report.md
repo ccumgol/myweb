@@ -340,6 +340,22 @@ Blowfish의 **페이지별 훅** `layouts/partials/extend-head-uncached.html`(he
 
 ---
 
+## 이슈 17. 드롭다운 상위 메뉴에 자체 페이지가 없어도 되는가 / 푸터 워터마크 제거
+
+### 푸터 "Hugo & Blowfish로 제공됨" 제거
+`config/_default/params.toml`의 `[footer] showThemeAttribution = true` → `false`로 변경. (테마 파일을 건드릴 필요 없이 옵션으로 처리)
+
+### 성경공부를 상위 드롭다운("성경배움터") 하위로 이동 + "새신자 성경공부" 신설
+- Blowfish 데스크톱 메뉴(`desktop-menu.html`)는 `.HasChildren`이면 드롭다운으로 렌더링하고, **상위 항목에 `url`이 없으면 링크 대신 토글(tabindex=0)로** 표시한다. 즉 상위 "성경배움터"는 자체 페이지 없이 `identifier`만 주고 하위만 두면 된다(동전 코너는 `/coins/` 랜딩이 있었지만, 여기선 굳이 만들지 않음).
+- 메뉴 구성(`menus.ko.toml`): 상위 `identifier = "bible"`, 하위 2개는 `parent = "bible"` + `pageRef`.
+- 기존 `/bible-study/`는 **URL·콘텐츠·섹션 스코프 CSS(`.Section=="bible-study"`)를 그대로 유지**(이동하면 링크와 CSS가 깨짐). 새 코너는 별도 섹션 `content/new-believer/`(URL `/new-believer/`)로 신설.
+
+### 교훈
+- 우산 메뉴가 필요할 때 반드시 허브 랜딩 페이지를 만들 필요는 없다. 테마가 URL 없는 상위 항목을 드롭다운 토글로 렌더링하는지 확인하고, 그렇다면 `identifier`+children만으로 충분하다.
+- 이미 배포된 섹션은 URL을 함부로 바꾸지 말 것(북마크·내부 링크·섹션 스코프 CSS가 모두 그 경로에 묶여 있다). 새 항목은 형제 섹션으로 추가한다.
+
+---
+
 ## 요약: 초보자에게 강조할 5가지
 
 1. **배포 실패의 1순위 용의자는 버전 차이다.** `HUGO_VERSION` 환경 변수를 항상 설정하라.

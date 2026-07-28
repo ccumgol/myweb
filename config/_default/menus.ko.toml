@@ -10,9 +10,21 @@
   weight = 20
 
 [[main]]
-  name = "성경공부"
-  pageRef = "bible-study"
+  name = "성경배움터"
+  identifier = "bible"
   weight = 30
+
+  [[main]]
+    name = "성경공부"
+    parent = "bible"
+    pageRef = "bible-study"
+    weight = 1
+
+  [[main]]
+    name = "새신자 성경공부"
+    parent = "bible"
+    pageRef = "new-believer"
+    weight = 2
 
 [[main]]
   name = "동전으로 배우는 미국"
