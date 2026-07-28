@@ -1,0 +1,17 @@
+{{/* Page-scoped styles. Bible-study list: marker before each title + row dividers. */}}
+{{ if eq .Section "bible-study" }}
+<style>
+  main .article-link--simple { border-top: 1px solid var(--line); padding-top: 1.15rem; margin-top: 0.5rem; }
+  main .article-link--simple:first-of-type { border-top: 0; margin-top: 0; }
+  main .article-link--simple h2 { position: relative; padding-left: 1.6rem; }
+  main .article-link--simple h2::before {
+    content: "🁢";
+    position: absolute;
+    left: 0;
+    top: 0.02em;
+    color: var(--accent-text);
+    font-size: 0.95em;
+    line-height: 1.2;
+  }
+</style>
+{{ end }}

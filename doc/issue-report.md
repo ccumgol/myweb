@@ -318,6 +318,22 @@ Blowfish 테마는 `img:not(.nozoom)` 즉 **모든 이미지에 medium-zoom(클�
 
 ---
 
+## 이슈 16. 특정 섹션 목록에만 스타일 적용하기 (성경공부 제목 마커)
+
+### 현상/요구
+성경공부 목록에서 글들이 서로 잘 구분되지 않아, 제목 앞에 눈에 띄는 마커(🁢)와 항목 간 구분선을 넣고 싶었다. 그런데 목록 마크업(`.article-link--simple`)은 블로그 등 **다른 목록과 공용**이라 전역 CSS로 바꾸면 다른 페이지에도 영향이 간다.
+
+### 해결
+Blowfish의 **페이지별 훅** `layouts/partials/extend-head-uncached.html`(head.html이 페이지마다 비캐시로 호출)을 이용해, `{{ if eq .Section "bible-study" }}`일 때만 `<style>`를 주입했다. 스타일이 그 섹션 페이지에만 출력되므로 자연스럽게 스코프가 잡힌다.
+- 마커: `.article-link--simple h2::before { content:"🁢"; color:var(--accent-text); }` (테라코타 타일)
+- 구분: `.article-link--simple { border-top:1px solid var(--line); }` + 첫 항목은 `border-top:0`
+- 참고: `extend-head.html`은 `partialCached ... .Site`라 **사이트 단위 캐시**여서 페이지별 분기가 안 된다. 페이지별로 달라야 하면 반드시 `extend-head-uncached.html`을 쓸 것.
+
+### 교훈
+- 공용 컴포넌트의 스타일을 특정 섹션에서만 바꾸려면, 전역 CSS 대신 **그 섹션 페이지에서만 로드되는 스타일 주입 지점**을 찾는 게 깔끔하다. body에 섹션 클래스가 없을 때 특히 유용.
+
+---
+
 ## 요약: 초보자에게 강조할 5가지
 
 1. **배포 실패의 1순위 용의자는 버전 차이다.** `HUGO_VERSION` 환경 변수를 항상 설정하라.
