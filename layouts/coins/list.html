@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ partial "quarter-styles.html" . }}
+{{ $en := eq site.Language.Lang "en" }}
 <div class="qcorner">
 
   <header>
@@ -11,18 +12,18 @@
   {{/* ---------- coin-series hub ---------- */}}
   <section class="q-hub mt-6">
     {{ $quarter := where site.Data.quarters "denomination" "25c" }}
-    <a class="q-hub-card" href="{{ "/coins/quarter/" | relURL }}">
+    <a class="q-hub-card" href="{{ "/coins/quarter/" | relLangURL }}">
       <div class="q-hub-emoji">🪙</div>
       <div>
         <div class="q-hub-title">Quarter Series</div>
-        <div class="q-hub-desc">미국 25센트 동전 · 50개 주, 준주, 국립공원, 여성들, 건국 250주년 <b>{{ len $quarter }}종</b></div>
+        <div class="q-hub-desc">{{ if $en }}The U.S. 25-cent coin · 50 states, territories, national parks, women, and the 250th anniversary <b>{{ len $quarter }} coins</b>{{ else }}미국 25센트 동전 · 50개 주, 준주, 국립공원, 여성들, 건국 250주년 <b>{{ len $quarter }}종</b>{{ end }}</div>
       </div>
     </a>
     <div class="q-hub-card q-hub-soon">
       <div class="q-hub-emoji">💵</div>
       <div>
-        <div class="q-hub-title">$1 대통령 시리즈</div>
-        <div class="q-hub-desc">준비 중입니다.</div>
+        <div class="q-hub-title">{{ if $en }}$1 Presidential Series{{ else }}$1 대통령 시리즈{{ end }}</div>
+        <div class="q-hub-desc">{{ if $en }}Coming soon.{{ else }}준비 중입니다.{{ end }}</div>
       </div>
     </div>
   </section>
