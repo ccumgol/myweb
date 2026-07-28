@@ -332,6 +332,12 @@ Blowfish의 **페이지별 훅** `layouts/partials/extend-head-uncached.html`(he
 ### 교훈
 - 공용 컴포넌트의 스타일을 특정 섹션에서만 바꾸려면, 전역 CSS 대신 **그 섹션 페이지에서만 로드되는 스타일 주입 지점**을 찾는 게 깔끔하다. body에 섹션 클래스가 없을 때 특히 유용.
 
+### 추가: 썸네일 오른쪽 정렬 + 높이 고정 (같은 섹션 스코프)
+성경공부 목록에서 썸네일 있는/없는 글이 불균형해 보여, 썸네일을 **오른쪽 고정 박스**(데스크톱 168×104, 모바일 상단 전체폭)로 재배치했다. 같은 `extend-head-uncached.html`에 CSS 추가.
+- **오른쪽 이동:** 마크업은 썸네일이 먼저 나오므로, flex `order`로 뒤집었다 — 내용 `order:1`, 썸네일 `order:2`, `flex-direction:row`.
+- **함정 (`min-height`):** 테마의 `.thumbnail { width:300px; min-height:180px }` 때문에 내 `height:104px`가 안 먹었다(min-height가 height를 이김). `min-height:0`을 함께 줘서 해결. **height만 바꿔도 안 되면 min-height/max-height를 의심할 것.**
+- 이미지는 `position:absolute; inset-0; w/h-full; object-cover`라 컨테이너 크기만 잡아주면 꽉 찬다.
+
 ---
 
 ## 요약: 초보자에게 강조할 5가지
