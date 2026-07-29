@@ -1,5 +1,5 @@
-{{/* Page-scoped styles. Bible-study list: title marker, row dividers, right-aligned thumbnail. */}}
-{{ if eq .Section "bible-study" }}
+{{/* Page-scoped styles for Bible-study corners: title marker, row dividers, right-aligned thumbnail. */}}
+{{ if or (eq .Section "bible-study") (eq .Section "new-believer") }}
 <style>
   /* row dividers between items */
   main .article-link--simple { border-top: 1px solid var(--line); padding-top: 1.15rem; margin-top: 0.5rem; }
