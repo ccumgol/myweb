@@ -29,8 +29,9 @@ header .sub b{color:var(--accentd)}
 .dot circle.hit{fill:transparent}
 .dot .ring{fill:var(--card);stroke-width:3}
 /* 라벨·배지도 클릭 대상 — 지명 글씨를 눌러도 그 장소가 선택된다 */
-.dot .lbl{font-family:var(--sans);font-size:14px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:4px;cursor:pointer}
+.dot .lbl{font-family:var(--sans);font-size:14px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:5px;cursor:pointer}
 .dot .badge{stroke:var(--card);stroke-width:2.5px;cursor:pointer}
+.dot .leader{stroke:var(--muted);stroke-width:1.2px;opacity:.5;pointer-events:none}
 .dot .bnum{font-family:var(--sans);font-size:11px;font-weight:800;fill:#fff;pointer-events:none}
 .dot:hover .lbl{fill:var(--accentd)}
 .dot.active .lbl{fill:var(--accentd)}
@@ -43,6 +44,11 @@ header .sub b{color:var(--accentd)}
 .ctrl{position:absolute;left:14px;top:14px;display:flex;flex-direction:column;gap:6px;z-index:4}
 .ctrl button{width:38px;height:38px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:9px;font-size:1.1rem;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .ctrl button:hover{border-color:var(--accent);color:var(--accent)}
+.mapcredit{position:absolute;left:12px;bottom:12px;z-index:4;font-size:.68rem;color:var(--muted);
+  background:color-mix(in srgb,var(--card) 82%,transparent);border:1px solid var(--rule);
+  border-radius:6px;padding:.25em .6em;max-width:52%;line-height:1.45}
+.mapcredit:empty{display:none}
+.mapcredit a{color:var(--accentd);text-decoration:none} .mapcredit a:hover{text-decoration:underline}
 .legend{position:absolute;right:14px;top:14px;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:10px 12px;font-size:.76rem;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.08);max-width:150px}
 .legend b{display:block;font-size:.7rem;letter-spacing:.12em;color:var(--muted);margin-bottom:6px;text-transform:uppercase}
 .legend .row{display:flex;align-items:center;gap:7px;margin:3px 0}
@@ -120,37 +126,16 @@ header .sub b{color:var(--accentd)}
        </defs>
        <g id="cam">
          <g id="terrain">
-  <rect x="0" y="0" width="1000" height="680" fill="url(#parch)"/>
-  <path d="M -40,20 L 267,41 C 333,203 325,366 17,577 L -40,720 Z" fill="var(--water)" opacity="0.28"/>
-  <path d="M 267,41 C 333,203 325,366 17,577" fill="none" stroke="var(--water)" stroke-width="3" opacity="0.5"/>
-  <text x="217" y="285" class="rgl" text-anchor="middle"
-        transform="rotate(-88 217 285)">지중해</text>
-  <path d="M 583,145 C 508,268 492,398 508,528" fill="none" stroke="var(--ridge)" stroke-width="30" stroke-linecap="round" opacity="0.13"/>
-  <ellipse cx="788" cy="132" rx="30" ry="24" fill="var(--water)" opacity="0.42"/>
-  <text x="752" y="104" class="rgl sm" text-anchor="middle">갈릴리 바다</text>
-  <path d="M 796,171 C 775,268 758,398 742,515" fill="none" stroke="var(--water)" stroke-width="8" stroke-linecap="round" opacity="0.42"/>
-  <text x="804" y="333" class="rgl sm" text-anchor="start">요단강</text>
-  <ellipse cx="725" cy="554" rx="24" ry="46" fill="var(--water)" opacity="0.38"/>
-  <text x="725" y="616" class="rgl sm" text-anchor="middle">사해</text>
-  <text x="633" y="106" class="rgl" text-anchor="middle">갈릴리</text>
-  <text x="350" y="528" class="rgl" text-anchor="middle">유대</text>
-
-  <!-- 유대 일대 확대 삽도 -->
-  <path d="M 529,471 L 615,440" stroke="var(--rules)" stroke-width="2"
-        stroke-dasharray="6 5" opacity="0.8" fill="none"/>
-  <circle cx="529" cy="471" r="7" fill="none" stroke="var(--rules)" stroke-width="2.5"/>
-  <text x="529" y="495" class="rgl sm" text-anchor="middle">예루살렘</text>
-  <!-- 삽도 배경은 불투명하게: 뒤의 요단강·사해가 비쳐 보이면 확대 영역과 혼동된다 -->
-  <rect x="615" y="205" width="320" height="275" rx="12" fill="var(--paper)" opacity="0.98"/>
-  <rect x="615" y="205" width="320" height="275" rx="12"
-        fill="var(--card)" opacity="0.5" stroke="var(--rules)" stroke-width="2"/>
-  <text x="629" y="229" class="rgl sm" text-anchor="start">예루살렘 일대 · 확대</text>
-  <text x="921" y="468" class="rgl sm" text-anchor="end" opacity="0.7">약 15km</text>
-
-  <!-- 애굽 방향 콜아웃(축척 밖) -->
-  <path d="M 350,561 C 167,580 230,540 152,556"
-        fill="none" stroke="var(--rules)" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.85"/>
-  <text x="120" y="606" class="rgl sm" text-anchor="middle">↓ 남서쪽 약 400km · 축척 밖</text>
+  <image href="/bible-map/img/ministry-of-jesus.svg" x="0.0" y="-465.7" width="1019.8" height="1529.7"
+         preserveAspectRatio="none" opacity="0.95"/>
+  <!-- 애굽: 지도 밖 → 방향 화살표만 -->
+  <defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/></marker></defs>
+  <path d="M 460,636 Q 297,718 116,532"
+        fill="none" stroke="var(--muted)" stroke-width="2.6" stroke-dasharray="9 6"
+        opacity="0.85" marker-end="url(#arw)"/>
+  <text x="86" y="596"
+        class="rgl sm" text-anchor="middle">↙ 애굽 (지도 밖)</text>
 </g>
          <path id="journey"></path>
          <g id="dots"></g>
@@ -163,6 +148,7 @@ header .sub b{color:var(--accentd)}
        <button id="jt" title="여정 경로 표시/숨김">〰</button>
      </div>
      <div class="legend" id="legend"><b>범례</b></div>
+     <div class="mapcredit">배경 지도: <a href="https://commons.wikimedia.org/wiki/File:The_Ministry_of_Jesus.svg" target="_blank" rel="noopener">The Ministry of Jesus</a> © DEGA MD · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · 변경: 웹 경량화·표시 추가</div>
    </div>
    <aside id="panel">
      <div class="ph" id="ph"><h2>탄생과 유년기</h2><p>지도의 점(장소)을 누르거나, 아래 <b>◀ ▶</b>로 예수님의 발자취를 순서대로 따라가 보세요.</p></div>
@@ -177,7 +163,7 @@ header .sub b{color:var(--accentd)}
  </div>
 </div>
 <script>
-const DATA = {"places": {"nazareth": {"id": "nazareth", "name": "나사렛", "cat": "annunciation", "desc": "마리아가 수태고지를 받은 갈릴리 마을 — 애굽에서 돌아온 뒤 예수께서 자라신 고향.", "x": 581.7, "y": 164.7, "n": 2}, "temple": {"id": "temple", "name": "예루살렘 성전", "cat": "temple", "desc": "사가랴가 분향하다 수태고지를 받고, 아기 예수를 데려와 시므온·안나가 축복하며, 열두 살 예수께서 선생들과 문답하신 성전.", "x": 845.8, "y": 282.5, "n": 3, "inset": true}, "hillcountry": {"id": "hillcountry", "name": "유대 산지", "cat": "visit", "desc": "엘리사벳과 사가랴의 집이 있던 유대 산골 — 마리아가 찾아와 석 달 머물고 세례 요한이 태어난 곳.", "x": 689.0, "y": 307.1, "n": 3, "inset": true}, "bethlehem": {"id": "bethlehem", "name": "베들레헴", "cat": "birth", "desc": "다윗의 동네 — 예수께서 나시고 목자들과 동방박사가 경배한 곳. 헤롯의 영아 학살이 일어난 지경.", "x": 779.8, "y": 437.7, "n": 5, "inset": true}, "egypt": {"id": "egypt", "name": "애굽", "cat": "flight", "desc": "헤롯을 피해 요셉이 아기 예수와 마리아를 데리고 내려간 땅 — 남서쪽 약 400km, 축척 밖.", "x": 120, "y": 560, "n": 2, "edge": true}}, "events": [{"code": "A-03", "title": "사가랴가 요한의 탄생을 예고받다", "place": "temple", "refs": {"눅": "눅 1:5-25"}, "study": "study/B01.html"}, {"code": "A-04", "title": "마리아가 수태고지를 받다", "place": "nazareth", "refs": {"눅": "눅 1:26-38"}, "study": "study/B02.html"}, {"code": "A-05", "title": "마리아가 엘리사벳을 방문하다", "place": "hillcountry", "refs": {"눅": "눅 1:39-56"}, "study": "study/B02.html"}, {"code": "A-06", "title": "세례 요한의 탄생과 이름", "place": "hillcountry", "refs": {"눅": "눅 1:57-66"}, "study": "study/B03.html"}, {"code": "A-07", "title": "사가랴의 노래(베네딕투스)", "place": "hillcountry", "refs": {"눅": "눅 1:67-80"}, "study": "study/B03.html"}, {"code": "A-08", "title": "요셉의 순종과 예수의 나심", "place": "bethlehem", "refs": {"마": "마 1:18-24", "눅": "눅 2:1-7"}, "study": "study/B04.html"}, {"code": "A-10", "title": "천사가 목자들에게 알리다", "place": "bethlehem", "refs": {"눅": "눅 2:8-20"}, "study": "study/B04.html"}, {"code": "A-11", "title": "할례와 이름 지음(예수)", "place": "bethlehem", "refs": {"마": "마 1:25", "눅": "눅 2:21"}, "study": "study/B04.html"}, {"code": "A-12", "title": "성전에 드려지심 — 시므온과 안나", "place": "temple", "refs": {"눅": "눅 2:22-38"}, "study": "study/B05.html"}, {"code": "A-13", "title": "동방박사가 찾아와 경배하다", "place": "bethlehem", "refs": {"마": "마 2:1-12"}, "study": "study/B05.html"}, {"code": "A-14", "title": "애굽으로 피신하다", "place": "egypt", "refs": {"마": "마 2:13-15"}, "study": "study/B06.html"}, {"code": "A-15", "title": "헤롯이 아이들을 죽이다", "place": "bethlehem", "refs": {"마": "마 2:16-18"}, "study": "study/B06.html"}, {"code": "A-16", "title": "애굽에서 나사렛으로 돌아오다", "place": "nazareth", "refs": {"마": "마 2:19-23", "눅": "눅 2:39-40"}, "also": ["egypt"], "study": "study/B06.html"}, {"code": "A-17", "title": "열두 살 예수, 성전에서", "place": "temple", "refs": {"눅": "눅 2:41-52"}, "study": "study/B06.html"}], "lessons": [{"id": "B01", "title": "태초의 말씀, 약속된 아기", "events": ["A-01", "A-02", "A-03"]}, {"id": "B02", "title": "은혜를 입은 자여 — 수태고지", "events": ["A-04", "A-05"]}, {"id": "B03", "title": "광야의 소리로 자라날 아이", "events": ["A-06", "A-07"]}, {"id": "B04", "title": "말구유의 왕 — 예수 나심", "events": ["A-08", "A-10", "A-11"]}, {"id": "B05", "title": "성전의 두 노인, 동방의 별", "events": ["A-12", "A-13"]}, {"id": "B06", "title": "애굽으로, 다시 나사렛으로", "events": ["A-14", "A-15", "A-16", "A-17"]}], "prologue": [{"code": "A-01", "title": "서론 — 말씀이 육신이 되어", "refs": {"눅": "눅 1:1-4", "요": "요 1:1-18"}, "study": "study/B01.html"}, {"code": "A-02", "title": "예수님의 족보", "refs": {"마": "마 1:1-17", "눅": "눅 3:23-38"}, "study": "study/B01.html"}], "cats": {"annunciation": {"label": "수태고지", "color": "#7d5aa0"}, "visit": {"label": "요한의 탄생", "color": "#4b7f52"}, "birth": {"label": "예수의 나심", "color": "#b5623a"}, "temple": {"label": "성전에서", "color": "#a67c33"}, "flight": {"label": "피신·귀환", "color": "#6a8caf"}}};
+const DATA = {"places": {"nazareth": {"id": "nazareth", "name": "나사렛", "cat": "annunciation", "desc": "마리아가 수태고지를 받은 갈릴리 마을 — 애굽에서 돌아온 뒤 예수께서 자라신 고향.", "x": 532.5, "y": 58.1, "lx": -54, "ly": -16, "n": 2}, "temple": {"id": "temple", "name": "예루살렘 성전", "cat": "temple", "desc": "사가랴가 분향하다 수태고지를 받고, 아기 예수를 데려와 시므온·안나가 축복하며, 열두 살 예수께서 선생들과 문답하신 성전.", "x": 497.1, "y": 581.1, "lx": 84, "ly": -6, "n": 3}, "hillcountry": {"id": "hillcountry", "name": "유대 산지", "cat": "visit", "desc": "엘리사벳과 사가랴의 집이 있던 유대 산골 — 마리아가 찾아와 석 달 머물고 세례 요한이 태어난 곳.", "x": 454.3, "y": 588.0, "lx": -86, "ly": -20, "n": 3}, "bethlehem": {"id": "bethlehem", "name": "베들레헴", "cat": "birth", "desc": "다윗의 동네 — 예수께서 나시고 목자들과 동방박사가 경배한 곳. 헤롯의 영아 학살이 일어난 지경.", "x": 478.4, "y": 622.2, "lx": -64, "ly": 34, "n": 5}, "egypt": {"id": "egypt", "name": "애굽", "cat": "flight", "desc": "헤롯을 피해 요셉이 아기 예수와 마리아를 데리고 내려간 땅 — 남서쪽 방향(이 지도 범위 밖).", "x": 86, "y": 556, "edge": true, "n": 2}}, "events": [{"code": "A-03", "title": "사가랴가 요한의 탄생을 예고받다", "place": "temple", "refs": {"눅": "눅 1:5-25"}, "study": "study/B01.html"}, {"code": "A-04", "title": "마리아가 수태고지를 받다", "place": "nazareth", "refs": {"눅": "눅 1:26-38"}, "study": "study/B02.html"}, {"code": "A-05", "title": "마리아가 엘리사벳을 방문하다", "place": "hillcountry", "refs": {"눅": "눅 1:39-56"}, "study": "study/B02.html"}, {"code": "A-06", "title": "세례 요한의 탄생과 이름", "place": "hillcountry", "refs": {"눅": "눅 1:57-66"}, "study": "study/B03.html"}, {"code": "A-07", "title": "사가랴의 노래(베네딕투스)", "place": "hillcountry", "refs": {"눅": "눅 1:67-80"}, "study": "study/B03.html"}, {"code": "A-08", "title": "요셉의 순종과 예수의 나심", "place": "bethlehem", "refs": {"마": "마 1:18-24", "눅": "눅 2:1-7"}, "study": "study/B04.html"}, {"code": "A-10", "title": "천사가 목자들에게 알리다", "place": "bethlehem", "refs": {"눅": "눅 2:8-20"}, "study": "study/B04.html"}, {"code": "A-11", "title": "할례와 이름 지음(예수)", "place": "bethlehem", "refs": {"마": "마 1:25", "눅": "눅 2:21"}, "study": "study/B04.html"}, {"code": "A-12", "title": "성전에 드려지심 — 시므온과 안나", "place": "temple", "refs": {"눅": "눅 2:22-38"}, "study": "study/B05.html"}, {"code": "A-13", "title": "동방박사가 찾아와 경배하다", "place": "bethlehem", "refs": {"마": "마 2:1-12"}, "study": "study/B05.html"}, {"code": "A-14", "title": "애굽으로 피신하다", "place": "egypt", "refs": {"마": "마 2:13-15"}, "study": "study/B06.html"}, {"code": "A-15", "title": "헤롯이 아이들을 죽이다", "place": "bethlehem", "refs": {"마": "마 2:16-18"}, "study": "study/B06.html"}, {"code": "A-16", "title": "애굽에서 나사렛으로 돌아오다", "place": "nazareth", "refs": {"마": "마 2:19-23", "눅": "눅 2:39-40"}, "also": ["egypt"], "study": "study/B06.html"}, {"code": "A-17", "title": "열두 살 예수, 성전에서", "place": "temple", "refs": {"눅": "눅 2:41-52"}, "study": "study/B06.html"}], "lessons": [{"id": "B01", "title": "태초의 말씀, 약속된 아기", "events": ["A-01", "A-02", "A-03"]}, {"id": "B02", "title": "은혜를 입은 자여 — 수태고지", "events": ["A-04", "A-05"]}, {"id": "B03", "title": "광야의 소리로 자라날 아이", "events": ["A-06", "A-07"]}, {"id": "B04", "title": "말구유의 왕 — 예수 나심", "events": ["A-08", "A-10", "A-11"]}, {"id": "B05", "title": "성전의 두 노인, 동방의 별", "events": ["A-12", "A-13"]}, {"id": "B06", "title": "애굽으로, 다시 나사렛으로", "events": ["A-14", "A-15", "A-16", "A-17"]}], "prologue": [{"code": "A-01", "title": "서론 — 말씀이 육신이 되어", "refs": {"눅": "눅 1:1-4", "요": "요 1:1-18"}, "study": "study/B01.html"}, {"code": "A-02", "title": "예수님의 족보", "refs": {"마": "마 1:1-17", "눅": "눅 3:23-38"}, "study": "study/B01.html"}], "cats": {"annunciation": {"label": "수태고지", "color": "#7d5aa0"}, "visit": {"label": "요한의 탄생", "color": "#2f7d4f"}, "birth": {"label": "예수의 나심", "color": "#b5623a"}, "temple": {"label": "성전에서", "color": "#9a6b1f"}, "flight": {"label": "피신·귀환", "color": "#3f6f9c"}}};
 const P = DATA.places, EV = DATA.events, CATS = DATA.cats;
 const $ = s=>document.querySelector(s);
 const svg=$('#svg'), cam=$('#cam'), dotsG=$('#dots'), journey=$('#journey');
@@ -203,7 +189,10 @@ Object.values(P).forEach(p=>{
   g.appendChild(el('circle',{class:'hit',cx:p.x,cy:p.y,r:r+14}));
   const ring=el('circle',{class:'ring',cx:p.x,cy:p.y,r:r,stroke:col}); g.appendChild(ring);
   g.appendChild(el('circle',{cx:p.x,cy:p.y,r:Math.max(3,r-5),fill:col}));
-  const t=el('text',{class:'lbl',x:p.x,y:p.y - r - 7,'text-anchor':'middle'}); t.textContent=p.name; g.appendChild(t);
+  /* 점은 실제 좌표에 고정하고, 겹칠 때는 라벨만 비켜 놓는다(lx,ly) */
+  const lx=p.x+(p.lx||0), ly=p.y-r-7+(p.ly||0);
+  const t=el('text',{class:'lbl',x:lx,y:ly,'text-anchor':p.la||'middle'}); t.textContent=p.name; g.appendChild(t);
+  if(p.lx||p.ly){ g.insertBefore(el('line',{class:'leader',x1:p.x,y1:p.y,x2:lx,y2:ly+4}), g.firstChild); }
   // 사건 수 배지 — 어느 장소에 사건이 많은지 한눈에
   const bx=p.x + r*0.78, by=p.y - r*0.78;
   g.appendChild(el('circle',{class:'badge',cx:bx,cy:by,r:9.5,fill:col}));

@@ -29,8 +29,9 @@ header .sub b{color:var(--accentd)}
 .dot circle.hit{fill:transparent}
 .dot .ring{fill:var(--card);stroke-width:3}
 /* 라벨·배지도 클릭 대상 — 지명 글씨를 눌러도 그 장소가 선택된다 */
-.dot .lbl{font-family:var(--sans);font-size:14px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:4px;cursor:pointer}
+.dot .lbl{font-family:var(--sans);font-size:14px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:5px;cursor:pointer}
 .dot .badge{stroke:var(--card);stroke-width:2.5px;cursor:pointer}
+.dot .leader{stroke:var(--muted);stroke-width:1.2px;opacity:.5;pointer-events:none}
 .dot .bnum{font-family:var(--sans);font-size:11px;font-weight:800;fill:#fff;pointer-events:none}
 .dot:hover .lbl{fill:var(--accentd)}
 .dot.active .lbl{fill:var(--accentd)}
@@ -43,6 +44,11 @@ header .sub b{color:var(--accentd)}
 .ctrl{position:absolute;left:14px;top:14px;display:flex;flex-direction:column;gap:6px;z-index:4}
 .ctrl button{width:38px;height:38px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:9px;font-size:1.1rem;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .ctrl button:hover{border-color:var(--accent);color:var(--accent)}
+.mapcredit{position:absolute;left:12px;bottom:12px;z-index:4;font-size:.68rem;color:var(--muted);
+  background:color-mix(in srgb,var(--card) 82%,transparent);border:1px solid var(--rule);
+  border-radius:6px;padding:.25em .6em;max-width:52%;line-height:1.45}
+.mapcredit:empty{display:none}
+.mapcredit a{color:var(--accentd);text-decoration:none} .mapcredit a:hover{text-decoration:underline}
 .legend{position:absolute;right:14px;top:14px;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:10px 12px;font-size:.76rem;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.08);max-width:150px}
 .legend b{display:block;font-size:.7rem;letter-spacing:.12em;color:var(--muted);margin-bottom:6px;text-transform:uppercase}
 .legend .row{display:flex;align-items:center;gap:7px;margin:3px 0}
@@ -139,6 +145,7 @@ header .sub b{color:var(--accentd)}
        <button id="jt" title="여정 경로 표시/숨김">〰</button>
      </div>
      <div class="legend" id="legend"><b>범례</b></div>
+     <div class="mapcredit">예루살렘 일대 개략도 — 직접 제작(실제 상대 위치 기준)</div>
    </div>
    <aside id="panel">
      <div class="ph" id="ph"><h2>고난주간 지도</h2><p>지도의 점(장소)을 누르거나, 아래 <b>◀ ▶</b>로 예수님의 발자취를 순서대로 따라가 보세요.</p></div>
@@ -179,7 +186,10 @@ Object.values(P).forEach(p=>{
   g.appendChild(el('circle',{class:'hit',cx:p.x,cy:p.y,r:r+14}));
   const ring=el('circle',{class:'ring',cx:p.x,cy:p.y,r:r,stroke:col}); g.appendChild(ring);
   g.appendChild(el('circle',{cx:p.x,cy:p.y,r:Math.max(3,r-5),fill:col}));
-  const t=el('text',{class:'lbl',x:p.x,y:p.y - r - 7,'text-anchor':'middle'}); t.textContent=p.name; g.appendChild(t);
+  /* 점은 실제 좌표에 고정하고, 겹칠 때는 라벨만 비켜 놓는다(lx,ly) */
+  const lx=p.x+(p.lx||0), ly=p.y-r-7+(p.ly||0);
+  const t=el('text',{class:'lbl',x:lx,y:ly,'text-anchor':p.la||'middle'}); t.textContent=p.name; g.appendChild(t);
+  if(p.lx||p.ly){ g.insertBefore(el('line',{class:'leader',x1:p.x,y1:p.y,x2:lx,y2:ly+4}), g.firstChild); }
   // 사건 수 배지 — 어느 장소에 사건이 많은지 한눈에
   const bx=p.x + r*0.78, by=p.y - r*0.78;
   g.appendChild(el('circle',{class:'badge',cx:bx,cy:by,r:9.5,fill:col}));
