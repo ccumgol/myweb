@@ -62,6 +62,35 @@ myweb/
 └── themes/blowfish/                    # 테마 원본 (git 서브모듈, 수정 금지)
 ```
 
+### 현재 사이트 구조 스냅샷 (2026-07 기준)
+
+사이트가 여러 코너로 성장했습니다. 상단 메뉴와 콘텐츠 섹션의 현재 지도는 다음과 같습니다.
+
+**상단 메뉴 (`config/_default/menus.ko.toml`)**
+- 소개 → `/about/`
+- 강연 · 문의 → `/lectures/` (문의 내용이 이 페이지 하단에 통합됨)
+- **성경배움터** (드롭다운, 자체 페이지 없는 우산 메뉴)
+  - 성경공부 → `/bible-study/`
+  - 새신자 성경공부 → `/new-believer/`
+  - 지도로 보는 예수님의 생애 → `/bible-map/`
+- **동전으로 배우는 미국** (드롭다운) → `/coins/` (하위: Quarter 시리즈 5개 앵커)
+- 블로그 → `/blog/`
+
+**콘텐츠 섹션 (`content/`)**
+| 섹션 | URL | 성격 | 특이사항 |
+|---|---|---|---|
+| about | /about/ | 단일 페이지 | 소개+활동/프로젝트 통합 |
+| lectures | /lectures/ | 단일 페이지 | 강연+문의 통합 |
+| bible-study | /bible-study/ | 목록+글 | 노션에서 이관, 목록에 마커/구분선 |
+| new-believer | /new-believer/ | 목록+글 | 6부×학생/인도자 12편 + 인쇄용 디자인 HTML(`static/new-believer/design/`) |
+| bible-map | /bible-map/ | 목록+글 | 인터랙티브 성경지도(예수님의 생애). `mapframe` 숏코드로 `static/bible-map/*.html` iframe 임베드 + 사건별 교재 HTML(`static/bible-map/study/`) |
+| coins | /coins/ | 허브+데이터생성 | `data/quarters.json` → 콘텐츠 어댑터로 137개 자동 생성. 한/영 이중언어 |
+| blog | /blog/ | 목록+글 | 한국어 전용 |
+
+**다국어**: 한국어(기본, `/`) + 영어(`/en/`). 영어는 홈·About·Talks&Contact·Coins만 제공(성경 관련·블로그는 한국어 전용). 언어 전환 버튼은 Blowfish 내장.
+
+**정적 인터랙티브 자산**: `static/bible-map/`(지도·교재 HTML), `static/new-believer/design/`(인쇄용 교재 HTML)는 Hugo가 처리하지 않는 **자립형 HTML**이라 `static/`에 두고 URL로 직접 서비스한다.
+
 ### 디자인 핵심 결정 사항 (왜 이렇게 했나)
 
 - **서체**: 제목은 명조(고운바탕), 본문은 Pretendard. 사역자의 진정성이 느껴지는 조합.
