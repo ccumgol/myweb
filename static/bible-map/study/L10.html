@@ -1,0 +1,72 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10과 겟세마네 — 이 잔을 — 고난주간 성경공부</title>
+<style>
+:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#b5623a;--accentd:#8f4a2c;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
+ --ridge:#cdbd97;--water:#9db9c4;--wall:#d8c9a8;--wallst:#b09a6f;--temple:#d9b98a;
+ --serif:"Nanum Myeongjo","AppleMyungjo",serif;--sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;}
+@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;--muted:#9b9080;--accent:#d1794f;--accentd:#e0895d;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318;
+ --ridge:#4a4130;--water:#3a5560;--wall:#3f3626;--wallst:#6b5c40;--temple:#5a4730;}}
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
+.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
+.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
+.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
+.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
+.evlist .ev .et{font-weight:600}
+.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
+.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);border-radius:6px;padding:.12em .55em}
+.timeline{display:flex;gap:4px;margin:20px 0 8px;align-items:stretch}
+.timeline .tl-lbl{font-size:.7rem;color:var(--muted);font-weight:700;align-self:center;margin-right:6px;white-space:nowrap}
+.tl-cell{flex:1;text-align:center;padding:7px 2px;border:1px solid var(--rule);border-radius:5px;background:var(--paper)}
+.tl-cell .tl-d{font-size:.66rem;color:var(--muted);font-weight:600}
+.tl-cell.cur{background:var(--accent);border-color:var(--accent)} .tl-cell.cur .tl-d{color:#fff;font-weight:800}
+figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
+.minimap{display:block;width:100%;height:auto;max-height:360px}
+.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:5px}
+.rgl{font-family:var(--serif);fill:var(--muted);font-size:20px;font-weight:700;opacity:.75} .rgl.sm{font-size:14px}
+figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);background:var(--card)}
+figcaption b{color:var(--accentd)}
+.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);margin:24px 0 22px;border-radius:2px}
+.step{margin:0 0 22px}
+.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
+.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
+.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
+.sb{margin-left:calc(1.9em + .7em)}
+.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
+.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);min-height:66px;border-radius:2px}
+blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
+blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
+.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
+.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0} .panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
+ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
+.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
+@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}.timeline .tl-lbl{display:none}.tl-cell .tl-d{font-size:.58rem}}
+</style></head><body><div class="wrap"><div class="page">
+  <div class="eyebrow">고난주간 성경공부 · 제10과 / 전 14과 · 목요일</div>
+  <h1 class="title">겟세마네 — 이 잔을</h1>
+  <p class="summary">땀이 핏방울같이 되도록 기도하시고, ‘내 뜻이 아니라 아버지 뜻대로’를 이루려 스스로 잡히십니다.</p>
+  <div class="evlist"><div class="ev"><span class="ec">G-35</span><span class="et">겟세마네의 기도와 고뇌</span><div class="er"><span class="chip">마 마 26:36-46</span><span class="chip">막 막 14:26,32-42</span><span class="chip">눅 눅 22:39-46</span></div></div><div class="ev"><span class="ec">G-36</span><span class="et">배반당하고 체포되시다</span><div class="er"><span class="chip">마 마 26:47-56</span><span class="chip">막 막 14:43-52</span><span class="chip">눅 눅 22:47-53</span><span class="chip">요 요 18:1-12</span></div></div></div>
+  <div class="timeline"><div class="tl-lbl">고난주간</div><div class="tl-cell"><span class="tl-d">일 · 종려주일</span></div><div class="tl-cell"><span class="tl-d">월</span></div><div class="tl-cell"><span class="tl-d">화</span></div><div class="tl-cell"><span class="tl-d">수</span></div><div class="tl-cell cur"><span class="tl-d">목 · 성목요일</span></div><div class="tl-cell"><span class="tl-d">금 · 성금요일</span></div><div class="tl-cell"><span class="tl-d">토 · 안식</span></div></div>
+  <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
+  <rect x="0" y="0" width="1000" height="680" fill="url(#parch)"/>
+  <ellipse cx="717" cy="315" rx="215" ry="172" fill="url(#hill)"/>
+  <text x="717" y="173" class="rgl" text-anchor="middle">감람산</text>
+  <path d="M 398,86 C 383,200 413,306 393,562" fill="none" stroke="var(--water)" stroke-width="14" stroke-linecap="round" opacity="0.45"/>
+  <text x="398" y="585" class="rgl sm" text-anchor="middle">기드론 골짜기</text>
+  <path d="M 107,136 L 298,122 L 333,264 L 298,519 L 107,526 L 77,335 Z" fill="var(--wall)" opacity="0.28" stroke="var(--wallst)" stroke-width="2" stroke-dasharray="7 5"/>
+  <rect x="303" y="193" width="80" height="85" rx="6" fill="var(--temple)" opacity="0.5" stroke="var(--wallst)" stroke-width="1.5"/>
+<circle cx="854.9" cy="483.6" r="5" fill="#8a8f98" opacity="0.28"/><circle cx="734.5" cy="536.8" r="5" fill="#8a8f98" opacity="0.28"/><circle cx="584.0" cy="215.2" r="5" fill="#a67c33" opacity="0.28"/><circle cx="456.1" cy="181.7" r="14" fill="#6a8caf" opacity="1"/><circle cx="456.1" cy="181.7" r="21" fill="none" stroke="#6a8caf" stroke-width="3"/><text x="456.1" y="156.7" text-anchor="middle" class="mm-lbl">겟세마네</text><circle cx="338.2" cy="235.4" r="5" fill="#a67c33" opacity="0.28"/><circle cx="212.8" cy="337.5" r="5" fill="#8a8f98" opacity="0.28"/><circle cx="308.1" cy="135.2" r="5" fill="#7d5aa0" opacity="0.28"/><circle cx="161.1" cy="271.5" r="5" fill="#7d5aa0" opacity="0.28"/><circle cx="191.8" cy="209.2" r="5" fill="#b23b3b" opacity="0.28"/><circle cx="141.2" cy="219.7" r="5" fill="#5b6b7a" opacity="0.28"/><circle cx="230.7" cy="474.8" r="5" fill="#4b7f52" opacity="0.28"/><circle cx="131.1" cy="520.5" r="5" fill="#7d5aa0" opacity="0.28"/><circle cx="172.2" cy="413.1" r="5" fill="#7d5aa0" opacity="0.28"/></svg>
+    <figcaption>이 과의 무대 — <b>겟세마네</b></figcaption></figure>
+  <div class="divider"></div>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">피하고 싶은 고통 앞에서 기도해 본 적이 있나요? 무엇을 구했나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>막 14:33-36 · 예수의 심령 상태와 기도의 내용은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>눅 22:44 · 예수의 기도는 어떠했습니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>막 14:37-41 · 제자들은 그때 무엇을 하고 있었습니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>요 18:4-6 · 잡으러 온 무리 앞에서 예수의 태도는 어떠했습니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>‘이 잔을 옮기시되 그러나 아버지의 원대로’ — 예수의 기도가 보여 주는 순종은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>예수께서 마셔야 했던 ‘잔’은 무엇을 의미합니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>도망치지 않고 스스로 잡히신 것은 그 죽음이 어떤 성격임을 보여줍니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>여호와의 손에서 그의 분노의 잔을 마신 예루살렘이여 깰지어다 깰지어다 일어설지어다 네가 이미 비틀걸음 치게 하는 큰 잔을 마셔 다 비웠도다<span class="ref">사 51:17 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>‘잔’이 성경에서 하나님의 진노를 뜻한다면(사 51:17), 예수가 그 잔을 마심은 우리에게 무엇을 뜻합니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>내 기도가 ‘내 뜻대로’에 머물지 않고 ‘아버지 뜻대로’로 나아가려면 어떻게 해야 합니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>시험의 때에 ‘깨어 기도하라’(막 14:38)는 부름에 나는 어떻게 응답하겠습니까?</p><div class="write"></div></div></section>
+  <div class="panel"><span class="label">오늘의 암송</span>
+    <p class="verse">이르시되 아빠 아버지여 아버지께는 모든 것이 가능하오니 이 잔을 내게서 옮기시옵소서 그러나 나의 원대로 마시옵고 아버지의 원대로 하옵소서 하시고<span class="ref">막 14:36 · 개역개정</span></p></div>
+  <section class="step"><div class="sh"><span class="n">✦</span><h2>함께 기도</h2></div><div class="sb"><ul class="pray"><li>내 뜻을 내려놓고 아버지 뜻을 구하게 하소서.</li><li>깨어 기도하는 자 되게 하소서.</li></ul></div></section>
+  <div class="foot"><a href="/bible-map/passion-week.html">← 고난주간 지도로 돌아가기</a><span>사복음서 대조 · 개역개정 · 개혁주의 관점</span></div>
+</div></div></body></html>

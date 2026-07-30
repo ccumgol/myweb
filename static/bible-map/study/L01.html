@@ -1,0 +1,72 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1과 향유와 입성 — 고난주간 성경공부</title>
+<style>
+:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#b5623a;--accentd:#8f4a2c;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
+ --ridge:#cdbd97;--water:#9db9c4;--wall:#d8c9a8;--wallst:#b09a6f;--temple:#d9b98a;
+ --serif:"Nanum Myeongjo","AppleMyungjo",serif;--sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;}
+@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;--muted:#9b9080;--accent:#d1794f;--accentd:#e0895d;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318;
+ --ridge:#4a4130;--water:#3a5560;--wall:#3f3626;--wallst:#6b5c40;--temple:#5a4730;}}
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
+.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
+.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
+.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
+.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
+.evlist .ev .et{font-weight:600}
+.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
+.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);border-radius:6px;padding:.12em .55em}
+.timeline{display:flex;gap:4px;margin:20px 0 8px;align-items:stretch}
+.timeline .tl-lbl{font-size:.7rem;color:var(--muted);font-weight:700;align-self:center;margin-right:6px;white-space:nowrap}
+.tl-cell{flex:1;text-align:center;padding:7px 2px;border:1px solid var(--rule);border-radius:5px;background:var(--paper)}
+.tl-cell .tl-d{font-size:.66rem;color:var(--muted);font-weight:600}
+.tl-cell.cur{background:var(--accent);border-color:var(--accent)} .tl-cell.cur .tl-d{color:#fff;font-weight:800}
+figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
+.minimap{display:block;width:100%;height:auto;max-height:360px}
+.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:5px}
+.rgl{font-family:var(--serif);fill:var(--muted);font-size:20px;font-weight:700;opacity:.75} .rgl.sm{font-size:14px}
+figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);background:var(--card)}
+figcaption b{color:var(--accentd)}
+.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);margin:24px 0 22px;border-radius:2px}
+.step{margin:0 0 22px}
+.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
+.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
+.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
+.sb{margin-left:calc(1.9em + .7em)}
+.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
+.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);min-height:66px;border-radius:2px}
+blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
+blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
+.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
+.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0} .panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
+ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
+.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
+@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}.timeline .tl-lbl{display:none}.tl-cell .tl-d{font-size:.58rem}}
+</style></head><body><div class="wrap"><div class="page">
+  <div class="eyebrow">고난주간 성경공부 · 제1과 / 전 14과 · 일요일</div>
+  <h1 class="title">향유와 입성</h1>
+  <p class="summary">산헤드린은 죽일 음모를, 마리아는 값진 헌신을, 무리는 겸손한 왕을 환호로 맞이하며 고난주간이 열립니다.</p>
+  <div class="evlist"><div class="ev"><span class="ec">G-01</span><span class="et">산헤드린이 예수와 나사로를 두고 음모를 꾸미다</span><div class="er"><span class="chip">요 요 12:9-11</span></div></div><div class="ev"><span class="ec">G-02</span><span class="et">베다니의 마리아가 예수께 향유를 부음</span><div class="er"><span class="chip">마 마 26:6-13</span><span class="chip">막 막 14:3-9</span><span class="chip">요 요 12:1-8</span></div></div><div class="ev"><span class="ec">G-03</span><span class="et">예수의 예루살렘 입성</span><div class="er"><span class="chip">마 마 21:1-11</span><span class="chip">막 막 11:1-11</span><span class="chip">눅 눅 19:28-44</span><span class="chip">요 요 12:12-19</span></div></div></div>
+  <div class="timeline"><div class="tl-lbl">고난주간</div><div class="tl-cell cur"><span class="tl-d">일 · 종려주일</span></div><div class="tl-cell"><span class="tl-d">월</span></div><div class="tl-cell"><span class="tl-d">화</span></div><div class="tl-cell"><span class="tl-d">수</span></div><div class="tl-cell"><span class="tl-d">목 · 성목요일</span></div><div class="tl-cell"><span class="tl-d">금 · 성금요일</span></div><div class="tl-cell"><span class="tl-d">토 · 안식</span></div></div>
+  <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
+  <rect x="0" y="0" width="1000" height="680" fill="url(#parch)"/>
+  <ellipse cx="717" cy="315" rx="215" ry="172" fill="url(#hill)"/>
+  <text x="717" y="173" class="rgl" text-anchor="middle">감람산</text>
+  <path d="M 398,86 C 383,200 413,306 393,562" fill="none" stroke="var(--water)" stroke-width="14" stroke-linecap="round" opacity="0.45"/>
+  <text x="398" y="585" class="rgl sm" text-anchor="middle">기드론 골짜기</text>
+  <path d="M 107,136 L 298,122 L 333,264 L 298,519 L 107,526 L 77,335 Z" fill="var(--wall)" opacity="0.28" stroke="var(--wallst)" stroke-width="2" stroke-dasharray="7 5"/>
+  <rect x="303" y="193" width="80" height="85" rx="6" fill="var(--temple)" opacity="0.5" stroke="var(--wallst)" stroke-width="1.5"/>
+<circle cx="854.9" cy="483.6" r="14" fill="#8a8f98" opacity="1"/><circle cx="854.9" cy="483.6" r="21" fill="none" stroke="#8a8f98" stroke-width="3"/><text x="854.9" y="458.6" text-anchor="middle" class="mm-lbl">베다니</text><circle cx="734.5" cy="536.8" r="5" fill="#8a8f98" opacity="0.28"/><circle cx="584.0" cy="215.2" r="5" fill="#a67c33" opacity="0.28"/><circle cx="456.1" cy="181.7" r="5" fill="#6a8caf" opacity="0.28"/><circle cx="338.2" cy="235.4" r="5" fill="#a67c33" opacity="0.28"/><circle cx="212.8" cy="337.5" r="14" fill="#8a8f98" opacity="1"/><circle cx="212.8" cy="337.5" r="21" fill="none" stroke="#8a8f98" stroke-width="3"/><text x="212.8" y="312.5" text-anchor="middle" class="mm-lbl">예루살렘 도성</text><circle cx="308.1" cy="135.2" r="5" fill="#7d5aa0" opacity="0.28"/><circle cx="161.1" cy="271.5" r="5" fill="#7d5aa0" opacity="0.28"/><circle cx="191.8" cy="209.2" r="5" fill="#b23b3b" opacity="0.28"/><circle cx="141.2" cy="219.7" r="5" fill="#5b6b7a" opacity="0.28"/><circle cx="230.7" cy="474.8" r="5" fill="#4b7f52" opacity="0.28"/><circle cx="131.1" cy="520.5" r="5" fill="#7d5aa0" opacity="0.28"/><circle cx="172.2" cy="413.1" r="5" fill="#7d5aa0" opacity="0.28"/></svg>
+    <figcaption>이 과의 무대 — <b>예루살렘 도성 · 베다니</b></figcaption></figure>
+  <div class="divider"></div>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">누군가를 향한 사랑이나 헌신을 두고 ‘낭비’라 여겨 본 적이 있나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>요 12:9-11 · 대제사장들이 나사로까지 죽이려 한 까닭은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>요 12:3 · 마리아는 무엇을, 어떻게 예수께 드렸습니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>막 14:4-6 · 이를 본 사람들의 반응과, 예수의 평가는 어떻게 달랐습니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>마 21:6-9 · 예수는 무엇을 타고 입성하셨고, 무리는 무엇이라 외쳤습니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>향유를 ‘허비’로 본 시선과 ‘아름다운 일’로 받으신 예수 — 참된 예배는 무엇을 향합니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>군마가 아니라 나귀를 타신 것(슥 9:9)은 그분이 어떤 왕이심을 보여줍니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>눅 19:41-44 · 환호 속에서 예수께서 우신 까닭은 무엇입니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>시온의 딸아 크게 기뻐할지어다 예루살렘의 딸아 즐거이 부를지어다 보라 네 왕이 네게 임하시나니 그는 공의로우시며 구원을 베푸시며 겸손하여서 나귀를 타시나니 나귀의 작은 것 곧 나귀 새끼니라<span class="ref">슥 9:9 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>슥 9:9의 예언이 입성에서 어떻게 이루어지며, 이 왕은 무엇으로 다스리십니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>마리아처럼 지금 내가 예수께 ‘아깝지만’ 드릴 것은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>나는 예수를 내 기대를 채울 왕으로 부릅니까, 십자가의 왕으로 맞이합니까?</p><div class="write"></div></div></section>
+  <div class="panel"><span class="label">오늘의 암송</span>
+    <p class="verse">앞에서 가고 뒤에서 따르는 무리가 소리 높여 이르되 호산나 다윗의 자손이여 찬송하리로다 주의 이름으로 오시는 이여 가장 높은 곳에서 호산나 하더라<span class="ref">마 21:9 · 개역개정</span></p></div>
+  <section class="step"><div class="sh"><span class="n">✦</span><h2>함께 기도</h2></div><div class="sb"><ul class="pray"><li>겸손히 오신 왕을 참되게 예배하게 하소서.</li><li>아까운 것을 드리는 사랑을 주소서.</li></ul></div></section>
+  <div class="foot"><a href="/bible-map/passion-week.html">← 고난주간 지도로 돌아가기</a><span>사복음서 대조 · 개역개정 · 개혁주의 관점</span></div>
+</div></div></body></html>

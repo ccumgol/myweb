@@ -26,6 +26,12 @@
     pageRef = "new-believer"
     weight = 2
 
+  [[main]]
+    name = "지도로 보는 예수님의 생애"
+    parent = "bible"
+    pageRef = "bible-map"
+    weight = 3
+
 [[main]]
   name = "동전으로 배우는 미국"
   pageRef = "coins"
