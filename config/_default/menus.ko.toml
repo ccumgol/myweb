@@ -32,6 +32,12 @@
     pageRef = "bible-map"
     weight = 3
 
+  [[main]]
+    name = "일년일독성경"
+    parent = "bible"
+    pageRef = "one-year-bible"
+    weight = 4
+
 [[main]]
   name = "동전으로 배우는 미국"
   pageRef = "coins"
