@@ -1,0 +1,107 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3과 나를 따라오라 — 부르심 — 갈릴리 사역 성경공부</title>
+<style>
+:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#a67c33;
+ --accentd:#7d5c22;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
+ --serif:"Nanum Myeongjo","AppleMyungjo",serif;
+ --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;
+ --muted:#9b9080;--accent:#c9a54c;--accentd:#e0bd6a;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318}}
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;
+ padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;
+ box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
+.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
+.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
+.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
+.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
+.evlist .ev .et{font-weight:600}
+.evlist .ev .pl{display:inline-block;font-size:.7rem;color:var(--muted);background:var(--tint);
+ border-radius:4px;padding:.05em .5em;margin-left:.5em;vertical-align:.1em}
+.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
+.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);
+ border-radius:6px;padding:.12em .55em}
+a.chip.reflink{text-decoration:none;cursor:pointer}
+a.chip.reflink:hover{border-color:var(--accent);color:var(--accentd)}
+a.chip.reflink::after{content:"↗";font-size:.62rem;margin-left:.25em;opacity:.55}
+figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;
+ background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
+.minimap{display:block;width:100%;height:auto;max-height:380px}
+.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);
+ paint-order:stroke;stroke:var(--card);stroke-width:5px}
+.rgl{font-family:var(--serif);fill:var(--soft);font-size:20px;font-weight:700;opacity:.95;
+ letter-spacing:.06em;paint-order:stroke;stroke:var(--card);stroke-width:4.5px;stroke-linejoin:round}
+.rgl.sm{font-size:14px;font-weight:600}
+figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);
+ background:var(--card)} figcaption b{color:var(--accentd)}
+.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);
+ margin:24px 0 22px;border-radius:2px}
+.step{margin:0 0 22px}
+.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
+.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;
+ display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);
+ border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
+.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
+.sb{margin-left:calc(1.9em + .7em)}
+.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
+.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);
+ min-height:66px;border-radius:2px}
+blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);
+ font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
+blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
+.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
+.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0}
+.panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
+ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
+.lnav{margin:24px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.lnav details{margin:0 0 10px}
+.lnav summary{cursor:pointer;font-size:.84rem;font-weight:700;color:var(--accentd);list-style:none}
+.lnav summary::-webkit-details-marker{display:none}
+.lnav summary::before{content:"▸ "} .lnav details[open] summary::before{content:"▾ "}
+.lnav .toclist{margin:.5em 0 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+.lnav .tocitem{display:block;padding:8px 14px;text-decoration:none;color:var(--ink);
+ border-bottom:1px solid var(--rule)}
+.lnav .tocitem:last-child{border-bottom:0} .lnav .tocitem:hover{background:var(--tint)}
+.lnav .tocitem.cur{background:var(--tint);border-left:3px solid var(--accent)}
+.lnav .tocitem .n{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.5em}
+.lnav .tocitem .t{font-weight:600;font-size:.92rem}
+.lnav .tocitem .c{display:block;font-size:.72rem;color:var(--muted);margin-left:2.3em}
+.lnav .pnrow{display:flex;gap:.5em;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.lnav .pn{font-size:.8rem;color:var(--accentd);text-decoration:none;font-weight:700}
+.lnav .pn:hover{text-decoration:underline}
+.lnav .pn.off,.lnav .pn.mid{color:var(--muted);font-weight:500}
+.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;
+ justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
+@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}}
+</style></head><body><div class="wrap"><div class="page">
+  <div class="eyebrow">갈릴리 사역 · 제3과 / 전 13과</div>
+  <h1 class="title">나를 따라오라 — 부르심</h1>
+  <p class="summary">그물을 버려두고, 세관을 떠나 — 부르심은 직업과 과거를 뚫고 온다. 그리고 밤이 새도록 기도하신 뒤 열둘을 세우신다.</p>
+  <div class="evlist"><div class="ev"><span class="ec">C-07</span><span class="et">베드로·안드레·야고보·요한을 부르시다</span><span class="pl">갈릴리 바다</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=4&sec=18" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 4:18-22</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=1&sec=16" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 1:16-20</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=luk&chap=5&sec=1" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">눅 5:1-11</a></div></div><div class="ev"><span class="ec">C-15</span><span class="et">마태(레위)를 부르시다</span><span class="pl">가버나움</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=9&sec=9" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 9:9-13</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=2&sec=13" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 2:13-17</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=luk&chap=5&sec=27" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">눅 5:27-32</a></div></div><div class="ev"><span class="ec">C-20</span><span class="et">열두 제자를 세우시다</span><span class="pl">산상수훈의 산</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=10&sec=2" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 10:2-4</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=3&sec=13" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 3:13-19</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=luk&chap=6&sec=12" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">눅 6:12-16</a></div></div></div>
+  <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
+  <image href="/bible-map/img/levant-topo.svg" x="-522.1" y="-415.0" width="1700.7" height="2125.9"
+         preserveAspectRatio="none"/>
+  <text x="700" y="92" class="rgl" text-anchor="middle">갈 릴 리</text><text x="300" y="300" class="rgl" text-anchor="middle">사 마 리 아</text><text x="215" y="545" class="rgl" text-anchor="middle">유    대</text><text x="660" y="250" class="rgl sm" text-anchor="middle">요 단 강</text><text x="505" y="645" class="rgl sm" text-anchor="middle">사    해</text><text x="730" y="560" class="rgl" text-anchor="middle">베 레 아</text>
+  <defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+    orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/></marker></defs>
+  
+<circle cx="454.9" cy="137.3" r="5" fill="#7d5aa0" opacity="0.3"/><circle cx="472.8" cy="117.8" r="5" fill="#1f6b41" opacity="0.3"/><circle cx="572.7" cy="60.9" r="14" fill="#a8442a" opacity="1"/><circle cx="572.7" cy="60.9" r="21" fill="none" stroke="#a8442a" stroke-width="3"/><text x="644.7" y="17.9" text-anchor="middle" class="mm-lbl">가버나움</text><circle cx="563.3" cy="60.5" r="14" fill="#8a5a12" opacity="1"/><circle cx="563.3" cy="60.5" r="21" fill="none" stroke="#8a5a12" stroke-width="3"/><text x="459.29999999999995" y="31.5" text-anchor="middle" class="mm-lbl">산상수훈의 산</text><circle cx="579.1" cy="95.2" r="14" fill="#2b5f92" opacity="1"/><circle cx="579.1" cy="95.2" r="21" fill="none" stroke="#2b5f92" stroke-width="3"/><text x="605.1" y="132.2" text-anchor="middle" class="mm-lbl">갈릴리 바다</text><circle cx="604.6" cy="82.5" r="5" fill="#1f6b41" opacity="0.3"/><circle cx="474.9" cy="167.5" r="5" fill="#1f6b41" opacity="0.3"/><circle cx="528.1" cy="125.0" r="5" fill="#6b6b6b" opacity="0.3"/><circle cx="428.6" cy="528.5" r="5" fill="#3f6f9c" opacity="0.3"/><circle cx="593.8" cy="619.1" r="5" fill="#4a4a4a" opacity="0.3"/></svg>
+    <figcaption>이 과의 무대 — <b>가버나움 · 갈릴리 바다 · 산상수훈의 산</b><br>
+      <span style="opacity:.8">배경 지형도: Southern Levant blank topographic map © DEGA MD · CC BY-SA 4.0 (변경됨)</span></figcaption></figure>
+  <div class="divider"></div>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">무언가를 두고 떠나야 했던 결정이 있었나요? 무엇이 가장 아까웠나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>눅 5:4-7 · 깊은 데로 가라는 말에 베드로는 어떻게 답하고, 무슨 일이 일어났습니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>눅 5:8-10 · 베드로의 고백과 예수의 대답은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>막 1:18,20 · 네 어부는 무엇을 어떻게 했습니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>막 2:14-15 · 마태(레위)는 무엇을 하던 사람이었고, 부름에 어떻게 응했습니까?</p><div class="write"></div><p class="q"><span class="lead">5.</span>막 2:16-17 · 비난에 대한 예수의 대답은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">6.</span>눅 6:12-13 · 열둘을 택하기 전 예수는 무엇을 하셨습니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>‘말씀에 의지하여 내가 그물을 내리리이다’ — 경험과 말씀이 부딪칠 때의 순종은 어떤 모습입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>고기가 가득할 때 베드로가 오히려 죄를 자각한 까닭은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>세리 마태를 부르신 일은 하나님 나라의 문턱에 대해 무엇을 말합니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>밤새 기도하신 뒤 열둘을 세우신 것은 사람을 세우는 일에 대해 무엇을 가르칩니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>형제들아 너희를 부르심을 보라 육체를 따라 지혜로운 자가 많지 아니하며 능한 자가 많지 아니하며 문벌 좋은 자가 많지 아니하도다 그러나 하나님께서 세상의 미련한 것들을 택하사 지혜 있는 자들을 부끄럽게 하려 하시고 세상의 약한 것들을 택하사 강한 것들을 부끄럽게 하려 하시며 하나님께서 세상의 천한 것들과 멸시 받는 것들과 없는 것들을 택하사 있는 것들을 폐하려 하시나니 이는 아무 육체도 하나님 앞에서 자랑하지 못하게 하려 하심이라<span class="ref">고전 1:26-29 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>고전 1:26-29에 비추어, 어부와 세리를 부르신 일이 하나님의 방식을 어떻게 보여줍니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>부르심에 응하기 위해 내가 ‘두고 가야 할 그물’은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>내가 ‘저 사람은 아니야’라고 여긴 사람이 있습니까? 예수는 어떻게 보실까요?</p><div class="write"></div></div></section>
+  <div class="panel"><span class="label">오늘의 암송</span>
+    <p class="verse">예수께서 들으시고 그들에게 이르시되 건강한 자에게는 의사가 쓸 데 없고 병든 자에게라야 쓸 데 있느니라 나는 의인을 부르러 온 것이 아니요 죄인을 부르러 왔노라 하시니라
+      <span class="ref">막 2:17 · 개역개정</span></p></div>
+  <section class="step"><div class="sh"><span class="n">✦</span><h2>함께 기도</h2></div>
+    <div class="sb"><ul class="pray"><li>말씀에 의지하여 순종하게 하소서.</li><li>죄인을 부르러 오신 주님께 감사합니다.</li></ul></div></section>
+  <nav class="lnav"><details><summary>전 13과 목차 보기</summary><div class="toclist"><a class="tocitem" href="D01.html"><span class="n">1과</span><span class="t">갈릴리에 임한 하나님 나라</span><span class="c">C-01 · C-02 · C-03 · C-04</span></a><a class="tocitem" href="D02.html"><span class="n">2과</span><span class="t">안식일의 주인</span><span class="c">C-05 · C-06 · C-17 · C-18</span></a><a class="tocitem cur" href="D03.html"><span class="n">3과</span><span class="t">나를 따라오라 — 부르심</span><span class="c">C-07 · C-15 · C-20</span></a><a class="tocitem" href="D04.html"><span class="n">4과</span><span class="t">권세 있는 새 가르침 — 첫 이적들</span><span class="c">C-08 · C-10 · C-13 · C-14</span></a><a class="tocitem" href="D05.html"><span class="n">5과</span><span class="t">새 포도주는 새 부대에</span><span class="c">C-12 · C-16 · C-19</span></a><a class="tocitem" href="D06.html"><span class="n">6과</span><span class="t">산상수훈 (1) 복과 소금·빛</span><span class="c">C-21-01 · C-21-02 · C-21-03</span></a><a class="tocitem" href="D07.html"><span class="n">7과</span><span class="t">산상수훈 (2) 더 나은 의</span><span class="c">C-21-04 · C-21-05 · C-21-06 · C-21-07 · C-21-08</span></a><a class="tocitem" href="D08.html"><span class="n">8과</span><span class="t">산상수훈 (3) 은밀한 경건과 기도</span><span class="c">C-21-09 · C-21-10 · C-21-11 · C-21-12</span></a><a class="tocitem" href="D09.html"><span class="n">9과</span><span class="t">산상수훈 (4) 좁은 문과 열매</span><span class="c">C-21-13 · C-21-14 · C-21-15 · C-21-16 · C-21-17</span></a><a class="tocitem" href="D10.html"><span class="n">10과</span><span class="t">믿음과 용서 — 백부장·과부·죄 많은 여인</span><span class="c">C-22 · C-23 · C-24 · C-25 · C-26-1 · C-26-2 · C-27</span></a><a class="tocitem" href="D11.html"><span class="n">11과</span><span class="t">하나님 나라의 비유들</span><span class="c">C-28 · C-29 · C-31 · C-32 · C-33 · C-34 · C-35 · C-36 · C-37 · C-38 · C-39 · C-41 · C-42 · C-43 · C-44 · C-45 · C-46</span></a><a class="tocitem" href="D12.html"><span class="n">12과</span><span class="t">바다와 무덤과 죽음을 다스리시다</span><span class="c">C-47 · C-48 · C-50 · C-51 · C-52</span></a><a class="tocitem" href="D13.html"><span class="n">13과</span><span class="t">추수할 일꾼 — 파송과 배척</span><span class="c">C-53 · C-54 · C-55 · C-56 · C-57</span></a></div></details><div class="pnrow"><a class="pn" href="D02.html">◀ 2과 안식일의 주인</a><a class="pn mid" href="/bible-map/galilee.html">← 갈릴리 사역 지도</a><a class="pn" href="D04.html">4과 권세 있는 새 가르침 — 첫 이적들 ▶</a></div></nav>
+  <div class="foot"><a href="/bible-map/galilee.html">← 갈릴리 사역 지도로 돌아가기</a>
+    <span>사복음서 대조 · 개역개정 · 개혁주의 관점</span></div>
+</div></div></body></html>
