@@ -1,0 +1,107 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8과 한 가지만이라도 — 마르다와 마리아 — 유대 사역 성경공부</title>
+<style>
+:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#a67c33;
+ --accentd:#7d5c22;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
+ --serif:"Nanum Myeongjo","AppleMyungjo",serif;
+ --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;
+ --muted:#9b9080;--accent:#c9a54c;--accentd:#e0bd6a;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318}}
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;
+ padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;
+ box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
+.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
+.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
+.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
+.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
+.evlist .ev .et{font-weight:600}
+.evlist .ev .pl{display:inline-block;font-size:.7rem;color:var(--muted);background:var(--tint);
+ border-radius:4px;padding:.05em .5em;margin-left:.5em;vertical-align:.1em}
+.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
+.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);
+ border-radius:6px;padding:.12em .55em}
+a.chip.reflink{text-decoration:none;cursor:pointer}
+a.chip.reflink:hover{border-color:var(--accent);color:var(--accentd)}
+a.chip.reflink::after{content:"↗";font-size:.62rem;margin-left:.25em;opacity:.55}
+figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;
+ background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
+.minimap{display:block;width:100%;height:auto;max-height:380px}
+.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);
+ paint-order:stroke;stroke:var(--card);stroke-width:5px}
+.rgl{font-family:var(--serif);fill:var(--soft);font-size:20px;font-weight:700;opacity:.95;
+ letter-spacing:.06em;paint-order:stroke;stroke:var(--card);stroke-width:4.5px;stroke-linejoin:round}
+.rgl.sm{font-size:14px;font-weight:600}
+figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);
+ background:var(--card)} figcaption b{color:var(--accentd)}
+.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);
+ margin:24px 0 22px;border-radius:2px}
+.step{margin:0 0 22px}
+.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
+.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;
+ display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);
+ border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
+.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
+.sb{margin-left:calc(1.9em + .7em)}
+.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
+.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);
+ min-height:66px;border-radius:2px}
+blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);
+ font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
+blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
+.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
+.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
+.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0}
+.panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
+ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
+.lnav{margin:24px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.lnav details{margin:0 0 10px}
+.lnav summary{cursor:pointer;font-size:.84rem;font-weight:700;color:var(--accentd);list-style:none}
+.lnav summary::-webkit-details-marker{display:none}
+.lnav summary::before{content:"▸ "} .lnav details[open] summary::before{content:"▾ "}
+.lnav .toclist{margin:.5em 0 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+.lnav .tocitem{display:block;padding:8px 14px;text-decoration:none;color:var(--ink);
+ border-bottom:1px solid var(--rule)}
+.lnav .tocitem:last-child{border-bottom:0} .lnav .tocitem:hover{background:var(--tint)}
+.lnav .tocitem.cur{background:var(--tint);border-left:3px solid var(--accent)}
+.lnav .tocitem .n{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.5em}
+.lnav .tocitem .t{font-weight:600;font-size:.92rem}
+.lnav .tocitem .c{display:block;font-size:.72rem;color:var(--muted);margin-left:2.3em}
+.lnav .pnrow{display:flex;gap:.5em;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.lnav .pn{font-size:.8rem;color:var(--accentd);text-decoration:none;font-weight:700}
+.lnav .pn:hover{text-decoration:underline}
+.lnav .pn.off,.lnav .pn.mid{color:var(--muted);font-weight:500}
+.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;
+ justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
+@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}}
+</style></head><body><div class="wrap"><div class="page">
+  <div class="eyebrow">유대 사역 · 제8과 / 전 13과</div>
+  <h1 class="title">한 가지만이라도 — 마르다와 마리아</h1>
+  <p class="summary">준비로 분주한 마르다와 발 앞에 앉은 마리아 — ‘몇 가지가 아니라 한 가지만이라도 족하다.’</p>
+  <div class="evlist"><div class="ev"><span class="ec">E-09</span><span class="et">마르다와 마리아의 집에 드시다</span><span class="pl">베다니</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=luk&chap=10&sec=38" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">눅 10:38-42</a></div></div></div>
+  <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
+  <image href="/bible-map/img/levant-topo.svg" x="-3433.3" y="-3360.0" width="6666.7" height="8333.3"
+         preserveAspectRatio="none"/>
+  <text x="180" y="200" class="rgl" text-anchor="middle">유    대</text><text x="700" y="90" class="rgl sm" text-anchor="middle">요 단 강</text><text x="760" y="560" class="rgl sm" text-anchor="middle">사    해</text><text x="128" y="108" class="rgl sm" text-anchor="middle">↑ 북쪽(지도 밖)</text>
+  <defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+    orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/></marker></defs>
+  
+<circle cx="292.3" cy="343.3" r="5" fill="#8a5a12" opacity="0.3"/><circle cx="326.7" cy="355.0" r="14" fill="#a8442a" opacity="1"/><circle cx="326.7" cy="355.0" r="21" fill="none" stroke="#a8442a" stroke-width="3"/><text x="402.7" y="352.0" text-anchor="middle" class="mm-lbl">베다니</text><circle cx="100.0" cy="540.0" r="5" fill="#6b6b6b" opacity="0.3"/><circle cx="533.3" cy="273.3" r="5" fill="#7d5aa0" opacity="0.3"/><circle cx="900.0" cy="140.0" r="5" fill="#3f6f9c" opacity="0.3"/><circle cx="128" cy="62" r="5" fill="#3f6f9c" opacity="0.3"/></svg>
+    <figcaption>이 과의 무대 — <b>베다니</b><br>
+      <span style="opacity:.8">배경 지형도: Southern Levant blank topographic map © DEGA MD · CC BY-SA 4.0 (변경됨)</span></figcaption></figure>
+  <div class="divider"></div>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">바쁘게 애썼는데 정작 중요한 것을 놓친 적이 있나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>눅 10:38-39 · 두 자매가 각각 무엇을 하고 있었습니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>눅 10:40 · 마르다가 예수께 한 말을 그대로 적어 보십시오.</p><div class="write"></div><p class="q"><span class="lead">3.</span>눅 10:41 · 예수께서 마르다의 상태를 무엇이라 하십니까(두 낱말)?</p><div class="write"></div><p class="q"><span class="lead">4.</span>눅 10:42a · ‘몇 가지’와 ‘한 가지’의 대비를 적어 보십시오.</p><div class="write"></div><p class="q"><span class="lead">5.</span>눅 10:42b · 마리아가 택한 것에 대해 무엇이라 하십니까?</p><div class="write"></div><p class="q"><span class="lead">6.</span>요 11:5과 함께 보십시오 · 예수는 이 가족을 어떻게 여기셨습니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>마르다의 섬김은 잘못된 것입니까? 예수께서 지적하신 것은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>‘염려하고 근심하여’ — 섬김이 어떻게 염려로 변질됩니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>‘좋은 편을 택하였다’ — 좋은 것과 더 좋은 것 사이의 선택을 어떻게 해야 합니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>당시 여자가 선생의 발 앞에 앉는 것은 이례적이었습니다. 예수의 태도에서 무엇을 봅니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>내가 여호와께 바라는 한 가지 일 그것을 구하리니 곧 내가 내 평생에 여호와의 집에 살면서 여호와의 아름다움을 바라보며 그의 성전에서 사모하는 그것이라<span class="ref">시 27:4 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>시 27:4에서 다윗이 구한 ‘한 가지’는 무엇입니까? 마리아의 선택과 어떻게 겹칩니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>내 섬김이 염려로 바뀌는 지점은 어디입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>이번 주 ‘한 가지’를 위해 확보할 시간은 언제입니까?</p><div class="write"></div></div></section>
+  <div class="panel"><span class="label">오늘의 암송</span>
+    <p class="verse">몇 가지만 하든지 혹은 한 가지만이라도 족하니라 마리아는 이 좋은 편을 택하였으니 빼앗기지 아니하리라 하시니라
+      <span class="ref">눅 10:42 · 개역개정</span></p></div>
+  <section class="step"><div class="sh"><span class="n">✦</span><h2>함께 기도</h2></div>
+    <div class="sb"><ul class="pray"><li>분주함 속에서 한 가지를 택하게 하소서.</li><li>발 앞에 앉는 시간을 지키게 하소서.</li></ul></div></section>
+  <nav class="lnav"><details><summary>전 13과 목차 보기</summary><div class="toclist"><a class="tocitem" href="F01.html"><span class="n">1과</span><span class="t">내 때가 아직 — 초막절의 논쟁</span><span class="c">E-01 · E-02</span></a><a class="tocitem" href="F02.html"><span class="n">2과</span><span class="t">돌을 들지 못한 사람들 — 간음한 여인</span><span class="c">E-03</span></a><a class="tocitem" href="F03.html"><span class="n">3과</span><span class="t">나는 세상의 빛이라</span><span class="c">E-04</span></a><a class="tocitem" href="F04.html"><span class="n">4과</span><span class="t">눈을 씻고 보게 된 사람</span><span class="c">E-05</span></a><a class="tocitem" href="F05.html"><span class="n">5과</span><span class="t">나는 선한 목자라</span><span class="c">E-06</span></a><a class="tocitem" href="F06.html"><span class="n">6과</span><span class="t">칠십 인을 보내시다</span><span class="c">E-07</span></a><a class="tocitem" href="F07.html"><span class="n">7과</span><span class="t">누가 내 이웃인가 — 선한 사마리아인</span><span class="c">E-08</span></a><a class="tocitem cur" href="F08.html"><span class="n">8과</span><span class="t">한 가지만이라도 — 마르다와 마리아</span><span class="c">E-09</span></a><a class="tocitem" href="F09.html"><span class="n">9과</span><span class="t">이렇게 기도하라 — 구하는 자에게</span><span class="c">E-10 · E-11 · E-12 · E-13</span></a><a class="tocitem" href="F10.html"><span class="n">10과</span><span class="t">외식의 누룩 — 책망과 경계</span><span class="c">E-14 · E-15</span></a><a class="tocitem" href="F11.html"><span class="n">11과</span><span class="t">어리석은 부자, 까마귀와 백합화</span><span class="c">E-16 · E-17</span></a><a class="tocitem" href="F12.html"><span class="n">12과</span><span class="t">깨어 준비하라 — 이 시대를 분별하라</span><span class="c">E-18 · E-19 · E-20 · E-21</span></a><a class="tocitem" href="F13.html"><span class="n">13과</span><span class="t">나와 아버지는 하나이니라</span><span class="c">E-22</span></a></div></details><div class="pnrow"><a class="pn" href="F07.html">◀ 7과 누가 내 이웃인가 — 선한 사마리아인</a><a class="pn mid" href="/bible-map/judea.html">← 유대 사역 지도</a><a class="pn" href="F09.html">9과 이렇게 기도하라 — 구하는 자에게 ▶</a></div></nav>
+  <div class="foot"><a href="/bible-map/judea.html">← 유대 사역 지도로 돌아가기</a>
+    <span>사복음서 대조 · 개역개정 · 개혁주의 관점</span></div>
+</div></div></body></html>
