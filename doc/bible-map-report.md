@@ -17,7 +17,7 @@
 | 성경공부 교재 | **78과** (`static/bible-map/study/*.html`, 합계 1.0MB) |
 | 인쇄용 A4 PDF | **8개** (국면별 전 과 묶음, 합계 15.4MB) |
 | 콘텐츠 페이지 | `content/bible-map/` 아래 8개 + 섹션 인덱스 |
-| 생성기 코드 | Python **18개 파일, 4677줄** (`B-Wiki/scripts/site-generators/`) |
+| 생성기 코드 | Python **19개 파일, 4902줄** (`B-Wiki/scripts/site-generators/`) |
 
 **사용자가 보는 흐름**은 이렇습니다.
 
@@ -938,7 +938,7 @@ WRITE = '<div class="write"><i></i><i></i><i class="px"></i></div>'
 @media print{
  :root{--paper:#fff;--card:#fff;--ink:#111;--soft:#333;--muted:#585858;
   --rule:#c9c9c9;--rules:#b3b3b3;--tint:#fff;--accent:#7d5c22;--accentd:#5c4319}
- @page{size:A4;margin:14mm 15mm}        /* 한국 기본 용지 */
+ @page{margin:14mm 15mm}                /* size 는 적지 않는다 — 이슈 20 참고 */
  .page{max-width:none;border:0;border-radius:0;box-shadow:none;padding:0}
  .step,.panel,.ev,figure.map,blockquote{break-inside:avoid}   /* 문항이 갈라지지 않게 */
  .sh,.eyebrow,h1.title,.q{break-after:avoid}
@@ -1096,6 +1096,97 @@ while time.time() < deadline:
 
 ---
 
+### 이슈 20. `@page{size:A4}`가 사용자의 용지 선택을 「축소 인쇄」로 바꾼다 ★가장 미묘한 함정★
+
+#### 질문
+「사용자가 인쇄 대화상자에서 Letter나 Statement를 고르면 어떻게 되는가?」
+
+처음에는 CSS에 `@page{size:A4}`를 넣어 두었습니다. 한국 기본 용지를 제안하는 뜻이었습니다. 그런데 이것이 **용지 선택을 무력화**한다는 것을 실측으로 알게 됐습니다.
+
+#### 시험 ① — 요청한 용지가 이기는가?
+인쇄 대화상자는 내부적으로 `Page.printToPDF`에 용지 크기를 넘깁니다. 그때 `preferCSSPageSize`가 `false`면 요청이, `true`면 CSS가 이깁니다. 표준 라이브러리만으로 CDP(WebSocket)를 최소 구현해 두 경우를 확인했습니다.
+
+| 요청 | 결과 용지 |
+|---|---|
+| Letter 요청 + `preferCSSPageSize=false` *(대화상자와 동일)* | **Letter** — 요청이 이김 |
+| Letter 요청 + `preferCSSPageSize=true` | A4 — CSS가 이김 |
+
+**종이 크기는 사용자가 고른 대로 나옵니다.** 여기까지는 좋습니다.
+
+#### 시험 ② — 그런데 레이아웃도 바뀌는가?
+같은 CSS(`size:A4`)로 용지만 바꿔 뽑아 보니 이상했습니다.
+
+| 용지 | 쪽 면적 | 쪽수 |
+|---|---|---|
+| A4 | 624cm² | 26쪽 |
+| Statement | **302cm² (절반)** | **25쪽** |
+
+**면적이 절반인데 쪽수가 줄었습니다.** 있을 수 없는 일입니다. 페이지에서 계산값을 직접 읽어 보니 답이 나왔습니다.
+
+```text
+용지          지도최대       본문   작은용지쿼리   뷰포트
+A4          159.46px     14px    아니오       741px
+Statement   159.46px     14px    아니오       741px      ← 전부 동일
+```
+
+**Chrome은 CSS가 지정한 A4로 배치한 뒤, 그 결과를 사용자가 고른 용지에 축소해 넣습니다.** 뷰포트가 두 용지에서 똑같은 741px인 것이 증거입니다. 그래서 Statement에 뽑으면 10.5pt 본문이 **약 7pt로 작아집니다.** 미디어 쿼리도 당연히 걸리지 않습니다 — 레이아웃 폭은 언제나 A4니까요.
+
+#### 해결 — `size`를 적지 않는다
+
+```css
+/* size 를 적지 않는다 — 적으면 Chrome이 그 크기로 배치한 뒤 사용자가 고른 용지에
+   **축소**해 버린다. 비워 두면 고른 용지로 제대로 다시 배치된다. */
+@page{margin:14mm 15mm}
+```
+
+`size`를 빼자 레이아웃이 실제로 다시 잡혔습니다.
+
+| 용지 | 쪽 면적 | 쪽수 | 쪽수/면적비 |
+|---|---|---|---|
+| A4 | 624cm² | 26쪽 | 1.00 (기준) |
+| Letter | 603cm² | 26쪽 | 0.97 |
+| Statement | 302cm² | **42쪽** | **0.78** |
+| A5 | 311cm² | 43쪽 | 0.82 |
+
+**쪽수/면적비**를 보면 판단이 섭니다. 축소 인쇄라면 쪽수가 그대로여서 비율이 0.48이 됩니다. 1.0 근처면 **글씨 크기를 유지한 채 재배치**된 것입니다. 0.78~0.82로 1.0보다 조금 작은 것은, 작은 용지 규칙(여백·표제·지도 축소)이 좁은 지면을 더 알차게 썼다는 뜻입니다 — 그 규칙이 실제로 걸렸다는 증거이기도 합니다.
+
+#### 그러면 우리 PDF는 어떻게 A4로 굽는가
+CSS가 용지를 정하지 않으므로 **구울 때 명시**합니다. `gen_pdfs.py`를 CDP로 옮겨 A4를 직접 넘깁니다.
+
+```python
+ch.pdf(dst, paper="A4")     # preferCSSPageSize=False — 우리가 준 용지가 이긴다
+```
+
+부수 효과로 **「Chrome이 끝나지 않는」 문제가 사라졌습니다**(이슈 19). CDP는 `printToPDF` 응답으로 완료를 알려 주므로, 파일 크기가 멈추는지 지켜보던 어림짐작이 필요 없습니다. `gen_terrain.py`의 스크린샷도 같이 옮겼습니다.
+
+#### 무엇을 용지에 맞추고 무엇을 고정할까
+작은 용지 규칙을 쓸 때 이 구분이 핵심입니다.
+
+| 값 | 용지에 따라 | 왜 |
+|---|---|---|
+| 필기줄 높이 9mm | **고정** | 손 글씨 크기다. 종이가 작아졌다고 글씨를 작게 쓰지 않는다 |
+| 본문 10.5pt | **고정** | 읽기 크기다 |
+| 좌우 여백 15mm → 10mm | 변함 | 110mm 폭에 15mm는 과하다 |
+| 지도 높이 | 변함 | `max-height:34vh` — 인쇄에서 `vh`는 쪽 높이로 계산된다 |
+| 표제 20pt → 17pt | 변함 | 장식이다 |
+
+```css
+@media print and (max-width:170mm){    /* 인쇄에서 max-width 는 쪽 상자 폭 */
+ @page{margin:11mm 10mm}
+ h1.title{font-size:17pt}
+ .minimap{max-height:30vh}
+ .sb{margin-left:0}
+}
+```
+
+#### 교훈
+- **`@page{size}`는 「기본값 제안」이 아니라 「레이아웃 고정」입니다.** 사용자에게 용지 선택을 열어 주려면 적지 말아야 합니다.
+- **「면적이 절반인데 쪽수가 그대로」 같은 산수의 모순을 놓치지 마세요.** 쪽수만 봤다면 「Statement도 25쪽이니 잘 되는군」으로 넘어갔을 것입니다. 비율을 계산해 보니 축소라는 것이 드러났습니다.
+- **계산값을 페이지에서 직접 읽으세요.** 「미디어 쿼리가 걸렸을 것」이라는 짐작이 틀렸다는 것을 뷰포트 741px 하나가 알려 줬습니다.
+- **무엇이 종이 크기에 비례해야 하고 무엇이 절대여야 하는지 먼저 나누세요.** 손 글씨 자리와 읽기 크기는 절대, 여백과 장식은 상대입니다.
+
+---
+
 ### 인쇄 작업의 결과 정리
 
 | 항목 | 이전 | 이후 |
@@ -1106,7 +1197,8 @@ while time.time() < deadline:
 | 필기줄 | 배경 이미지(배경 끄면 사라짐) | **테두리** (화면 2줄 / 종이 3줄) |
 | 인쇄 시 배경 | 베이지 전면 | **흰 바탕** |
 | 다크 모드 인쇄 | 검은 바탕 | **흰 바탕으로 되돌림** |
-| 용지 | Letter | **A4** |
+| 용지 (HTML) | Letter 고정 | **사용자가 고른 용지로 재배치** (A4·Letter·Statement·A5) |
+| 용지 (내려받는 PDF) | 없음 | **A4** (`gen_pdfs.py --paper` 로 다른 용지도 가능) |
 | 미니지도 | 5.5MB SVG | **JPEG 94~274KB** |
 | 미리 구운 PDF | 없음 | **국면별 8개, 15.4MB** |
 
@@ -1151,7 +1243,9 @@ python3 gen_terrain.py      # 국면별 terrain-<slug>.jpg 8개
 
 # 4) 인쇄판 묶음 + A4 PDF
 python3 gen_printbook.py    # print/<slug>.html 8개 (표지 + 목차 + 전 과)
-python3 gen_pdfs.py --all   # pdf/<slug>.pdf 8개  (headless Chrome, 약 3분)
+python3 gen_pdfs.py --all   # pdf/<slug>.pdf 8개  (A4, headless Chrome, 약 2분)
+# 다른 용지가 필요하면:  python3 gen_pdfs.py --all --paper Statement
+#   → pdf/<slug>-statement.pdf 로 따로 나온다 (A4판을 덮지 않는다)
 
 # 5) Hugo 콘텐츠 페이지
 python3 gen_series.py       # 8개 국면 페이지 골격
@@ -1208,7 +1302,7 @@ cd /Users/gihyunpark/Desktop/Playground/myweb && git add -A && git commit -m "fe
 요약의 숫자는 프로그램으로 확인하세요. 「92과」와 「78과」의 차이는 신뢰의 차이입니다.
 
 ### ⑩ 매체가 다르면 스타일도 다르다
-화면과 종이는 다른 매체입니다. 화면용 스타일을 그대로 인쇄하면 배경색이 지면을 덮고, 다크 모드가 종이로 넘어옵니다. **인쇄해서 쓰는 자료라면 `@media print`는 선택이 아니라 필수입니다.** 그리고 「보이는 선」은 배경이 아니라 테두리로 그리세요 — 배경은 사용자가 끌 수 있습니다.
+화면과 종이는 다른 매체입니다. 화면용 스타일을 그대로 인쇄하면 배경색이 지면을 덮고, 다크 모드가 종이로 넘어옵니다. **인쇄해서 쓰는 자료라면 `@media print`는 선택이 아니라 필수입니다.** 그리고 「보이는 선」은 배경이 아니라 테두리로 그리세요 — 배경은 사용자가 끌 수 있습니다. 용지 크기는 `@page{size}`로 **못 박지 마세요** — 적으면 사용자의 용지 선택이 재배치가 아니라 축소가 됩니다(이슈 20).
 
 ### ⑪ 용량 문제는 열어 보고 고친다
 PDF가 크다고 내용을 줄이는 것은 대개 헛수고입니다. 실제 원인은 CSS 필터가 유발한 무손실 비트맵(789KB)과 한글 폰트 서브셋(550KB)이었습니다. **파일 안을 열어 무엇이 자리를 차지하는지 세어 보세요.**
@@ -1245,7 +1339,8 @@ PDF가 크다고 내용을 줄이는 것은 대개 헛수고입니다. 실제 �
 | `gen_study.py` | 459 | 7국면 교재 14과 |
 | `gen_map_birth.py` / `gen_study_birth.py` | 196 / 324 | 1국면 (mapkit 이전에 만들어 독립 구조) |
 | `phase_b.py` ~ `phase_h.py` | 202~440 | 2·3·4·5·6·8국면 **데이터** |
-| `studycss.py` | 213 | **교재 공용 스타일** — 화면 + 인쇄(`@media print`) 한 벌 |
+| `studycss.py` | 213 | **교재 공용 스타일** — 화면 + 인쇄 + 작은 용지 한 벌 |
+| `chromedp.py` | 235 | headless Chrome을 CDP로 다루는 최소 클라이언트(표준 라이브러리만) |
 | `gen_terrain.py` | 107 | 국면별 미니지도 배경 JPEG (headless Chrome + sips) |
 | `gen_printbook.py` | 115 | 국면 전체 묶음 인쇄판 HTML (표지 + 목차 + 전 과) |
 | `gen_pdfs.py` | 156 | 위 묶음을 A4 PDF로 (headless Chrome) |

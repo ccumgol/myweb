@@ -111,7 +111,11 @@ ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(
 @media print{
  :root{--paper:#fff;--card:#fff;--ink:#111;--soft:#333;--muted:#585858;
   --rule:#c9c9c9;--rules:#b3b3b3;--tint:#fff;--accent:#7d5c22;--accentd:#5c4319}
- @page{size:A4;margin:14mm 15mm}
+ /* size 를 적지 않는다 — 적으면 Chrome이 그 크기로 배치한 뒤 사용자가 고른 용지에
+    **축소**해 버린다(그래서 Statement에 뽑으면 본문이 10.5pt→7pt로 작아진다).
+    비워 두면 고른 용지로 제대로 다시 배치된다(실측: Statement 26쪽→42쪽 재배치).
+    미리 굽는 PDF는 gen_pdfs.py가 CDP로 A4를 지정한다. */
+ @page{margin:14mm 15mm}
  html,body{background:#fff}
  .wrap{background:#fff;padding:0;line-height:1.7;font-size:10.5pt}
  .page{max-width:none;margin:0;background:#fff;border:0;border-radius:0;box-shadow:none;padding:0}
@@ -124,7 +128,10 @@ ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(
     다시 굽느라 PDF가 과당 1.3MB가 된다. 흑백은 프린터의 '흑백 인쇄'로 하면 된다.
     저작권 표기(figcaption)는 지우지 않는다 — 종이 복제도 배포다. */
  figure.map{background:none;border-color:var(--rule)}
- .minimap{max-height:100mm}
+ /* 지도 높이는 용지에 비례해야 한다. 인쇄에서 vh 는 쪽 상자 높이로 계산되므로
+    A4(297mm)에서 약 101mm, Statement(216mm)에서 약 73mm가 된다.
+    mm로 못 박으면 작은 용지에서 지도가 지면 절반을 먹는다. */
+ .minimap{max-height:34vh}
  .tl-cell{background:none} .tl-cell.cur{background:none;border:2px solid #333}
  .tl-cell.cur .tl-d{color:#111}
  .panel{background:none;border:1px solid #999}
@@ -135,4 +142,18 @@ ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(
  a{color:inherit;text-decoration:none}
  a.chip.reflink::after{content:none}
  .foot{color:#555}
+}
+
+/* ── 작은 용지 (Statement 5.5x8.5in, A5 등) ────────────────────────
+   인쇄에서 max-width 는 쪽 상자 폭으로 평가된다. A4/Letter는 여기 걸리지 않는다.
+   여백을 줄여 좁은 지면의 본문 폭을 확보하고, 표제와 지도를 한 단계 낮춘다.
+   필기줄 높이(9mm)와 본문 크기(10pt)는 **줄이지 않는다** — 손 글씨와 읽기 크기는
+   종이가 작아졌다고 작아져선 안 된다. */
+@media print and (max-width:170mm){
+ @page{margin:11mm 10mm}
+ h1.title{font-size:17pt} .summary{font-size:9.5pt}
+ .sh h2{font-size:1.1rem}
+ .minimap{max-height:30vh}
+ .sb{margin-left:0}                    /* 좁은 폭에서는 들여쓰기가 사치다 */
+ .timeline .tl-lbl{display:none}       /* 연표 앞 '고난주간' 표찰은 제목과 겹치는 정보 */
 }

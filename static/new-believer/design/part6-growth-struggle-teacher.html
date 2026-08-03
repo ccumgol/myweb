@@ -96,7 +96,10 @@ ul.list{margin:.3em 0;padding-left:1.15em} ul.list li{margin:.3em 0;color:var(--
 @media print{
  :root{--paper:#fff;--card:#fff;--ink:#111;--soft:#333;--muted:#585858;
   --rule:#c9c9c9;--rules:#b3b3b3;--tint:#fff;--quote:#333}
- @page{size:A4;margin:14mm 15mm}
+ /* size 를 적지 않는다 — 적으면 Chrome이 그 크기로 배치한 뒤 사용자가 고른 용지에
+    **축소**해 버려서, Statement에 뽑으면 본문까지 작아진다. 비워 두면 고른 용지로
+    제대로 다시 배치된다. */
+ @page{margin:14mm 15mm}
  html,body{background:#fff}
  .wrap{background:#fff;padding:0;font-size:10.5pt;line-height:1.7}
  .page{max-width:none;margin:0;background:#fff;border:0;border-radius:0;box-shadow:none;padding:0}
@@ -111,6 +114,20 @@ ul.list{margin:.3em 0;padding-left:1.15em} ul.list li{margin:.3em 0;color:var(--
  .divider{background:#333}
  a{color:inherit;text-decoration:none}
  .foot{color:#555}
+}
+
+/* ── 작은 용지 (Statement 5.5x8.5in, A5 등) ────────────────────────
+   인쇄에서 max-width 는 쪽 상자 폭으로 평가된다. A4/Letter는 걸리지 않는다.
+   필기줄 높이와 본문 크기는 줄이지 않는다 — 손 글씨와 읽기 크기는 종이가
+   작아졌다고 작아져선 안 된다. 줄이는 것은 여백·표제·장식뿐이다. */
+@media print and (max-width:170mm){
+ @page{margin:11mm 10mm}
+ .cover h1{font-size:22pt} .cover .epi{font-size:.9rem}
+ h1.title{font-size:17pt}
+ .step h2{font-size:1.1rem}
+ .body{margin-left:0}
+ .flow{grid-template-columns:1fr 1fr}
+ .canon .cat{break-inside:avoid}
 }
 </style>
 </head>
