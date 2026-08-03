@@ -2,6 +2,7 @@
 
 > 이 문서는 홈페이지를 **GitHub → Cloudflare Pages → ccumgol.net**으로 배포하는 과정에서 실제로 발생한 문제들과 그 원인, 해결 과정을 기록합니다. 같은 구성을 가르치거나 재현할 때 반드시 마주치게 될 문제들이므로, 교육 자료로 활용하세요.
 > 초기 제작 단계의 이슈는 [troubleshooting.md](./troubleshooting.md), 전체 절차는 [deployment-manual.md](./deployment-manual.md) 참고.
+> 성경지도 제작 과정에서의 이슈(좌표·SVG 가공·저작권 표기·포인터 이벤트)는 [bible-map-report.md](./bible-map-report.md)에 따로 정리했습니다.
 
 ---
 

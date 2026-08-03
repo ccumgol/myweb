@@ -34,7 +34,7 @@ weight: 1
 ## 이 지도에 대하여
 
 - 사건 구분과 4복음서 대조는 꿈골이 정리한 **사복음서 조화표**(예수님의 행적 기준, 전 8국면 약 240개 사건)의 **A 국면**을 옮긴 것입니다.
-- **배경 지도 출처**: [The Ministry of Jesus](https://commons.wikimedia.org/wiki/File:The_Ministry_of_Jesus.svg) © DEGA MD, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — 위키미디어 공용. 변경 사항: 웹 게시를 위한 파일 경량화, 그리고 우리 표시(사건 지점 · 이름표 · 여정선 · 애굽 방향 화살표)를 덧붙였습니다. 이 배경 지도와 그 변경본은 원 라이선스와 같은 **CC BY-SA 4.0**으로 제공됩니다.
-- 사건 지점은 원본 지도의 위도·경도 격자에서 역산한 좌표 변환으로 배치했습니다. 예루살렘 · 베들레헴 · 나사렛 · 가버나움 등 9개 도시 표기와 **평균 1.4km 이내**로 일치하는 것을 확인했습니다.
+- **배경 지형도 출처**: [Southern Levant blank topographic map](https://commons.wikimedia.org/wiki/File:Southern_Levant_blank_topographic_map.svg) © DEGA MD, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — 위키미디어 공용. 변경 사항: 격자·눈금자·범례 제거, 웹 경량화, 그리고 우리 표시(사건 지점 · 이름표 · 여정선 · 애굽 방향 화살표)를 덧붙였습니다. 이 배경 지도와 그 변경본은 원 라이선스와 같은 **CC BY-SA 4.0**으로 제공됩니다.
+- 사건 지점은 원본 지도의 위도·경도 격자에서 역산한 좌표 변환으로 배치했습니다(EPSG:4326, 1도 = 500px). 같은 지도의 지명 표기판([The Ministry of Jesus](https://commons.wikimedia.org/wiki/File:The_Ministry_of_Jesus.svg), 동일 저작자·동일 투영)에 찍힌 예루살렘 · 베들레헴 · 나사렛 · 가버나움 등 9개 도시 위치와 **평균 1.4km 이내**로 일치하는 것을 확인했습니다.
 - **서론**(요 1:1-18, 눅 1:1-4)과 **족보**(마 1:1-17, 눅 3:23-38)는 특정 장소가 없는 본문이라 지도의 점이 아니라 오른쪽 패널의 ‘서론’ 카드로 안내하며, 1과에서 함께 다룹니다.
 - 다음은 [🁢 2. 공생애의 시작](/bible-map/early-ministry/)입니다. 이미 완성된 [🁢 7. 고난주간](/bible-map/passion-week/)도 보실 수 있습니다.
