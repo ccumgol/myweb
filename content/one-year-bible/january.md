@@ -3,6 +3,7 @@ title: "1월 (January)"
 date: 2026-07-30T10:00:00+09:00
 categories: ["일년일독성경"]
 summary: "1월 일년일독성경 읽기표 - 창세기, 출애굽기"
+books: "창세기, 출애굽기"
 weight: 1
 ---
 

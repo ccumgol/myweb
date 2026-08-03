@@ -3,6 +3,7 @@ title: "2월 (February)"
 date: 2026-07-30T10:00:00+09:00
 categories: ["일년일독성경"]
 summary: "2월 일년일독성경 읽기표 - 레위기, 민수기, 신명기"
+books: "레위기, 민수기, 신명기"
 weight: 2
 ---
 
