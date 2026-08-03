@@ -23,6 +23,12 @@ weight: 8
 
 각 과는 다루는 사건 목록 · 미니지도 · 귀납적 4단계(관찰 → 해석 → 연결 → 적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/resurrection.pdf" target="_blank" >}}⬇ 전 6과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/resurrection.html" target="_blank" >}}📄 전 6과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 - [1과 · 그가 여기 계시지 아니하니라 — 빈 무덤](/bible-map/study/H01.html) — H-01 · H-07
 - [2과 · 길에서 눈이 밝아지다 — 엠마오](/bible-map/study/H02.html) — H-08 · H-09
 - [3과 · 너희에게 평강이 있을지어다 — 도마](/bible-map/study/H03.html) — H-10 · H-11

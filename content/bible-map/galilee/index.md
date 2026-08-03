@@ -23,6 +23,12 @@ weight: 3
 
 각 과는 다루는 사건 목록 · 미니지도 · 귀납적 4단계(관찰 → 해석 → 연결 → 적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/galilee.pdf" target="_blank" >}}⬇ 전 13과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/galilee.html" target="_blank" >}}📄 전 13과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 - [1과 · 갈릴리에 임한 하나님 나라](/bible-map/study/D01.html) — 첫 선포·나사렛 배척·가버나움 이주
 - [2과 · 안식일의 주인](/bible-map/study/D02.html) — 베데스다와 안식일 논쟁
 - [3과 · 나를 따라오라 — 부르심](/bible-map/study/D03.html) — 어부·마태·열두 제자

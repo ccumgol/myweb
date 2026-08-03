@@ -1,91 +1,14 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2과 물에서 광야로 — 세례와 시험 — 공생애의 시작 성경공부</title>
-<style>
-:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#a67c33;
- --accentd:#7d5c22;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
- --serif:"Nanum Myeongjo","AppleMyungjo",serif;
- --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;
- --muted:#9b9080;--accent:#c9a54c;--accentd:#e0bd6a;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318}}
-*{box-sizing:border-box;margin:0;padding:0}
-.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;
- padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
-.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;
- box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
-.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
-h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
-.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
-.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
-.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
-.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
-.evlist .ev .et{font-weight:600}
-.evlist .ev .pl{display:inline-block;font-size:.7rem;color:var(--muted);background:var(--tint);
- border-radius:4px;padding:.05em .5em;margin-left:.5em;vertical-align:.1em}
-.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
-.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);
- border-radius:6px;padding:.12em .55em}
-a.chip.reflink{text-decoration:none;cursor:pointer}
-a.chip.reflink:hover{border-color:var(--accent);color:var(--accentd)}
-a.chip.reflink::after{content:"↗";font-size:.62rem;margin-left:.25em;opacity:.55}
-figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;
- background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
-.minimap{display:block;width:100%;height:auto;max-height:380px}
-.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);
- paint-order:stroke;stroke:var(--card);stroke-width:5px}
-.rgl{font-family:var(--serif);fill:var(--soft);font-size:20px;font-weight:700;opacity:.95;
- letter-spacing:.06em;paint-order:stroke;stroke:var(--card);stroke-width:4.5px;stroke-linejoin:round}
-.rgl.sm{font-size:14px;font-weight:600}
-figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);
- background:var(--card)} figcaption b{color:var(--accentd)}
-.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);
- margin:24px 0 22px;border-radius:2px}
-.step{margin:0 0 22px}
-.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
-.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;
- display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);
- border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
-.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
-.sb{margin-left:calc(1.9em + .7em)}
-.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
-.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);
- min-height:66px;border-radius:2px}
-blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);
- font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
-blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
-.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
-.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
-.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0}
-.panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
-ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
-.lnav{margin:24px 0 0;border-top:1px solid var(--rule);padding-top:14px}
-.lnav details{margin:0 0 10px}
-.lnav summary{cursor:pointer;font-size:.84rem;font-weight:700;color:var(--accentd);list-style:none}
-.lnav summary::-webkit-details-marker{display:none}
-.lnav summary::before{content:"▸ "} .lnav details[open] summary::before{content:"▾ "}
-.lnav .toclist{margin:.5em 0 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.lnav .tocitem{display:block;padding:8px 14px;text-decoration:none;color:var(--ink);
- border-bottom:1px solid var(--rule)}
-.lnav .tocitem:last-child{border-bottom:0} .lnav .tocitem:hover{background:var(--tint)}
-.lnav .tocitem.cur{background:var(--tint);border-left:3px solid var(--accent)}
-.lnav .tocitem .n{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.5em}
-.lnav .tocitem .t{font-weight:600;font-size:.92rem}
-.lnav .tocitem .c{display:block;font-size:.72rem;color:var(--muted);margin-left:2.3em}
-.lnav .pnrow{display:flex;gap:.5em;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.lnav .pn{font-size:.8rem;color:var(--accentd);text-decoration:none;font-weight:700}
-.lnav .pn:hover{text-decoration:underline}
-.lnav .pn.off,.lnav .pn.mid{color:var(--muted);font-weight:500}
-.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;
- justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
-.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
-@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}}
-</style></head><body><div class="wrap"><div class="page">
+<link rel="stylesheet" href="/bible-map/study.css"></head><body><div class="wrap"><div class="page">
   <div class="eyebrow">공생애의 시작 · 제2과 / 전 6과</div>
   <h1 class="title">물에서 광야로 — 세례와 시험</h1>
   <p class="summary">죄 없으신 분이 죄인의 자리에 서서 세례를 받으시고, 곧바로 성령에 이끌려 광야의 시험으로 들어가신다.</p>
+  <div class="tools"><button type="button" class="tbtn" onclick="window.print()">🖨 이 과 인쇄</button><a class="tbtn ghost" href="/bible-map/pdf/early-ministry.pdf" download>⬇ 전 6과 PDF</a><a class="tbtn ghost" href="/bible-map/print/early-ministry.html">📄 전 6과 인쇄판</a><span class="thint">A4에 맞춰져 있습니다. 「배경 그래픽」을 꺼도 필기줄은 그대로 나옵니다.</span></div>
   <div class="evlist"><div class="ev"><span class="ec">B-02</span><span class="et">예수께서 세례를 받으시다</span><span class="pl">요단강 베다니</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=3&sec=13" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 3:13-17</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=1&sec=9" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 1:9-11</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=luk&chap=3&sec=21" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">눅 3:21-22</a></div></div><div class="ev"><span class="ec">B-03</span><span class="et">예수께서 광야에서 시험을 받으시다</span><span class="pl">유대 광야</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=4&sec=1" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 4:1-11</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=1&sec=12" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 1:12-13</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=luk&chap=4&sec=1" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">눅 4:1-13</a></div></div></div>
   <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
-  <image href="/bible-map/img/levant-topo.svg" x="-522.1" y="-415.0" width="1700.7" height="2125.9"
+  <image href="/bible-map/img/terrain-early-ministry.jpg" x="0.0" y="0.0" width="1000.0" height="680.0"
          preserveAspectRatio="none"/>
   <text x="700" y="92" class="rgl" text-anchor="middle">갈 릴 리</text><text x="300" y="300" class="rgl" text-anchor="middle">사 마 리 아</text><text x="215" y="545" class="rgl" text-anchor="middle">유    대</text><text x="660" y="250" class="rgl sm" text-anchor="middle">요 단 강</text><text x="505" y="645" class="rgl sm" text-anchor="middle">사    해</text><text x="730" y="560" class="rgl" text-anchor="middle">베 레 아</text>
   <defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
@@ -95,7 +18,7 @@ ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(
     <figcaption>이 과의 무대 — <b>요단강 베다니 · 유대 광야</b><br>
       <span style="opacity:.8">배경 지형도: Southern Levant blank topographic map © DEGA MD · CC BY-SA 4.0 (변경됨)</span></figcaption></figure>
   <div class="divider"></div>
-  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">꼭 하지 않아도 될 일을 스스로 감당한 사람을 본 적이 있나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>마 3:13-15 · 요한은 왜 만류했고, 예수는 무엇이라 답하셨습니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>마 3:16-17 · 세례 후 일어난 세 가지(하늘·성령·소리)는 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>마 4:1-2 · 예수는 누구에게 이끌려, 어디로, 얼마 동안 가셨습니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>마 4:3-4 · 첫 시험과 예수의 대답은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">5.</span>마 4:5-7 · 둘째 시험에서 마귀도 성경을 인용합니다. 예수는 어떻게 답하십니까?</p><div class="write"></div><p class="q"><span class="lead">6.</span>마 4:8-10 · 셋째 시험이 요구한 것과, 예수의 답은 무엇입니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>‘모든 의를 이루는 것이 합당하다’ — 죄 없으신 분이 회개의 세례를 받으신 뜻은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>‘너는 내 사랑하는 아들’이라는 선언이 **시험 직전에** 주어진 것은 무엇을 말해 줍니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>세 시험(먹을 것·자기 증명·권세)은 사람을 무엇으로 흔들려 합니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>마귀도 성경을 인용합니다. 성경을 성경으로 답하신 예수에게서 무엇을 배웁니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>너를 낮추시며 너를 주리게 하시며 또 너도 알지 못하며 네 조상들도 알지 못하던 만나를 네게 먹이신 것은 사람이 떡으로만 사는 것이 아니요 여호와의 입에서 나오는 모든 말씀으로 사는 줄을 네가 알게 하려 하심이니라<span class="ref">신 8:3 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>예수께서 인용하신 신 8:3은 이스라엘의 사십 년 광야를 배경으로 합니다. 예수의 사십 일 광야는 그 역사를 어떻게 다시 사시는 것입니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>내가 자주 흔들리는 시험은 세 가지 중 어느 쪽에 가깝습니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>시험의 순간에 붙들 말씀 한 구절을 지금 정해 적어 보십시오.</p><div class="write"></div></div></section>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">꼭 하지 않아도 될 일을 스스로 감당한 사람을 본 적이 있나요?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>마 3:13-15 · 요한은 왜 만류했고, 예수는 무엇이라 답하셨습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>마 3:16-17 · 세례 후 일어난 세 가지(하늘·성령·소리)는 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">3.</span>마 4:1-2 · 예수는 누구에게 이끌려, 어디로, 얼마 동안 가셨습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">4.</span>마 4:3-4 · 첫 시험과 예수의 대답은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">5.</span>마 4:5-7 · 둘째 시험에서 마귀도 성경을 인용합니다. 예수는 어떻게 답하십니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">6.</span>마 4:8-10 · 셋째 시험이 요구한 것과, 예수의 답은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>‘모든 의를 이루는 것이 합당하다’ — 죄 없으신 분이 회개의 세례를 받으신 뜻은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>‘너는 내 사랑하는 아들’이라는 선언이 **시험 직전에** 주어진 것은 무엇을 말해 줍니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">3.</span>세 시험(먹을 것·자기 증명·권세)은 사람을 무엇으로 흔들려 합니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">4.</span>마귀도 성경을 인용합니다. 성경을 성경으로 답하신 예수에게서 무엇을 배웁니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>너를 낮추시며 너를 주리게 하시며 또 너도 알지 못하며 네 조상들도 알지 못하던 만나를 네게 먹이신 것은 사람이 떡으로만 사는 것이 아니요 여호와의 입에서 나오는 모든 말씀으로 사는 줄을 네가 알게 하려 하심이니라<span class="ref">신 8:3 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>예수께서 인용하신 신 8:3은 이스라엘의 사십 년 광야를 배경으로 합니다. 예수의 사십 일 광야는 그 역사를 어떻게 다시 사시는 것입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>내가 자주 흔들리는 시험은 세 가지 중 어느 쪽에 가깝습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>시험의 순간에 붙들 말씀 한 구절을 지금 정해 적어 보십시오.</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section>
   <div class="panel"><span class="label">오늘의 암송</span>
     <p class="verse">예수께서 대답하여 이르시되 기록되었으되 사람이 떡으로만 살 것이 아니요 하나님의 입으로부터 나오는 모든 말씀으로 살 것이라  하였느니라 하시니
       <span class="ref">마 4:4 · 개역개정</span></p></div>

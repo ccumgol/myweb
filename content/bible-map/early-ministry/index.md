@@ -23,6 +23,12 @@ weight: 2
 
 각 과는 다루는 사건 목록 · 미니지도 · 귀납적 4단계(관찰 → 해석 → 연결 → 적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/early-ministry.pdf" target="_blank" >}}⬇ 전 6과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/early-ministry.html" target="_blank" >}}📄 전 6과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 - [1과 · 광야의 소리 — 회개의 세례](/bible-map/study/C01.html) — 요한의 선포와 ‘하나님의 어린양’ (마 3장, 요 1:19-34)
 - [2과 · 물에서 광야로 — 세례와 시험](/bible-map/study/C02.html) — 세례와 사십 일 시험 (마 3:13-4:11)
 - [3과 · 와서 보라 — 첫 제자와 첫 표적](/bible-map/study/C03.html) — 첫 제자들·가나의 혼인 잔치 (요 1:35-2:12)

@@ -31,6 +31,12 @@ weight: 7
 
 각 과는 미니지도 · 7일 연표 · 귀납적 4단계(관찰→해석→연결→적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/passion-week.pdf" target="_blank" >}}⬇ 전 14과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/passion-week.html" target="_blank" >}}📄 전 14과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 **일 · 종려주일**
 - [1과 · 향유와 입성](/bible-map/study/L01.html)
 

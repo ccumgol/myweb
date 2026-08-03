@@ -1,91 +1,14 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>4과 네가 나를 사랑하느냐 — 베드로의 회복 — 부활과 승천 성경공부</title>
-<style>
-:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#a67c33;
- --accentd:#7d5c22;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
- --serif:"Nanum Myeongjo","AppleMyungjo",serif;
- --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;
- --muted:#9b9080;--accent:#c9a54c;--accentd:#e0bd6a;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318}}
-*{box-sizing:border-box;margin:0;padding:0}
-.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;
- padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
-.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;
- box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
-.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
-h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
-.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
-.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
-.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
-.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
-.evlist .ev .et{font-weight:600}
-.evlist .ev .pl{display:inline-block;font-size:.7rem;color:var(--muted);background:var(--tint);
- border-radius:4px;padding:.05em .5em;margin-left:.5em;vertical-align:.1em}
-.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
-.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);
- border-radius:6px;padding:.12em .55em}
-a.chip.reflink{text-decoration:none;cursor:pointer}
-a.chip.reflink:hover{border-color:var(--accent);color:var(--accentd)}
-a.chip.reflink::after{content:"↗";font-size:.62rem;margin-left:.25em;opacity:.55}
-figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;
- background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
-.minimap{display:block;width:100%;height:auto;max-height:380px}
-.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);
- paint-order:stroke;stroke:var(--card);stroke-width:5px}
-.rgl{font-family:var(--serif);fill:var(--soft);font-size:20px;font-weight:700;opacity:.95;
- letter-spacing:.06em;paint-order:stroke;stroke:var(--card);stroke-width:4.5px;stroke-linejoin:round}
-.rgl.sm{font-size:14px;font-weight:600}
-figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);
- background:var(--card)} figcaption b{color:var(--accentd)}
-.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);
- margin:24px 0 22px;border-radius:2px}
-.step{margin:0 0 22px}
-.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
-.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;
- display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);
- border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
-.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
-.sb{margin-left:calc(1.9em + .7em)}
-.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
-.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);
- min-height:66px;border-radius:2px}
-blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);
- font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
-blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
-.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
-.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
-.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0}
-.panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
-ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
-.lnav{margin:24px 0 0;border-top:1px solid var(--rule);padding-top:14px}
-.lnav details{margin:0 0 10px}
-.lnav summary{cursor:pointer;font-size:.84rem;font-weight:700;color:var(--accentd);list-style:none}
-.lnav summary::-webkit-details-marker{display:none}
-.lnav summary::before{content:"▸ "} .lnav details[open] summary::before{content:"▾ "}
-.lnav .toclist{margin:.5em 0 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.lnav .tocitem{display:block;padding:8px 14px;text-decoration:none;color:var(--ink);
- border-bottom:1px solid var(--rule)}
-.lnav .tocitem:last-child{border-bottom:0} .lnav .tocitem:hover{background:var(--tint)}
-.lnav .tocitem.cur{background:var(--tint);border-left:3px solid var(--accent)}
-.lnav .tocitem .n{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.5em}
-.lnav .tocitem .t{font-weight:600;font-size:.92rem}
-.lnav .tocitem .c{display:block;font-size:.72rem;color:var(--muted);margin-left:2.3em}
-.lnav .pnrow{display:flex;gap:.5em;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.lnav .pn{font-size:.8rem;color:var(--accentd);text-decoration:none;font-weight:700}
-.lnav .pn:hover{text-decoration:underline}
-.lnav .pn.off,.lnav .pn.mid{color:var(--muted);font-weight:500}
-.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;
- justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
-.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
-@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}}
-</style></head><body><div class="wrap"><div class="page">
+<link rel="stylesheet" href="/bible-map/study.css"></head><body><div class="wrap"><div class="page">
   <div class="eyebrow">부활과 승천 · 제4과 / 전 6과</div>
   <h1 class="title">네가 나를 사랑하느냐 — 베드로의 회복</h1>
   <p class="summary">다시 그물을 잡던 베드로에게 큰 물고기와 숯불 아침을 차려 주시고, 세 번 물으신다 — ‘네가 나를 사랑하느냐.’</p>
+  <div class="tools"><button type="button" class="tbtn" onclick="window.print()">🖨 이 과 인쇄</button><a class="tbtn ghost" href="/bible-map/pdf/resurrection.pdf" download>⬇ 전 6과 PDF</a><a class="tbtn ghost" href="/bible-map/print/resurrection.html">📄 전 6과 인쇄판</a><span class="thint">A4에 맞춰져 있습니다. 「배경 그래픽」을 꺼도 필기줄은 그대로 나옵니다.</span></div>
   <div class="evlist"><div class="ev"><span class="ec">H-12</span><span class="et">디베랴 바다에서 큰 물고기를 잡다</span><span class="pl">디베랴 바다</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=jhn&chap=21&sec=1" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">요 21:1-14</a></div></div><div class="ev"><span class="ec">H-13</span><span class="et">베드로를 회복시키시다</span><span class="pl">디베랴 바다</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=jhn&chap=21&sec=15" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">요 21:15-19</a></div></div><div class="ev"><span class="ec">H-14</span><span class="et">요한의 미래를 두고 말씀하시다</span><span class="pl">디베랴 바다</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=jhn&chap=21&sec=20" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">요 21:20-25</a></div></div></div>
   <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
-  <image href="/bible-map/img/levant-topo.svg" x="-766.4" y="-594.3" width="2193.0" height="2741.2"
+  <image href="/bible-map/img/terrain-resurrection.jpg" x="0.0" y="0.0" width="1000.0" height="680.0"
          preserveAspectRatio="none"/>
   <text x="300" y="96" class="rgl" text-anchor="middle">갈 릴 리</text><text x="270" y="300" class="rgl" text-anchor="middle">사 마 리 아</text><text x="560" y="600" class="rgl" text-anchor="middle">유    대</text><text x="700" y="330" class="rgl sm" text-anchor="middle">요 단 강</text>
   <defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
@@ -95,7 +18,7 @@ ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(
     <figcaption>이 과의 무대 — <b>디베랴 바다</b><br>
       <span style="opacity:.8">배경 지형도: Southern Levant blank topographic map © DEGA MD · CC BY-SA 4.0 (변경됨)</span></figcaption></figure>
   <div class="divider"></div>
-  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">실패한 뒤 다시 일어설 기회를 받은 적이 있나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>요 21:2-3 · 베드로가 한 말과, 그 밤의 결과는 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>요 21:5-7 · 예수의 지시와 결과, 그리고 요한과 베드로의 반응은?</p><div class="write"></div><p class="q"><span class="lead">3.</span>요 21:9-13 · 육지에서 제자들이 본 것과, 예수께서 하신 일은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>요 21:15-17 · 세 번의 문답을 그대로 적어 보십시오(질문·대답·명령).</p><div class="write"></div><p class="q"><span class="lead">5.</span>요 21:18-19 · 예수께서 예고하신 것과 마지막 명령은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">6.</span>요 21:20-22 · 요한에 대한 베드로의 질문과 예수의 대답은?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>밤새 헛수고한 뒤 오신 것은 예수의 방식에 대해 무엇을 말합니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>숯불(요 21:9)은 베드로가 부인했던 그 밤의 불(요 18:18)을 떠올리게 합니다. 무엇이 회복됩니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>세 번 물으신 것과 세 번 부인한 것의 관계는 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>‘너는 나를 따르라’ — 남과 비교하려는 베드로에게 주신 이 답은 무엇을 정리합니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>시몬아, 시몬아, 보라 사탄이 너희를 밀 까부르듯 하려고 요구하였으나 그러나 내가 너를 위하여 네 믿음이 떨어지지 않기를 기도하였노니 너는 돌이킨 후에 네 형제를 굳게 하라<span class="ref">눅 22:31-32 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>눅 22:31-32에서 예수는 베드로에게 무엇을 예고하셨습니까? 요 21장은 그 말씀의 무엇을 이룹니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>내 실패의 자리에서 주님이 다시 물으신다면 무엇을 물으실까요?</p><div class="write"></div><p class="q"><span class="lead">2.</span>남과 비교하며 미루는 순종이 있습니까?</p><div class="write"></div></div></section>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">실패한 뒤 다시 일어설 기회를 받은 적이 있나요?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>요 21:2-3 · 베드로가 한 말과, 그 밤의 결과는 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>요 21:5-7 · 예수의 지시와 결과, 그리고 요한과 베드로의 반응은?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">3.</span>요 21:9-13 · 육지에서 제자들이 본 것과, 예수께서 하신 일은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">4.</span>요 21:15-17 · 세 번의 문답을 그대로 적어 보십시오(질문·대답·명령).</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">5.</span>요 21:18-19 · 예수께서 예고하신 것과 마지막 명령은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">6.</span>요 21:20-22 · 요한에 대한 베드로의 질문과 예수의 대답은?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>밤새 헛수고한 뒤 오신 것은 예수의 방식에 대해 무엇을 말합니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>숯불(요 21:9)은 베드로가 부인했던 그 밤의 불(요 18:18)을 떠올리게 합니다. 무엇이 회복됩니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">3.</span>세 번 물으신 것과 세 번 부인한 것의 관계는 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">4.</span>‘너는 나를 따르라’ — 남과 비교하려는 베드로에게 주신 이 답은 무엇을 정리합니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>시몬아, 시몬아, 보라 사탄이 너희를 밀 까부르듯 하려고 요구하였으나 그러나 내가 너를 위하여 네 믿음이 떨어지지 않기를 기도하였노니 너는 돌이킨 후에 네 형제를 굳게 하라<span class="ref">눅 22:31-32 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>눅 22:31-32에서 예수는 베드로에게 무엇을 예고하셨습니까? 요 21장은 그 말씀의 무엇을 이룹니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>내 실패의 자리에서 주님이 다시 물으신다면 무엇을 물으실까요?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>남과 비교하며 미루는 순종이 있습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section>
   <div class="panel"><span class="label">오늘의 암송</span>
     <p class="verse">세 번째 이르시되 요한의 아들 시몬아 네가 나를 사랑하느냐 하시니 주께서 세 번째 네가 나를 사랑하느냐 하시므로 베드로가 근심하여 이르되 주님 모든 것을 아시오매 내가 주님을 사랑하는 줄을 주님께서 아시나이다 예수께서 이르시되 내 양을 먹이라
       <span class="ref">요 21:17 · 개역개정</span></p></div>

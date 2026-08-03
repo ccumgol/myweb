@@ -44,8 +44,12 @@ section{margin:0 0 26px}
 .q .lead{color:var(--accentd);font-weight:700;margin-right:.15em}
 .hint{color:var(--soft);font-size:.92rem;font-weight:400;margin:.1em 0 .55em}
 .fill{color:var(--muted);border-bottom:1.5px dashed var(--rules);padding:0 .9em}
-.write{margin:.4em 0 1.05em;background:repeating-linear-gradient(transparent 0 33px,var(--rules) 33px 34px);min-height:68px;border-radius:2px}
-.write.sm{min-height:34px}
+/* 필기줄 — 배경 이미지가 아니라 테두리다. 인쇄에서 '배경 그래픽'을 꺼도 남는다. */
+.write{margin:.4em 0 1.05em}
+.write i{display:block;height:33px;border-bottom:1px solid var(--rules)}
+@media screen{.write i.px{display:none}}   /* 세 번째 줄은 종이에서만 */
+.write.sm i:nth-child(n+2){display:none}
+@media print{.write.sm i:nth-child(2){display:block}}
 blockquote{margin:.5em 0 1em;padding:.6em 0 .6em 1.05em;border-left:3px solid var(--quote);font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.68}
 blockquote .ref{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);margin-top:.35em}
 .panel{background:var(--tint);border:1px solid var(--rules);border-radius:6px;padding:20px 24px;margin:0 0 26px}
@@ -86,6 +90,28 @@ ul.list{margin:.3em 0;padding-left:1.15em} ul.list li{margin:.3em 0;color:var(--
 .canon .cat .cb{font-family:var(--serif);color:var(--soft);margin:.35em 0 .15em;line-height:1.65}
 .canon .cat .cd{font-size:.85rem;color:var(--muted);line-height:1.5}
 @media (max-width:560px){.wrap{padding:16px 8px 40px}.page{padding:30px 20px}.cover{padding:44px 22px 28px}.cover h1{font-size:2.4rem}h1.title{font-size:2rem}.body{margin-left:0}.flow{grid-template-columns:1fr 1fr}}
+/* ── 인쇄 ─────────────────────────────────────────────────────────
+   다크 모드 토큰을 되돌린다. prefers-color-scheme 규칙보다 뒤에 와야 이긴다.
+   그러지 않으면 다크 모드인 기기에서 검은 바탕에 흰 글씨가 인쇄된다. */
+@media print{
+ :root{--paper:#fff;--card:#fff;--ink:#111;--soft:#333;--muted:#585858;
+  --rule:#c9c9c9;--rules:#b3b3b3;--tint:#fff;--quote:#333}
+ @page{size:A4;margin:14mm 15mm}
+ html,body{background:#fff}
+ .wrap{background:#fff;padding:0;font-size:10.5pt;line-height:1.7}
+ .page{max-width:none;margin:0;background:#fff;border:0;border-radius:0;box-shadow:none;padding:0}
+ .page + .page{break-before:page}
+ .cover{border:0;background:none;box-shadow:none;break-after:page}
+ /* 문항과 필기 공간, 표는 쪽 경계에서 갈라지지 않게 */
+ .step,.panel,.qa,.note,.obj,.canon .cat,blockquote{break-inside:avoid}
+ .step h2,.eyebrow,.rubric,.q{break-after:avoid}
+ .write{margin:.3em 0 .85em} .write i{height:9mm}
+ .panel,.note,.obj,.qa .ans{background:none;border:1px solid #999}
+ .flow .f,.toc li,.canon .cat{background:none}
+ .divider{background:#333}
+ a{color:inherit;text-decoration:none}
+ .foot{color:#555}
+}
 </style>
 </head>
 <body>

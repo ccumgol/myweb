@@ -23,6 +23,12 @@ weight: 6
 
 각 과는 다루는 사건 목록 · 미니지도 · 귀납적 4단계(관찰 → 해석 → 연결 → 적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/perea.pdf" target="_blank" >}}⬇ 전 10과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/perea.html" target="_blank" >}}📄 전 10과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 - [1과 · 좁은 문 — 들어가기를 힘쓰라](/bible-map/study/G01.html) — F-01 · F-02
 - [2과 · 높은 자리와 큰 잔치](/bible-map/study/G02.html) — F-04 · F-05 · F-06 · F-07
 - [3과 · 잃은 것을 찾으시는 하나님](/bible-map/study/G03.html) — F-08 · F-09 · F-10

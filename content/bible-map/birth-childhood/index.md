@@ -24,6 +24,12 @@ weight: 1
 
 각 과는 다루는 사건 목록 · 미니지도 · 귀납적 4단계(관찰 → 해석 → 연결 → 적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/birth-childhood.pdf" target="_blank" >}}⬇ 전 6과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/birth-childhood.html" target="_blank" >}}📄 전 6과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 - [1과 · 태초의 말씀, 약속된 아기](/bible-map/study/B01.html) — 서론 · 족보 · 요한의 탄생 예고 (요 1장, 마 1장, 눅 1:5-25)
 - [2과 · 은혜를 입은 자여 — 수태고지](/bible-map/study/B02.html) — 마리아와 엘리사벳 (눅 1:26-56)
 - [3과 · 광야의 소리로 자라날 아이](/bible-map/study/B03.html) — 요한의 탄생과 사가랴의 노래 (눅 1:57-80)

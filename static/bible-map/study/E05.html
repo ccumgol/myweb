@@ -1,101 +1,24 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>5과 표적을 구하는 세대, 바리새인의 누룩 — 갈릴리에서 물러나심 성경공부</title>
-<style>
-:root{--paper:#f4efe6;--card:#fffdf8;--ink:#2b2622;--soft:#5b5148;--muted:#8a7f73;--accent:#a67c33;
- --accentd:#7d5c22;--rule:#e3dccf;--rules:#d3c9b6;--tint:#efe7d8;
- --serif:"Nanum Myeongjo","AppleMyungjo",serif;
- --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--paper:#1a1712;--card:#221d17;--ink:#ece5d8;--soft:#c3b9a8;
- --muted:#9b9080;--accent:#c9a54c;--accentd:#e0bd6a;--rule:#3a332a;--rules:#4a4235;--tint:#2a2318}}
-*{box-sizing:border-box;margin:0;padding:0}
-.wrap{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;
- padding:34px 18px 70px;-webkit-font-smoothing:antialiased}
-.page{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-radius:6px;
- box-shadow:0 10px 30px rgba(0,0,0,.08);padding:44px 46px 40px}
-.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accentd);font-weight:700;text-transform:uppercase}
-h1.title{font-family:var(--serif);font-weight:800;font-size:2.3rem;line-height:1.15;margin:.2em 0 .15em}
-.summary{color:var(--soft);font-size:1rem;font-family:var(--serif);margin:.2em 0 .6em}
-.evlist{margin:16px 0 2px;border-top:1px solid var(--rule)}
-.evlist .ev{padding:9px 0;border-bottom:1px solid var(--rule)}
-.evlist .ev .ec{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.55em}
-.evlist .ev .et{font-weight:600}
-.evlist .ev .pl{display:inline-block;font-size:.7rem;color:var(--muted);background:var(--tint);
- border-radius:4px;padding:.05em .5em;margin-left:.5em;vertical-align:.1em}
-.evlist .ev .er{display:flex;flex-wrap:wrap;gap:.35em;margin-top:.3em}
-.chip{font-size:.76rem;color:var(--soft);background:var(--tint);border:1px solid var(--rules);
- border-radius:6px;padding:.12em .55em}
-a.chip.reflink{text-decoration:none;cursor:pointer}
-a.chip.reflink:hover{border-color:var(--accent);color:var(--accentd)}
-a.chip.reflink::after{content:"↗";font-size:.62rem;margin-left:.25em;opacity:.55}
-figure.map{margin:18px 0 6px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;
- background:radial-gradient(120% 120% at 50% 0,var(--card),var(--paper))}
-.minimap{display:block;width:100%;height:auto;max-height:380px}
-.mm-lbl{font-family:var(--sans);font-size:21px;font-weight:800;fill:var(--ink);
- paint-order:stroke;stroke:var(--card);stroke-width:5px}
-.rgl{font-family:var(--serif);fill:var(--soft);font-size:20px;font-weight:700;opacity:.95;
- letter-spacing:.06em;paint-order:stroke;stroke:var(--card);stroke-width:4.5px;stroke-linejoin:round}
-.rgl.sm{font-size:14px;font-weight:600}
-figcaption{font-size:.82rem;color:var(--muted);padding:8px 12px;border-top:1px solid var(--rule);
- background:var(--card)} figcaption b{color:var(--accentd)}
-.divider{height:2px;background:linear-gradient(90deg,var(--accent) 0 46px,var(--rule) 46px);
- margin:24px 0 22px;border-radius:2px}
-.step{margin:0 0 22px}
-.sh{display:flex;align-items:baseline;gap:.7em;margin:0 0 .5em}
-.sh .n{font-family:var(--serif);font-weight:800;color:var(--accent);min-width:1.9em;height:1.9em;
- display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--accent);
- border-radius:50%;flex:none;aspect-ratio:1;line-height:1}
-.sh h2{font-size:1.22rem;font-weight:700} .sh .cue{font-size:.85rem;color:var(--muted);font-weight:500}
-.sb{margin-left:calc(1.9em + .7em)}
-.q{margin:.2em 0 .3em;font-weight:600} .q .lead{color:var(--accentd);font-weight:800;margin-right:.35em}
-.write{margin:.3em 0 1em;background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px);
- min-height:66px;border-radius:2px}
-blockquote{margin:.4em 0 .9em;padding:.5em 0 .5em 1em;border-left:3px solid var(--accent);
- font-family:var(--serif);font-size:1.02rem;color:var(--soft);line-height:1.7}
-blockquote .ref{display:block;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:.3em}
-.panel{background:var(--tint);border:1px solid var(--rules);border-radius:8px;padding:18px 22px;margin:6px 0 22px}
-.panel .label{font-size:.74rem;letter-spacing:.14em;color:var(--accentd);font-weight:700;text-transform:uppercase}
-.panel .verse{font-family:var(--serif);font-size:1.12rem;line-height:1.6;margin:.4em 0 0}
-.panel .verse .ref{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-left:.3em}
-ul.pray{margin:.3em 0 0;padding-left:1.1em} ul.pray li{margin:.25em 0;color:var(--soft)}
-.lnav{margin:24px 0 0;border-top:1px solid var(--rule);padding-top:14px}
-.lnav details{margin:0 0 10px}
-.lnav summary{cursor:pointer;font-size:.84rem;font-weight:700;color:var(--accentd);list-style:none}
-.lnav summary::-webkit-details-marker{display:none}
-.lnav summary::before{content:"▸ "} .lnav details[open] summary::before{content:"▾ "}
-.lnav .toclist{margin:.5em 0 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.lnav .tocitem{display:block;padding:8px 14px;text-decoration:none;color:var(--ink);
- border-bottom:1px solid var(--rule)}
-.lnav .tocitem:last-child{border-bottom:0} .lnav .tocitem:hover{background:var(--tint)}
-.lnav .tocitem.cur{background:var(--tint);border-left:3px solid var(--accent)}
-.lnav .tocitem .n{font-family:var(--serif);font-weight:800;color:var(--accent);margin-right:.5em}
-.lnav .tocitem .t{font-weight:600;font-size:.92rem}
-.lnav .tocitem .c{display:block;font-size:.72rem;color:var(--muted);margin-left:2.3em}
-.lnav .pnrow{display:flex;gap:.5em;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.lnav .pn{font-size:.8rem;color:var(--accentd);text-decoration:none;font-weight:700}
-.lnav .pn:hover{text-decoration:underline}
-.lnav .pn.off,.lnav .pn.mid{color:var(--muted);font-weight:500}
-.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);display:flex;
- justify-content:space-between;gap:1em;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
-.foot a{color:var(--accentd);text-decoration:none;font-weight:700} .foot a:hover{text-decoration:underline}
-@media (max-width:560px){.page{padding:26px 18px}.sb{margin-left:0}h1.title{font-size:1.8rem}}
-</style></head><body><div class="wrap"><div class="page">
+<link rel="stylesheet" href="/bible-map/study.css"></head><body><div class="wrap"><div class="page">
   <div class="eyebrow">갈릴리에서 물러나심 · 제5과 / 전 10과</div>
   <h1 class="title">표적을 구하는 세대, 바리새인의 누룩</h1>
   <p class="summary">하늘의 표적을 구하는 이들에게 탄식하시고, 바리새인의 누룩을 경계하시며, 벳새다의 맹인을 두 번에 걸쳐 고치신다.</p>
+  <div class="tools"><button type="button" class="tbtn" onclick="window.print()">🖨 이 과 인쇄</button><a class="tbtn ghost" href="/bible-map/pdf/withdrawal.pdf" download>⬇ 전 10과 PDF</a><a class="tbtn ghost" href="/bible-map/print/withdrawal.html">📄 전 10과 인쇄판</a><span class="thint">A4에 맞춰져 있습니다. 「배경 그래픽」을 꺼도 필기줄은 그대로 나옵니다.</span></div>
   <div class="evlist"><div class="ev"><span class="ec">D-09</span><span class="et">바리새인·사두개인이 표적을 구하다</span><span class="pl">달마누다</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=15&sec=39" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 15:39-16:4</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=8&sec=11" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 8:11-12</a></div></div><div class="ev"><span class="ec">D-10</span><span class="et">바리새인·사두개인의 누룩을 경계하시다</span><span class="pl">갈릴리 바다</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mat&chap=16&sec=5" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">마 16:5-12</a><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=8&sec=13" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 8:13-21</a></div></div><div class="ev"><span class="ec">D-11</span><span class="et">벳새다에서 맹인을 고치시다</span><span class="pl">벳새다 들</span><div class="er"><a class="chip reflink" href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=mrk&chap=8&sec=22" target="_blank" rel="noopener" title="대한성서공회 개역개정 본문 열기">막 8:22-26</a></div></div></div>
   <figure class="map"><svg class="minimap" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
-  <image href="/bible-map/img/levant-topo.svg" x="-695.0" y="-222.9" width="1888.6" height="2360.7"
+  <image href="/bible-map/img/terrain-withdrawal.jpg" x="0.0" y="0.0" width="1000.0" height="680.0"
          preserveAspectRatio="none"/>
   <text x="110" y="210" class="rgl" text-anchor="middle">지 중 해</text><text x="770" y="86" class="rgl sm" text-anchor="middle">헤 르 몬 산</text><text x="250" y="420" class="rgl" text-anchor="middle">갈 릴 리</text><text x="740" y="470" class="rgl sm" text-anchor="middle">데 가 볼 리</text><text x="210" y="615" class="rgl" text-anchor="middle">사 마 리 아</text>
   <defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
     orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/></marker></defs>
   
 <circle cx="546.7" cy="291.8" r="14" fill="#a8442a" opacity="1"/><circle cx="546.7" cy="291.8" r="21" fill="none" stroke="#a8442a" stroke-width="3"/><text x="644.7" y="240.8" text-anchor="middle" class="mm-lbl">벳새다 들</text><circle cx="525.5" cy="334.3" r="14" fill="#2b5f92" opacity="1"/><circle cx="525.5" cy="334.3" r="21" fill="none" stroke="#2b5f92" stroke-width="3"/><text x="603.5" y="357.3" text-anchor="middle" class="mm-lbl">갈릴리 바다</text><circle cx="492.4" cy="322.5" r="5" fill="#1f6b41" opacity="0.3"/><circle cx="520.8" cy="305.6" r="5" fill="#8a5a12" opacity="0.3"/><circle cx="345.3" cy="121.8" r="5" fill="#7d5aa0" opacity="0.3"/><circle cx="641.2" cy="428.7" r="5" fill="#7d5aa0" opacity="0.3"/><circle cx="490.1" cy="343.7" r="14" fill="#6b6b6b" opacity="1"/><circle cx="490.1" cy="343.7" r="21" fill="none" stroke="#6b6b6b" stroke-width="3"/><text x="378.1" y="346.7" text-anchor="middle" class="mm-lbl">달마누다</text><circle cx="577.0" cy="131.9" r="5" fill="#b5623a" opacity="0.3"/><circle cx="653.9" cy="52.9" r="5" fill="#c9a54c" opacity="0.3"/><circle cx="390.9" cy="627.0" r="5" fill="#3f6f9c" opacity="0.3"/></svg>
-    <figcaption>이 과의 무대 — <b>갈릴리 바다 · 달마누다 · 벳새다 들</b><br>
+    <figcaption>이 과의 무대 — <b>달마누다 · 갈릴리 바다 · 벳새다 들</b><br>
       <span style="opacity:.8">배경 지형도: Southern Levant blank topographic map © DEGA MD · CC BY-SA 4.0 (변경됨)</span></figcaption></figure>
   <div class="divider"></div>
-  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">충분한 증거를 보고도 믿지 못한 일이 있나요?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>막 8:11-12 · 그들이 구한 것과, 예수의 반응(심령에 탄식)은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>마 16:2-4 · 예수는 그들을 무엇이라 부르시며 어떤 표적만 주겠다 하십니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>막 8:14-16 · 제자들의 오해는 무엇이었습니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>막 8:17-21 · 예수께서 되짚어 물으신 두 사건과 숫자는 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">5.</span>막 8:23-25 · 맹인을 고치실 때의 과정은 어떠했습니까?</p><div class="write"></div><p class="q"><span class="lead">6.</span>막 8:26 · 고친 뒤 무엇이라 하셨습니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>표적을 이미 많이 보인 분에게 표적을 또 구하는 것은 무엇의 표시입니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>‘누룩’이 가르침의 영향력을 뜻한다면, 작은 누룩이 위험한 까닭은 무엇입니까?</p><div class="write"></div><p class="q"><span class="lead">3.</span>‘아직도 깨닫지 못하느냐’ — 제자들의 문제는 지식 부족입니까, 다른 것입니까?</p><div class="write"></div><p class="q"><span class="lead">4.</span>맹인이 단번에 아니라 두 단계로 보게 된 일은 제자들의 상태와 어떻게 이어집니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>예수께서 대답하여 이르시되 악하고 음란한 세대가 표적을 구하나 선지자 요나의 표적 밖에는 보일 표적이 없느니라 요나가 밤낮 사흘 동안 큰 물고기 뱃속에 있었던 것 같이 인자도 밤낮 사흘 동안 땅 속에 있으리라<span class="ref">마 12:39-40 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>마 12:39-40의 ‘요나의 표적’이 여기서 다시 언급됩니다. 하나님이 주시려는 결정적 표적은 무엇입니까?</p><div class="write"></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>나는 이미 받은 은혜를 기억하고 있습니까? 무엇을 잊고 있습니까?</p><div class="write"></div><p class="q"><span class="lead">2.</span>내 생각에 스며든 ‘누룩’(세상의 셈법)은 무엇입니까?</p><div class="write"></div></div></section>
+  <section class="step"><div class="sh"><span class="n">0</span><h2>들어가며<span class="cue"> · 마음 열기</span></h2></div><div class="sb"><p class="q">충분한 증거를 보고도 믿지 못한 일이 있나요?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">1</span><h2>관찰<span class="cue"> · 본문이 무엇이라 말합니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>막 8:11-12 · 그들이 구한 것과, 예수의 반응(심령에 탄식)은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>마 16:2-4 · 예수는 그들을 무엇이라 부르시며 어떤 표적만 주겠다 하십니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">3.</span>막 8:14-16 · 제자들의 오해는 무엇이었습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">4.</span>막 8:17-21 · 예수께서 되짚어 물으신 두 사건과 숫자는 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">5.</span>막 8:23-25 · 맹인을 고치실 때의 과정은 어떠했습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">6.</span>막 8:26 · 고친 뒤 무엇이라 하셨습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">2</span><h2>해석<span class="cue"> · 무슨 뜻입니까?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>표적을 이미 많이 보인 분에게 표적을 또 구하는 것은 무엇의 표시입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>‘누룩’이 가르침의 영향력을 뜻한다면, 작은 누룩이 위험한 까닭은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">3.</span>‘아직도 깨닫지 못하느냐’ — 제자들의 문제는 지식 부족입니까, 다른 것입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">4.</span>맹인이 단번에 아니라 두 단계로 보게 된 일은 제자들의 상태와 어떻게 이어집니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">3</span><h2>연결<span class="cue"> · 성경은 서로 무엇이라 합니까?</span></h2></div><div class="sb"><blockquote>예수께서 대답하여 이르시되 악하고 음란한 세대가 표적을 구하나 선지자 요나의 표적 밖에는 보일 표적이 없느니라 요나가 밤낮 사흘 동안 큰 물고기 뱃속에 있었던 것 같이 인자도 밤낮 사흘 동안 땅 속에 있으리라<span class="ref">마 12:39-40 · 개역개정</span></blockquote><p class="q"><span class="lead">1.</span>마 12:39-40의 ‘요나의 표적’이 여기서 다시 언급됩니다. 하나님이 주시려는 결정적 표적은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section><section class="step"><div class="sh"><span class="n">4</span><h2>적용<span class="cue"> · 나에게는?</span></h2></div><div class="sb"><p class="q"><span class="lead">1.</span>나는 이미 받은 은혜를 기억하고 있습니까? 무엇을 잊고 있습니까?</p><div class="write"><i></i><i></i><i class="px"></i></div><p class="q"><span class="lead">2.</span>내 생각에 스며든 ‘누룩’(세상의 셈법)은 무엇입니까?</p><div class="write"><i></i><i></i><i class="px"></i></div></div></section>
   <div class="panel"><span class="label">오늘의 암송</span>
     <p class="verse">너희가 눈이 있어도 보지 못하며 귀가 있어도 듣지 못하느냐 또 기억하지 못하느냐
       <span class="ref">막 8:18 · 개역개정</span></p></div>

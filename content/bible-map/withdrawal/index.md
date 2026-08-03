@@ -23,6 +23,12 @@ weight: 4
 
 각 과는 다루는 사건 목록 · 미니지도 · 귀납적 4단계(관찰 → 해석 → 연결 → 적용) · 암송 · 기도로 구성됩니다. 성경 본문은 개역개정, 관점은 개혁주의(장로교)입니다.
 
+<!-- print-links -->
+{{< button href="/bible-map/pdf/withdrawal.pdf" target="_blank" >}}⬇ 전 10과 PDF (A4 인쇄용){{< /button >}}
+{{< button href="/bible-map/print/withdrawal.html" target="_blank" >}}📄 전 10과 한 번에 보기{{< /button >}}
+
+인쇄해서 쓰실 수 있게 **A4에 맞춘 PDF**를 함께 올려 두었습니다. 각 과 화면에서 「🖨 이 과 인쇄」를 눌러 한 과만 인쇄할 수도 있습니다. 브라우저 인쇄 설정에서 「배경 그래픽」은 꺼도 **필기줄은 그대로 나옵니다**.
+
 - [1과 · 떡 다섯 개와 물 위의 걸음](/bible-map/study/E01.html) — D-01 · D-02 · D-03-2
 - [2과 · 생명의 떡 — 떠나간 무리](/bible-map/study/E02.html) — D-03
 - [3과 · 마음에서 나오는 것 — 전통과 정결](/bible-map/study/E03.html) — D-04

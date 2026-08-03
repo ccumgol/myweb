@@ -14,9 +14,10 @@
 | 국면(章) | **8개** — 탄생·유년기 / 공생애의 시작 / 갈릴리 사역 / 물러나심 / 유대 사역 / 베레아 사역 / 고난주간 / 부활과 승천 |
 | 인터랙티브 지도 | **8개** (`static/bible-map/*.html`, 합계 248KB) |
 | 지도에 실린 사건 | **239개** — 각 사건에 마·막·눅·요 병행 구절 |
-| 성경공부 교재 | **78과** (`static/bible-map/study/*.html`, 합계 1.4MB) |
+| 성경공부 교재 | **78과** (`static/bible-map/study/*.html`, 합계 1.0MB) |
+| 인쇄용 A4 PDF | **8개** (국면별 전 과 묶음, 합계 15.4MB) |
 | 콘텐츠 페이지 | `content/bible-map/` 아래 8개 + 섹션 인덱스 |
-| 생성기 코드 | Python 12개 파일, 약 3,200줄 (`B-Wiki/scripts/site-generators/`) |
+| 생성기 코드 | Python **18개 파일, 4677줄** (`B-Wiki/scripts/site-generators/`) |
 
 **사용자가 보는 흐름**은 이렇습니다.
 
@@ -866,7 +867,264 @@ sum(len(mod.PHASE["lessons"]) for mod in (phase_b, phase_c, phase_d, phase_e, ph
 
 ---
 
-## 9. 재현 방법
+## 9. 인쇄·PDF — 종이로 쓰는 교재 만들기
+
+교재는 화면으로 읽는 글이 아니라 **인쇄해서 손으로 쓰는 자료**입니다. 그런데 처음 만들 때는 화면만 보고 만들었고, 사용자가 실제로 인쇄해 보고서야 문제가 드러났습니다.
+
+### 사용자가 겪은 것
+
+두 가지 방법으로 PDF를 만들어 오셨습니다.
+
+| | 캡처 확장(jsPDF) | Chrome 인쇄 |
+|---|---|---|
+| 쪽수 | **26쪽** | 4쪽 |
+| 용량 | 2.5MB | 3.7MB |
+| 용지 | Letter | Letter *(한국은 A4)* |
+| 배경 | 전면 베이지 | 여백 베이지 + 카드 그림자 |
+
+교재 CSS를 확인하니 **`@media print` 규칙이 한 줄도 없었습니다.** 네 곳의 CSS 사본(`mapkit.py`·`gen_study.py`·`gen_study_birth.py`·`booklib.py`) 모두 0개. 화면용 스타일이 그대로 종이로 넘어가고 있었습니다.
+
+---
+
+### 이슈 15. 배경을 끄면 필기줄도 사라진다 ★인쇄 문제의 핵심★
+
+#### 현상
+브라우저 인쇄 설정에는 「배경 그래픽」 옵션이 있습니다. 이걸 **끄면** 베이지 바탕은 사라지는데 **필기줄도 함께 사라집니다.** **켜면** 필기줄은 나오지만 베이지가 온 지면을 덮습니다. 어느 쪽도 쓸 수 없는 상태였습니다.
+
+#### 원인
+필기줄을 **CSS 배경 이미지**로 그렸기 때문입니다.
+
+```css
+.write{background:repeating-linear-gradient(transparent 0 32px,var(--rules) 32px 33px)}
+```
+
+`repeating-linear-gradient`는 이름이 그라디언트지만 **배경 이미지**입니다. 「배경 그래픽 끄기」는 배경색과 배경 이미지를 함께 끄므로, 베이지 바탕과 필기줄이 같은 스위치에 묶여 있었습니다.
+
+#### 해결
+필기줄을 **테두리**로 바꿨습니다. 테두리는 배경이 아니라 요소의 일부이므로 「배경 그래픽 끄기」와 무관하게 항상 인쇄됩니다.
+
+```css
+/* 필기줄 — 배경 이미지가 아니라 테두리다. '배경 그래픽 끄기'에도 살아남는다. */
+.write{margin:.3em 0 1em}
+.write i{display:block;height:32px;border-bottom:1px solid var(--rules)}
+@media screen{.write i.px{display:none}}   /* 세 번째 줄은 종이에서만 */
+```
+
+```python
+# 세 번째 줄은 인쇄에서만 보인다(.px) — 종이에는 손으로 쓸 자리가 더 필요하다
+WRITE = '<div class="write"><i></i><i></i><i class="px"></i></div>'
+```
+
+곁들여 얻은 것이 하나 있습니다. 화면은 2줄, 종이는 3줄로 **매체마다 다르게** 줄 수를 줄 수 있게 됐습니다. 화면에서 3줄은 낭비고, 종이에서 2줄은 부족합니다.
+
+#### 교훈
+- **「보이는 선」을 배경으로 그리지 마세요.** 배경은 사용자가 끌 수 있는 것이고, 테두리는 내용의 일부입니다. 필기줄은 내용입니다.
+- 인쇄 설정의 스위치 하나에 **성격이 다른 두 요소가 묶이지 않도록** 하세요.
+
+---
+
+### 이슈 16. 다크 모드가 종이로 넘어간다
+
+#### 현상
+맥이 다크 모드일 때 인쇄하면 **검은 바탕에 흰 글씨**가 나옵니다. 토너를 지면 전체에 붓습니다.
+
+#### 원인
+`@media (prefers-color-scheme:dark)`가 **인쇄에도 적용됩니다.** 인쇄는 별개의 매체지만, 색 구성 선호는 기기 설정이므로 그대로 따라옵니다.
+
+#### 해결
+`@media print`에서 색 토큰을 되돌립니다. **다크 모드 규칙보다 뒤에 두어야** 우선순위에서 이깁니다.
+
+```css
+@media print{
+ :root{--paper:#fff;--card:#fff;--ink:#111;--soft:#333;--muted:#585858;
+  --rule:#c9c9c9;--rules:#b3b3b3;--tint:#fff;--accent:#7d5c22;--accentd:#5c4319}
+ @page{size:A4;margin:14mm 15mm}        /* 한국 기본 용지 */
+ .page{max-width:none;border:0;border-radius:0;box-shadow:none;padding:0}
+ .step,.panel,.ev,figure.map,blockquote{break-inside:avoid}   /* 문항이 갈라지지 않게 */
+ .sh,.eyebrow,h1.title,.q{break-after:avoid}
+ .tools,.lnav{display:none!important}   /* 단추·네비는 종이에 쓸모없다 */
+}
+```
+
+#### 교훈
+**CSS 변수로 색을 다루면 이런 되돌리기가 한 블록으로 끝납니다.** 색을 규칙마다 직접 써 놓았다면 수십 곳을 고쳐야 했습니다.
+
+---
+
+### 이슈 17. 흑백 필터가 PDF를 6배로 키운다 ★뜻밖의 인과관계★
+
+#### 현상
+잉크를 아끼려고 지도에 흑백 필터를 걸었습니다.
+
+```css
+.minimap{max-height:105mm;filter:grayscale(1) contrast(1.06)}
+```
+
+그런데 한 과가 **1.3MB**가 됐습니다. 78과면 100MB입니다.
+
+#### 원인
+PDF 안을 들여다보니 **2125×1435 무손실 비트맵이 두 장**(789KB) 들어 있었습니다.
+
+```text
+이미지 XObject:  2125x1435  FlateDecode
+                2125x1435  FlateDecode
+```
+
+CSS 필터는 벡터로 표현할 수 없습니다. 그래서 Chrome이 **필터를 적용한 결과를 비트맵으로 구워** 넣습니다. 무손실(FlateDecode)이라 JPEG보다 5배쯤 큽니다.
+
+필터를 빼 보니 **더 나빠졌습니다 — 3.8MB.** 이번에는 지형 SVG의 벡터 경로(5.5MB짜리)가 통째로 들어갔습니다.
+
+| 방식 | 한 과 크기 | 무엇이 들어갔나 |
+|---|---|---|
+| 흑백 필터 | 1,323KB | 무손실 비트맵 2장 |
+| 필터 없음 | **3,779KB** | 지형 SVG 벡터 경로 |
+| 흑백 + 지도 축소 | 1,062KB | 조금 작은 비트맵 |
+
+#### 해결 — 배경을 미리 래스터로 굽는다
+
+두 방법이 다 나쁜 이유는 같습니다. **교재 미니지도에 5.5MB짜리 벡터 지도를 쓰고 있다는 것.** 미니지도는 확대하지 않으므로 벡터일 이유가 없습니다.
+
+국면별로 **잘라낸 그림 그대로** JPEG을 미리 구웠습니다(`gen_terrain.py`). 확대·이동이 필요한 인터랙티브 지도는 그대로 벡터를 씁니다.
+
+```python
+OUTW, OUTH = 1500, 1020    # 미니지도 최대 표시 폭의 약 3배 — 인쇄 300dpi에 충분
+QUALITY = 62               # 지형도는 완만한 색면이라 낮은 품질에도 잘 버틴다
+```
+
+이미 잘려 있으므로 미니지도는 캔버스를 그대로 채우면 됩니다 — 좌표 계산이 사라집니다.
+
+```python
+if raster:
+    bgx, bgy, bgw, bgh = 0, 0, W, H
+    bg_href = f'/bible-map/img/terrain-{ph["slug"]}.jpg'
+```
+
+그리고 흑백 필터는 **뺐습니다.** JPEG에 필터를 걸면 다시 무손실 비트맵으로 구워지기 때문입니다. 흑백은 프린터의 「흑백 인쇄」 설정으로 하면 됩니다.
+
+| | 이전 | 이후 |
+|---|---|---|
+| 한 과 PDF | 1,323KB | **806KB** |
+| PDF 안의 지도 | 무손실 비트맵 2장 | **JPEG 1장** (DCTDecode, 214KB) |
+| 교재 8개 래스터 | — | 94~274KB, 합계 1.6MB |
+| 화면에서 미니지도용 내려받기 | 986KB (SVG, brotli) | **~200KB** (JPEG) |
+
+마지막 줄이 뜻밖의 이득입니다. 교재를 열 때마다 5.5MB SVG를 받고 있었는데, 이제 200KB만 받습니다.
+
+#### 교훈
+- **CSS 필터는 벡터를 비트맵으로 바꿉니다.** `filter`, `opacity`가 걸린 그룹, `mix-blend-mode`, 둥근 모서리 클립 — 모두 래스터화를 유발합니다. 인쇄물에서는 용량과 화질에 직결됩니다.
+- **용량 문제는 짐작하지 말고 PDF 안을 열어 보세요.** 「이미지 XObject의 크기와 필터 종류」만 보면 원인이 바로 나옵니다.
+
+```python
+for m in re.finditer(rb'/Subtype\s*/Image(.{0,400}?)stream', d, re.S):
+    ...  # /Width /Height /FlateDecode(무손실) vs /DCTDecode(JPEG)
+```
+
+- **같은 자료라도 쓰임에 따라 형식을 나누세요.** 확대하는 지도는 벡터, 고정 크기 미니지도는 래스터. 하나로 통일하려는 욕심이 양쪽을 망칩니다.
+
+---
+
+### 이슈 18. 78개 PDF의 대부분은 한글 폰트다
+
+#### 현상
+과별 PDF를 806KB까지 줄였지만, 안에 든 지도 JPEG은 214KB뿐입니다. 나머지 **약 550KB의 정체**가 뭔지 확인해 보니 **한글 폰트 서브셋**이었습니다.
+
+78과 × 약 700KB = **55MB**. 내용을 줄여도 줄지 않는 종류의 용량입니다.
+
+#### 해결 — 국면별 묶음으로 묶는다
+한 문서에 여러 과를 담으면 **폰트가 한 번만** 들어갑니다. 그리고 교사가 실제로 하는 일은 '한 과'가 아니라 '한 국면을 통째로 인쇄해 교재 묶음을 만드는 것'입니다. 쓰임과 기술이 같은 방향을 가리켰습니다.
+
+`gen_printbook.py`는 이미 만들어 둔 교재 HTML에서 본문(`.page`)만 떼어 이어 붙입니다. 교재를 고치면 묶음도 자동으로 따라오므로 내용이 어긋날 일이 없습니다.
+
+```python
+def page_of(html: str) -> str:
+    """교재 HTML에서 본문 <div class="page"> … </div> 만 떼어 낸다.
+    단추(.tools)와 과 이동 네비(.lnav)는 종이에 쓸모가 없어 뺀다."""
+```
+
+```css
+.book .page + .page{break-before:page}    /* 과마다 새 쪽에서 시작 */
+.cover{break-after:page}                  /* 표지 + 목차 */
+```
+
+| | 과별 78개 | 국면별 8개 |
+|---|---|---|
+| 합계 | 55MB (추정) | **15.4MB** |
+| 한 파일 | ~700KB | 1.5~2.5MB |
+| 지도 JPEG | 과마다 1장 | **문서당 1장으로 중복 제거됨** |
+
+#### 교훈
+- **용량의 정체를 먼저 밝히세요.** '내용이 많아서'라고 짐작하고 내용을 줄였다면 아무 효과가 없었을 것입니다.
+- **기술적 최적점과 사용자의 실제 용법이 일치하는 지점**을 찾으면 타협이 아니라 개선이 됩니다.
+
+---
+
+### 이슈 19. headless Chrome이 PDF를 다 쓰고도 끝나지 않는다
+
+#### 현상
+`--print-to-pdf`로 PDF를 굽는 스크립트가 120초 타임아웃에 걸립니다. 그런데 **PDF 파일은 완성되어 있습니다**(1323KB, 4쪽, 정상).
+
+#### 원인
+Chrome 150에서 `--print-to-pdf`와 `--screenshot` 모두 출력을 마친 뒤 프로세스가 종료되지 않습니다. `--headless=old`, `--headless=new`, `--virtual-time-budget` 세 가지를 다 시험했지만 결과가 같았습니다.
+
+```text
+  headless=old           TIMEOUT   70.0초  1323KB
+  headless=new           TIMEOUT   70.0초  1323KB
+  old+vtb                TIMEOUT   70.0초  1323KB
+```
+
+#### 해결
+**프로세스가 끝나기를 기다리지 않고, 결과 파일의 크기가 멈추면** 완성으로 보고 직접 종료시킵니다.
+
+```python
+while time.time() < deadline:
+    if proc.poll() is not None:      # 스스로 끝났으면 그대로 둔다
+        break
+    size = dst.stat().st_size if dst.exists() else 0
+    if size and size == last:
+        stable += 0.4
+        if stable >= 1.2:            # 1.2초간 크기가 그대로면 완성
+            break
+    else:
+        stable = 0.0
+    last = size
+    time.sleep(0.4)
+```
+
+#### 교훈
+- **외부 도구는 문서대로 동작하지 않을 수 있습니다.** 버전과 플래그를 바꿔 세 번 시험해 보고 안 되면, 도구를 고치려 하지 말고 **관찰 가능한 결과**(파일 크기)를 기준으로 삼으세요.
+- macOS에는 `timeout` 명령이 없습니다(coreutils의 `gtimeout`). 셸에서 `timeout`을 쓰면 종료코드 127이 납니다.
+
+---
+
+### 인쇄 작업의 결과 정리
+
+| 항목 | 이전 | 이후 |
+|---|---|---|
+| `@media print` 규칙 | **0개** | 통합 CSS 1곳 (+새신자 교재) |
+| CSS 사본 수 | 4벌 (판본마다 어긋남) | **1벌** `static/bible-map/study.css` |
+| 교재 78과 합계 | 1.4MB | **1.0MB** |
+| 필기줄 | 배경 이미지(배경 끄면 사라짐) | **테두리** (화면 2줄 / 종이 3줄) |
+| 인쇄 시 배경 | 베이지 전면 | **흰 바탕** |
+| 다크 모드 인쇄 | 검은 바탕 | **흰 바탕으로 되돌림** |
+| 용지 | Letter | **A4** |
+| 미니지도 | 5.5MB SVG | **JPEG 94~274KB** |
+| 미리 구운 PDF | 없음 | **국면별 8개, 15.4MB** |
+
+산출물이 다음과 같이 늘었습니다.
+
+```text
+static/bible-map/
+  study.css                  ← 78과가 공유하는 단 하나의 스타일시트
+  img/terrain-<slug>.jpg     ← 국면별 미니지도 배경 8개
+  print/<slug>.html          ← 국면 전체 묶음(표지 + 목차 + 전 과)
+  pdf/<slug>.pdf             ← 위를 A4로 구운 PDF 8개
+```
+
+각 교재 화면에는 단추 세 개가 붙습니다 — **🖨 이 과 인쇄** / **⬇ 전 N과 PDF** / **📄 전 N과 인쇄판**.
+
+---
+
+## 10. 재현 방법
 
 ### 전체 다시 만들기
 
@@ -888,10 +1146,19 @@ python3 phase_e.py          # 5국면
 python3 phase_f.py          # 6국면
 python3 phase_h.py          # 8국면
 
-# 3) Hugo 콘텐츠 페이지
+# 3) 교재 미니지도 배경 래스터 (원본 지도나 잘라낸 범위가 바뀐 경우만)
+python3 gen_terrain.py      # 국면별 terrain-<slug>.jpg 8개
+
+# 4) 인쇄판 묶음 + A4 PDF
+python3 gen_printbook.py    # print/<slug>.html 8개 (표지 + 목차 + 전 과)
+python3 gen_pdfs.py --all   # pdf/<slug>.pdf 8개  (headless Chrome, 약 3분)
+
+# 5) Hugo 콘텐츠 페이지
 python3 gen_series.py       # 8개 국면 페이지 골격
 python3 gen_pages.py        # 4·5·6·8국면 본문 (LESSONS에서 목록 자동 생성)
 ```
+
+순서가 중요합니다. **교재를 고치면 인쇄판과 PDF를 다시 만들어야** 합니다(묶음이 교재 HTML에서 본문을 떼어 오므로). 반대로 지도 좌표가 바뀌면 `gen_terrain.py`부터 다시 돌립니다.
 
 ### 로컬 확인
 
@@ -909,7 +1176,7 @@ cd /Users/gihyunpark/Desktop/Playground/myweb && git add -A && git commit -m "fe
 
 ---
 
-## 10. 설계 원칙 정리 — 다른 프로젝트에 옮길 것들
+## 11. 설계 원칙 정리 — 다른 프로젝트에 옮길 것들
 
 이 프로젝트에서 얻은 원칙을 일반화하면 이렇습니다.
 
@@ -940,12 +1207,18 @@ cd /Users/gihyunpark/Desktop/Playground/myweb && git add -A && git commit -m "fe
 ### ⑨ 셀 수 있는 것은 센다
 요약의 숫자는 프로그램으로 확인하세요. 「92과」와 「78과」의 차이는 신뢰의 차이입니다.
 
-### ⑩ 사실을 가리키는 문장은 코드가 쓰게 한다
+### ⑩ 매체가 다르면 스타일도 다르다
+화면과 종이는 다른 매체입니다. 화면용 스타일을 그대로 인쇄하면 배경색이 지면을 덮고, 다크 모드가 종이로 넘어옵니다. **인쇄해서 쓰는 자료라면 `@media print`는 선택이 아니라 필수입니다.** 그리고 「보이는 선」은 배경이 아니라 테두리로 그리세요 — 배경은 사용자가 끌 수 있습니다.
+
+### ⑪ 용량 문제는 열어 보고 고친다
+PDF가 크다고 내용을 줄이는 것은 대개 헛수고입니다. 실제 원인은 CSS 필터가 유발한 무손실 비트맵(789KB)과 한글 폰트 서브셋(550KB)이었습니다. **파일 안을 열어 무엇이 자리를 차지하는지 세어 보세요.**
+
+### ⑫ 사실을 가리키는 문장은 코드가 쓰게 한다
 출처·라이선스·경로·버전 표기를 손으로 쓰면 재료가 바뀔 때 낡습니다. 이 프로젝트에서 자동 생성된 크레딧 세 곳은 전부 맞았고, **손으로 쓴 한 곳만 틀렸습니다**(→ 이슈 13). 사람이 쓸 것은 판단과 설명이고, 사실 대조는 기계의 몫입니다.
 
 ---
 
-## 11. 남은 일 · 확장 방향
+## 12. 남은 일 · 확장 방향
 
 ### 즉시 가능
 - **9국면 추가** — `phase_i.py` 하나 작성. `mapkit.build(PHASE)`가 나머지를 처리합니다.
@@ -972,6 +1245,10 @@ cd /Users/gihyunpark/Desktop/Playground/myweb && git add -A && git commit -m "fe
 | `gen_study.py` | 459 | 7국면 교재 14과 |
 | `gen_map_birth.py` / `gen_study_birth.py` | 196 / 324 | 1국면 (mapkit 이전에 만들어 독립 구조) |
 | `phase_b.py` ~ `phase_h.py` | 202~440 | 2·3·4·5·6·8국면 **데이터** |
+| `studycss.py` | 213 | **교재 공용 스타일** — 화면 + 인쇄(`@media print`) 한 벌 |
+| `gen_terrain.py` | 107 | 국면별 미니지도 배경 JPEG (headless Chrome + sips) |
+| `gen_printbook.py` | 115 | 국면 전체 묶음 인쇄판 HTML (표지 + 목차 + 전 과) |
+| `gen_pdfs.py` | 156 | 위 묶음을 A4 PDF로 (headless Chrome) |
 | `optimize_svg.py` | 160 | 위키미디어 SVG 손질 |
 | `gen_series.py` | 89 | 8국면 페이지 골격 (순서·(준비중) 표시) |
 | `gen_pages.py` | 96 | 4·5·6·8국면 본문 (LESSONS에서 목록 생성) |
@@ -986,9 +1263,13 @@ layouts/shortcodes/
   mapframe.html              지도 iframe 임베드
 static/bible-map/
   <slug>.html                인터랙티브 지도 8개 (248KB)
-  study/*.html               교재 78과 (1.4MB)
-  img/levant-topo.svg        지역 지형도 (5.47MB, CC BY-SA 4.0)
+  study/*.html               교재 78과 (1.0MB)
+  study.css                  교재 78과 공용 스타일 (9KB) — 화면 + 인쇄
+  print/<slug>.html          국면 전체 묶음 인쇄판 8개 (684KB)
+  pdf/<slug>.pdf             A4 PDF 8개 (15.4MB)
+  img/levant-topo.svg        지역 지형도 (5.47MB, CC BY-SA 4.0) — 인터랙티브 지도용
   img/jerusalem-oldcity.svg  도성 지도 (31KB, CC BY-SA 3.0)
+  img/terrain-<slug>.jpg     교재 미니지도 배경 8개 (1.6MB) — 인쇄·화면 경량화
 config/_default/menus.ko.toml   메뉴명 「지도로 보는 예수님의 생애」
 ```
 
