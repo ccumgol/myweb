@@ -73,6 +73,7 @@ myweb/
   - 성경공부 → `/bible-study/`
   - 새신자 성경공부 → `/new-believer/`
   - 지도로 보는 예수님의 생애 → `/bible-map/`
+  - 일년일독성경 → `/one-year-bible/`
 - **동전으로 배우는 미국** (드롭다운) → `/coins/` (하위: Quarter 시리즈 5개 앵커)
 - 블로그 → `/blog/`
 
@@ -84,6 +85,7 @@ myweb/
 | bible-study | /bible-study/ | 목록+글 | 노션에서 이관, 목록에 마커/구분선 |
 | new-believer | /new-believer/ | 목록+글 | 6부×학생/인도자 12편 + 인쇄용 디자인 HTML(`static/new-believer/design/`) |
 | bible-map | /bible-map/ | 목록+글 | 인터랙티브 성경지도(예수님의 생애). `mapframe` 숏코드로 `static/bible-map/*.html` iframe 임베드 + 사건별 교재 HTML(`static/bible-map/study/`) |
+| one-year-bible | /one-year-bible/ | 목록+글 | 월별 성경읽기표 12편(1~12월, 365일). 각 날 = 표 한 행, 대한성서공회(bskorea) 개역개정 장별 링크. 2~12월은 노션 데이터에서 스크립트로 생성 |
 | coins | /coins/ | 허브+데이터생성 | `data/quarters.json` → 콘텐츠 어댑터로 137개 자동 생성. 한/영 이중언어 |
 | blog | /blog/ | 목록+글 | 한국어 전용 |
 
