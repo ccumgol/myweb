@@ -27,3 +27,23 @@
   }
 </style>
 {{ end }}
+
+{{/* Blog list: keep thumbnails at a fixed ratio but show the whole image (no cropping). */}}
+{{ if eq .Section "blog" }}
+<style>
+  /* 썸네일 전체가 잘리지 않고 고정 박스 안에 들어가도록 (cover → contain) */
+  main .thumbnail img,
+  main .thumbnail_card img {
+    object-fit: contain;
+  }
+  /* contain 시 생기는 여백을 깔끔한 중립 배경으로 */
+  main .thumbnail,
+  main .thumbnail_card {
+    background: var(--line-soft, #f0efed);
+  }
+  .dark main .thumbnail,
+  .dark main .thumbnail_card {
+    background: #26262b;
+  }
+</style>
+{{ end }}
