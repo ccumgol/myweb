@@ -45,5 +45,5 @@ Even children who can't read yet can play. Each piece carries part of a picture 
 - No ads, and no personal data collected.
 - **Free** to download with Starter and Easy levels and picture puzzle stages 1–2; one purchase ($1.99) unlocks every level, shared with your family.
 
-📱 App Store: coming soon
+📱 [Download on the App Store](https://apps.apple.com/app/id6830463805) (iPhone, iPad and Mac)
 🔒 [Privacy Policy](/smartbean/privacy/) · 💬 [Support](/smartbean/support/)

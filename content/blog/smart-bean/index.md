@@ -45,5 +45,5 @@ draft: false
 - 광고가 없고, 개인 정보를 모으지 않습니다.
 - **무료**로 받아 입문·쉬움 단계와 그림 퍼즐 1~2단계를 즐길 수 있고, 한 번 구매($1.99)로 모든 단계를 엽니다. 가족 공유도 됩니다.
 
-📱 App Store: 곧 출시됩니다
+📱 [App Store에서 받기](https://apps.apple.com/app/id6830463805) (iPhone · iPad · Mac)
 🔒 [개인정보 처리방침](/smartbean/privacy/) · 💬 [문의하기](/smartbean/support/)
