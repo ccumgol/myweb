@@ -1,0 +1,133 @@
+<nav class="flex items-center gap-x-5 h-12">
+  {{ if .Site.Menus.main }}
+    {{ range .Site.Menus.main }}
+      {{ template "DesktopMenu" . }}
+    {{ end }}
+  {{ end }}
+
+  {{ partial "header/components/translations.html" . }}
+  {{ if .Site.Params.enableA11y | default false }}
+    {{ partial "header/components/a11y.html" (dict "prefix" "desktop-") }}
+  {{ end }}
+
+  {{ if .Site.Params.enableSearch | default false }}
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="{{ i18n "search.open_button_title" }}">
+      {{ partial "icon.html" "search" }}
+    </button>
+  {{ end }}
+
+  {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="{{ i18n "footer.dark_appearance" }}"
+        type="button"
+        class="text-base bf-icon-color-hover"
+        title="{{ i18n "footer.dark_appearance" }}">
+        <div class="flex items-center justify-center dark:hidden">
+          {{ partial "icon.html" "moon" }}
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          {{ partial "icon.html" "sun" }}
+        </div>
+      </button>
+    </div>
+  {{ end }}
+</nav>
+
+{{/* Custom override: supports a raster image icon on a menu entry via [main.params] iconImage. */}}
+{{ define "DesktopMenu" }}
+  {{ if .HasChildren }}
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          {{ if .URL }}
+            href="{{ .URL }}"
+            {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+              target="_blank"
+            {{ end }}
+          {{ else }}
+            tabindex="0"
+          {{ end }}
+          {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="{{ .Title }}">
+          {{ with .Params.iconImage }}
+            <img src="{{ . | relURL }}" alt="" width="20" height="20" loading="lazy"
+              class="mr-1.5 h-5 w-5 rounded-[5px] object-cover" />
+          {{ else }}
+            {{ if .Pre }}
+              <span {{ if and .Pre .Name }}class="mr-1"{{ end }}>
+                {{ partial "icon.html" .Pre }}
+              </span>
+            {{ end }}
+          {{ end }}
+          <span class="text-bg font-bg break-normal" title="{{ .Title }}">
+            {{ .Name | markdownify }}
+          </span>
+          <span>
+            {{ partial "icon.html" "chevron-down" }}
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            {{ range .Children }}
+              <a
+                href="{{ .URL }}"
+                {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+                  target="_blank"
+                {{ end }}
+                {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
+                class="flex items-center bf-icon-color-hover">
+                {{ with .Params.iconImage }}
+                  <img src="{{ . | relURL }}" alt="" width="24" height="24" loading="lazy"
+                    class="mr-2 h-6 w-6 rounded-[6px] object-cover shrink-0" />
+                {{ else }}
+                  {{ if .Pre }}
+                    <span {{ if and .Pre .Name }}class="mr-1"{{ end }}>
+                      {{ partial "icon.html" .Pre }}
+                    </span>
+                  {{ end }}
+                {{ end }}
+                <span class="text-sm font-sm" title="{{ .Title }}">
+                  {{ .Name | markdownify }}
+                </span>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ else }}
+    <a
+      href="{{ .URL }}"
+      {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+        target="_blank"
+      {{ end }}
+      class="flex items-center bf-icon-color-hover"
+      {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
+      title="{{ .Title }}">
+      {{ with .Params.iconImage }}
+        <img src="{{ . | relURL }}" alt="" width="20" height="20" loading="lazy"
+          class="mr-1.5 h-5 w-5 rounded-[5px] object-cover" />
+      {{ else }}
+        {{ if .Pre }}
+          <span {{ if and .Pre .Name }}class="mr-1"{{ end }}>
+            {{ partial "icon.html" .Pre }}
+          </span>
+        {{ end }}
+      {{ end }}
+      {{ if .Name }}
+        <span class="text-base font-medium break-normal">
+          {{ .Name | markdownify }}
+        </span>
+      {{ end }}
+    </a>
+  {{ end }}
+{{ end }}

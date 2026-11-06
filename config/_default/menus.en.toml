@@ -50,12 +50,16 @@
     parent = "app"
     pageRef = "smartbean"
     weight = 1
+    [main.params]
+      iconImage = "/img/app/smartbean.webp"
 
   [[main]]
     name = "Typing Warrior"
     parent = "app"
     pageRef = "typing-warrior"
     weight = 2
+    [main.params]
+      iconImage = "/img/app/typing-warrior.webp"
 
 # -- Footer Menu (English) --
 [[footer]]
