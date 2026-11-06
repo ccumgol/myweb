@@ -121,6 +121,31 @@ html.dark .tw-sticker { box-shadow: 5px 6px 0 rgba(0,0,0,.45); }
 .tw-sticker-3 { transform: rotate(2.6deg) translateY(4px); z-index: 2; }
 .tw-sticker:hover { transform: rotate(0) translateY(-8px) scale(1.04); z-index: 5; }
 
+/* ---------------------------------------------------------------- Video */
+.tw-video { margin: clamp(40px, 7vw, 76px) 0; }
+.tw-video-lead { color: var(--soft); line-height: 1.8; max-width: 44em; margin-bottom: 20px !important; }
+.tw-player { position: relative; border: 3px solid var(--rule); border-radius: 10px; overflow: hidden; background: var(--cap); box-shadow: 7px 7px 0 rgba(31,27,22,.2); aspect-ratio: 16 / 9; }
+html.dark .tw-player { box-shadow: 7px 7px 0 rgba(0,0,0,.45); }
+.tw-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.tw-poster { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.tw-poster img { display: block; margin: 0 !important; width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
+.tw-poster:hover img { transform: scale(1.03); }
+.tw-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 84px; height: 60px; border-radius: 14px; background: var(--gold);
+  border: 3px solid #1f1b16; box-shadow: 4px 4px 0 rgba(31,27,22,.5);
+}
+.tw-play::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-40%, -50%); border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent #1f1b16; }
+.tw-poster:hover .tw-play { transform: translate(-50%, -50%) scale(1.07); }
+.tw-play-text {
+  position: absolute; left: 14px; bottom: 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  padding: 8px 14px; background: var(--card); color: var(--ink); border: 2.5px solid var(--rule); border-radius: 8px;
+  font-family: var(--serif); font-weight: 700; font-size: 1rem; line-height: 1.2;
+}
+.tw-play-text small { font-family: var(--mono); font-weight: 400; font-size: .7rem; letter-spacing: .06em; color: var(--soft); }
+.tw-video .tw-note { text-align: right; }
+.tw-video .tw-note a { color: var(--ink) !important; border-bottom: 2px solid var(--gold); }
+
 /* ------------------------------------------------------------- Features */
 .tw-feat-list { list-style: none; padding: 0 !important; margin: 0 !important; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 44px; }
 .tw-feat { display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: start; margin: 0 !important; }
@@ -179,6 +204,14 @@ html.dark .tw-slate { border-color: var(--capTop); background: var(--capTop); bo
   .tw-ticket { grid-template-columns: 1fr; gap: 6px; }
   .tw-sticker { width: 45%; margin: 0 2% 18px !important; }
   .tw-stats { gap: 14px; }
+}
+@media (max-width: 560px) {
+  /* The poster is small here, so the play button and its label step back. */
+  .tw-play { width: 62px; height: 44px; border-radius: 11px; }
+  .tw-play::after { border-width: 9px 0 9px 14px; }
+  .tw-play-text { left: 9px; bottom: 9px; padding: 5px 10px; font-size: .85rem; }
+  .tw-play-text small { font-size: .62rem; }
+  .tw-video .tw-note { text-align: left; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tw-dots i, .tw-caret { animation: none; }

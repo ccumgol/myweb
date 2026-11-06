@@ -52,6 +52,14 @@ tw:
     - { src: "ko-verse.webp", alt: "오늘의 말씀" }
     - { src: "ko-blocks.webp", alt: "단어블록게임" }
     - { src: "ko-frontline.webp", alt: "전선작전게임" }
+  video:
+    heading: "쓰는 모습 <span>그대로</span>"
+    text: "iPad에 Magic Keyboard를 붙이고 처음부터 끝까지 찍은 영상입니다. 앱을 열고, 연습할 글을 고르고, 한 줄씩 쳐 나가는 모습을 덜어내지 않고 담았습니다."
+    id: "W8xmAB2OsRI"
+    image: "video-thumb.webp"
+    label: "영상 보기"
+    length: "4분 41초 · iPad 실기기 녹화"
+    fallback: "유튜브에서 보기 →"
   featuresHeading: "자리 연습부터 성경 한 권까지, <span>한 프로그램에서</span>"
   features:
     - cap: "ㅏ"

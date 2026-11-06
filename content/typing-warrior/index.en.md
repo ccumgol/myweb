@@ -52,6 +52,14 @@ tw:
     - { src: "en-verse.webp", alt: "Verse of the day" }
     - { src: "en-blocks.webp", alt: "Word Blocks" }
     - { src: "en-frontline.webp", alt: "Frontline Game" }
+  video:
+    heading: "The real thing, <span>start to finish</span>"
+    text: "Filmed end to end on an iPad with a Magic Keyboard: opening the app, choosing something to type, and working through it line by line, with nothing cut out."
+    id: "W8xmAB2OsRI"
+    image: "video-thumb.webp"
+    label: "Watch the video"
+    length: "4 min 41 s · recorded on a real iPad"
+    fallback: "Watch on YouTube →"
   featuresHeading: "From the home row to a whole book of the Bible, <span>in one place</span>"
   features:
     - cap: "A"

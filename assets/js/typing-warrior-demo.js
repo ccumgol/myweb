@@ -487,8 +487,29 @@
     if (coarse) runAuto();
   }
 
+  /* ------------------------------------------------- Click-to-play video */
+
+  // The poster is a plain image until it is clicked, so an unopened page
+  // asks nothing of YouTube.
+  function startPlayer(player) {
+    var poster = player.querySelector('.tw-poster');
+    if (!poster) return;
+    poster.addEventListener('click', function () {
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(player.dataset.video)
+        + '?autoplay=1&rel=0&modestbranding=1';
+      frame.title = player.dataset.title || '';
+      frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      player.textContent = '';
+      player.appendChild(frame);
+    });
+  }
+
   function init() {
     Array.prototype.forEach.call(document.querySelectorAll('.tw-demo'), start);
+    Array.prototype.forEach.call(document.querySelectorAll('.tw-player'), startPlayer);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

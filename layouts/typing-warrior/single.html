@@ -69,6 +69,24 @@
     {{ end }}
   </section>
 
+  <!-- The app in motion. Nothing is loaded from YouTube until the poster is clicked. -->
+  {{ with $p.video }}
+  <section class="tw-video">
+    <h2 class="tw-h2">{{ .heading | safeHTML }}</h2>
+    <p class="tw-video-lead">{{ .text }}</p>
+    <div class="tw-player" data-video="{{ .id }}" data-title="{{ .label }}">
+      <button class="tw-poster" type="button">
+        {{ with $.Resources.GetMatch .image }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+        {{ end }}
+        <span class="tw-play" aria-hidden="true"></span>
+        <span class="tw-play-text">{{ .label }}<small>{{ .length }}</small></span>
+      </button>
+    </div>
+    <p class="tw-note"><a href="https://youtu.be/{{ .id }}" target="_blank" rel="noopener">{{ .fallback }}</a></p>
+  </section>
+  {{ end }}
+
   <!-- Features, each tagged with the key it belongs to -->
   <section class="tw-feats">
     <h2 class="tw-h2">{{ $p.featuresHeading | safeHTML }}</h2>
