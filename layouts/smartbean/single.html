@@ -1,0 +1,144 @@
+{{ define "main" }}
+{{ partial "smartbean-styles.html" . }}
+{{ $p := .Params.sb }}
+{{ $store := $p.appstore }}
+{{/* Real pieces, colors and a real solution, exported from the app into data/smartbean.yaml. */}}
+{{ $d := site.Data.smartbean }}
+{{/* Same geometry as the app's BoardLayout: cell (x, y) sits at ((x − y), (x + y)) / √2 bead units. */}}
+{{ $k := div 36.0 (math.Sqrt 2) }}
+<div class="sb">
+
+  <!-- Hero: copy on the left, a real bead board on the right -->
+  <section class="sb-hero">
+    <div class="sb-hero-copy">
+      <p class="sb-kicker">
+        {{ with .Resources.GetMatch "icon.webp" }}<img src="{{ .RelPermalink }}" width="44" height="44" alt="">{{ end }}
+        Smart Bean
+      </p>
+      <h1 class="sb-title">{{ $p.title | safeHTML }}</h1>
+      <p class="sb-lead">{{ $p.lead }}</p>
+      <div class="sb-cta">
+        <a class="sb-btn" href="{{ $store.url }}" target="_blank" rel="noopener">
+          <small>{{ $store.small }}</small>{{ $store.label }}
+        </a>
+        <span class="sb-btn sb-btn-off" aria-disabled="true"><small>{{ $p.mac.small }}</small>{{ $p.mac.label }}</span>
+      </div>
+      <p class="sb-platforms">{{ $p.platforms }}</p>
+    </div>
+
+    {{ $game := dict "pieces" $d.pieces "fixed" $d.demo.fixed "solution" $d.demo.solution }}
+    <div class="sb-play" data-game="{{ $game | jsonify }}" data-text="{{ $p.play | jsonify }}" data-store="{{ $store.url }}" aria-label="{{ $p.play.label }}">
+      <p class="sb-play-badge">{{ $p.play.badge }}</p>
+      {{/* Without JavaScript this is the solved board; the script turns it into a playable puzzle. */}}
+      <svg class="sb-board" viewBox="-262 -32 524 296" role="img" aria-label="{{ $p.boardLabel }}">
+        <defs>
+          <radialGradient id="sbGloss" cx="35%" cy="30%" r="70%">
+            <stop offset="0" stop-color="#fff" stop-opacity=".8" />
+            <stop offset=".3" stop-color="#fff" stop-opacity=".12" />
+            <stop offset="1" stop-color="#000" stop-opacity=".28" />
+          </radialGradient>
+        </defs>
+        {{ $all := $d.demo.fixed | append $d.demo.solution }}
+        {{/* Tray: one wide disc per hole, which gives the app's scalloped edge. */}}
+        {{ range $all }}{{ range .cells }}
+          <circle class="sb-tray" cx="{{ mul (float (sub (index . 0) (index . 1))) $k }}" cy="{{ mul (float (add (index . 0) (index . 1))) $k }}" r="25" />
+        {{ end }}{{ end }}
+        {{ range $all }}
+          {{ partial "smartbean-piece.html" (dict "cells" .cells "color" (index $d.pieces .piece).color "k" $k "r" 16.5) }}
+        {{ end }}
+      </svg>
+      <div class="sb-play-bar" hidden>
+        <button type="button" data-act="rotate">↻ {{ $p.play.rotate }}</button>
+        <button type="button" data-act="flip">⇋ {{ $p.play.flip }}</button>
+        <button type="button" data-act="hint">💡 {{ $p.play.hint }}</button>
+        <button type="button" data-act="reset">{{ $p.play.reset }}</button>
+      </div>
+      <p class="sb-play-msg" aria-live="polite"></p>
+    </div>
+    {{ with resources.Get "js/smartbean-play.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+    {{ end }}
+  </section>
+
+  <!-- News ticket -->
+  <section class="sb-ticket" aria-label="{{ $p.news.label }}">
+    <p class="sb-ticket-date">{{ $p.news.date }}</p>
+    <p class="sb-ticket-main">{{ $p.news.title }}</p>
+    <p class="sb-ticket-side"><span class="sb-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ $p.news.mac }}</p>
+  </section>
+
+  <!-- Screenshots scattered like stickers -->
+  <section class="sb-table" aria-label="{{ $p.shotsLabel }}">
+    {{ range $i, $s := $p.shots }}
+      {{ with $.Resources.GetMatch $s.src }}
+      <figure class="sb-sticker sb-sticker-{{ $i }}">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $s.alt }}" loading="lazy">
+        <figcaption>{{ $s.alt }}</figcaption>
+      </figure>
+      {{ end }}
+    {{ end }}
+  </section>
+
+  <!-- Features, each tagged with a different bead piece -->
+  <section class="sb-pieces">
+    <h2 class="sb-h2">{{ $p.featuresHeading }}</h2>
+    <ol class="sb-piece-list">
+      {{ range $i, $f := $p.features }}
+      {{ $piece := index $d.pieces $f.piece }}
+      {{ $k2 := div 24.0 (math.Sqrt 2) }}
+      {{ $sum := newScratch }}
+      {{ range $piece.cells }}
+        {{ $sum.Add "x" (mul (float (sub (index . 0) (index . 1))) $k2) }}
+        {{ $sum.Add "y" (mul (float (add (index . 0) (index . 1))) $k2) }}
+      {{ end }}
+      {{ $n := float (len $piece.cells) }}
+      {{ $ox := div ($sum.Get "x") $n }}{{ $oy := div ($sum.Get "y") $n }}
+      <li class="sb-piece">
+        <svg class="sb-piece-shape" viewBox="-52 -52 104 104" aria-hidden="true">
+          {{ partial "smartbean-piece.html" (dict "cells" $piece.cells "color" $piece.color "k" $k2 "r" 11.0 "ox" $ox "oy" $oy) }}
+        </svg>
+        <div>
+          <h3>{{ $f.title }}</h3>
+          <p>{{ $f.text }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+
+  <!-- Price as a two-line receipt -->
+  <section class="sb-receipt">
+    <h2 class="sb-h2">{{ $p.price.heading }}</h2>
+    <dl>
+      <div><dt>{{ $p.price.freeName }}<span>{{ $p.price.freeText }}</span></dt><dd>{{ $p.price.freeAmount }}</dd></div>
+      <div><dt>{{ $p.price.fullName }}<span>{{ $p.price.fullText }}</span></dt><dd>{{ $p.price.fullAmount }}</dd></div>
+    </dl>
+    <p class="sb-receipt-foot">{{ $p.price.note }}</p>
+  </section>
+
+  <!-- Mac, coming soon -->
+  <section class="sb-mac">
+    <div class="sb-mac-copy">
+      <h2 class="sb-h2">{{ $p.mac.heading }}</h2>
+      <p>{{ $p.mac.text }}</p>
+    </div>
+    <div class="sb-window">
+      <div class="sb-window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+      {{ with $.Resources.GetMatch $p.mac.image }}
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $p.mac.heading }}" loading="lazy">
+      {{ end }}
+      <span class="sb-tape">{{ $p.mac.badge }}</span>
+    </div>
+  </section>
+
+  <!-- Promises and links -->
+  <section class="sb-end">
+    <p class="sb-promise">{{ $p.promise }}</p>
+    <a class="sb-btn" href="{{ $store.url }}" target="_blank" rel="noopener"><small>{{ $store.small }}</small>{{ $store.label }}</a>
+    <nav class="sb-links">
+      {{ range $p.links }}<a href="{{ .url }}">{{ .label }}</a>{{ end }}
+    </nav>
+  </section>
+
+</div>
+{{ end }}

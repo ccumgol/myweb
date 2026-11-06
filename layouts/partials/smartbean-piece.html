@@ -1,0 +1,27 @@
+{{/*
+  Draws one Smart Bean piece the way the app does: beads joined by bars, glossy, with a center dot.
+  Args: cells (list of [x, y]), color, k (lattice step), r (bead radius), ox, oy (offset).
+  Same geometry as the app's BoardLayout: (x, y) → ((x − y)·k, (x + y)·k).
+*/}}
+{{ $k := .k }}{{ $r := .r }}{{ $ox := .ox | default 0.0 }}{{ $oy := .oy | default 0.0 }}
+{{ $cells := .cells }}
+{{ range $i, $a := $cells }}
+  {{ range $j, $b := $cells }}
+    {{ if lt $i $j }}
+      {{ $dx := sub (index $a 0) (index $b 0) }}{{ $dy := sub (index $a 1) (index $b 1) }}
+      {{/* Neighbors are one step apart; JSON numbers arrive as floats, so compare with a margin. */}}
+      {{ if lt (add (mul $dx $dx) (mul $dy $dy)) 1.5 }}
+        <line x1="{{ sub (mul (float (sub (index $a 0) (index $a 1))) $k) $ox }}" y1="{{ sub (mul (float (add (index $a 0) (index $a 1))) $k) $oy }}"
+              x2="{{ sub (mul (float (sub (index $b 0) (index $b 1))) $k) $ox }}" y2="{{ sub (mul (float (add (index $b 0) (index $b 1))) $k) $oy }}"
+              stroke="{{ $.color }}" stroke-width="{{ mul $r 0.62 }}" stroke-linecap="round" />
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ range $cells }}
+  {{ $x := sub (mul (float (sub (index . 0) (index . 1))) $k) $ox }}
+  {{ $y := sub (mul (float (add (index . 0) (index . 1))) $k) $oy }}
+  <circle cx="{{ $x }}" cy="{{ $y }}" r="{{ $r }}" fill="{{ $.color }}" />
+  <circle cx="{{ $x }}" cy="{{ $y }}" r="{{ $r }}" fill="url(#sbGloss)" />
+  <circle cx="{{ $x }}" cy="{{ $y }}" r="{{ mul $r 0.16 }}" fill="rgba(0,0,0,.38)" />
+{{ end }}

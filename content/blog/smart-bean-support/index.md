@@ -51,4 +51,4 @@ Any time, under **My name** at the top of Settings.
 
 ---
 
-[개인정보 처리방침 · Privacy Policy](/smartbean/privacy/) · [Smart Bean 소개](/blog/smart-bean/)
+[개인정보 처리방침 · Privacy Policy](/smartbean/privacy/) · [Smart Bean 홈](/smartbean/)
