@@ -67,8 +67,7 @@ myweb/
 사이트가 여러 코너로 성장했습니다. 상단 메뉴와 콘텐츠 섹션의 현재 지도는 다음과 같습니다.
 
 **상단 메뉴 (`config/_default/menus.ko.toml`)**
-- 소개 → `/about/`
-- 강연 · 문의 → `/lectures/` (문의 내용이 이 페이지 하단에 통합됨)
+- 소개 → `/about/` (소개 + 활동/프로젝트 + 강연·교육 안내 + 문의·연락처를 한 페이지로 통합)
 - **성경배움터** (드롭다운, 자체 페이지 없는 우산 메뉴)
   - 성경공부 → `/bible-study/`
   - 새신자 성경공부 → `/new-believer/`
@@ -76,12 +75,14 @@ myweb/
   - 일년일독성경 → `/one-year-bible/`
 - **동전으로 배우는 미국** (드롭다운) → `/coins/` (하위: Quarter 시리즈 5개 앵커)
 - 블로그 → `/blog/`
+- **APP** (드롭다운, 자체 페이지 없는 우산 메뉴)
+  - Smart Bean → `/smartbean/`
 
 **콘텐츠 섹션 (`content/`)**
 | 섹션 | URL | 성격 | 특이사항 |
 |---|---|---|---|
-| about | /about/ | 단일 페이지 | 소개+활동/프로젝트 통합 |
-| lectures | /lectures/ | 단일 페이지 | 강연+문의 통합 |
+| about | /about/ | 단일 페이지 | 소개+활동/프로젝트+강연·교육 안내+문의·연락처 통합(기존 lectures 흡수) |
+| smartbean | /smartbean/ | 단일 페이지(앱 소개) | 다른 프로젝트에서 제작, `type: smartbean` 전용 레이아웃. `build.list: never`(블로그 목록 비노출). 한/영 |
 | bible-study | /bible-study/ | 목록+글 | 노션에서 이관, 목록에 마커/구분선 |
 | new-believer | /new-believer/ | 목록+글 | 6부×학생/인도자 12편 + 인쇄용 디자인 HTML(`static/new-believer/design/`) |
 | bible-map | /bible-map/ | 목록+글 | 인터랙티브 성경지도(예수님의 생애). `mapframe` 숏코드로 `static/bible-map/*.html` iframe 임베드 + 사건별 교재 HTML(`static/bible-map/study/`) |
@@ -89,7 +90,7 @@ myweb/
 | coins | /coins/ | 허브+데이터생성 | `data/quarters.json` → 콘텐츠 어댑터로 137개 자동 생성. 한/영 이중언어 |
 | blog | /blog/ | 목록+글 | 한국어 전용 |
 
-**다국어**: 한국어(기본, `/`) + 영어(`/en/`). 영어는 홈·About·Talks&Contact·Coins만 제공(성경 관련·블로그는 한국어 전용). 언어 전환 버튼은 Blowfish 내장.
+**다국어**: 한국어(기본, `/`) + 영어(`/en/`). 영어는 홈·About·Coins·Smart Bean(APP)만 제공(성경 관련·블로그는 한국어 전용). 언어 전환 버튼은 Blowfish 내장.
 
 **정적 인터랙티브 자산**: `static/bible-map/`(지도·교재 HTML), `static/new-believer/design/`(인쇄용 교재 HTML)는 Hugo가 처리하지 않는 **자립형 HTML**이라 `static/`에 두고 URL로 직접 서비스한다.
 

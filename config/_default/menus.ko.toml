@@ -5,11 +5,6 @@
   weight = 10
 
 [[main]]
-  name = "강연 · 문의"
-  pageRef = "lectures"
-  weight = 20
-
-[[main]]
   name = "성경배움터"
   identifier = "bible"
   weight = 30
@@ -79,6 +74,17 @@
   pageRef = "blog"
   weight = 40
 
+[[main]]
+  name = "APP"
+  identifier = "app"
+  weight = 45
+
+  [[main]]
+    name = "Smart Bean"
+    parent = "app"
+    pageRef = "smartbean"
+    weight = 1
+
 # -- Footer Menu --
 [[footer]]
   name = "블로그"
@@ -87,5 +93,5 @@
 
 [[footer]]
   name = "문의"
-  pageRef = "lectures"
+  pageRef = "about"
   weight = 20

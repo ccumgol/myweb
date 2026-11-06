@@ -5,11 +5,6 @@
   weight = 10
 
 [[main]]
-  name = "Talks & Contact"
-  pageRef = "lectures"
-  weight = 20
-
-[[main]]
   name = "Learn America Through Coins"
   pageRef = "coins"
   identifier = "coins"
@@ -45,8 +40,19 @@
     url = "/en/coins/quarter/#series-semiquincentennial-2026"
     weight = 5
 
+[[main]]
+  name = "APP"
+  identifier = "app"
+  weight = 45
+
+  [[main]]
+    name = "Smart Bean"
+    parent = "app"
+    pageRef = "smartbean"
+    weight = 1
+
 # -- Footer Menu (English) --
 [[footer]]
   name = "Contact"
-  pageRef = "lectures"
+  pageRef = "about"
   weight = 10
