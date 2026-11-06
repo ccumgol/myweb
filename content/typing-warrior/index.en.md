@@ -17,8 +17,7 @@ tw:
   lead: "Learn Korean and English typing by copying the whole Bible, the poems of Kim Sowol, Yun Dong-ju and Han Yong-un, Shakespeare's sonnets and Emily Dickinson — one line at a time. Free, with no ads."
   buttons:
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store" }
-    - { url: "https://github.com/ccumgol/typing-warrior/releases", small: "macOS · Windows", label: "Direct download" }
-    - { small: "Mac App Store · App Store", label: "In review" }
+    - { small: "Mac · iPad", label: "Coming soon" }
   platforms: "macOS (Intel and Apple silicon) · Windows 10/11 · iPadOS (hardware keyboard needed) &nbsp;·&nbsp; the interface language and the practice language are chosen separately"
   demo:
     text:
@@ -45,7 +44,7 @@ tw:
     label: "Where things stand"
     date: "Nov 6, 2026"
     title: "On Windows, install it straight from the Microsoft Store"
-    pending: "Mac and iPad apps are in App Store review"
+    pending: "Mac and iPad apps are coming soon"
   shotsLabel: "Typing Warrior screens"
   shots:
     - { src: "en-longtext.webp", alt: "Long texts — the Bible" }
@@ -97,30 +96,28 @@ tw:
     - kind: "Your own"
       title: "Your text files · your Bible"
       note: "Open a .txt file, upload a Bible as CSV or XML, or fetch a translation of your choice from API.Bible."
-  textsNote: "Everything you type is public domain or CC BY-SA. Every source and licence is listed on the app's <b>About</b> screen and <a href=\"https://github.com/ccumgol/typing-warrior#english\">on GitHub</a>."
+  textsNote: "Everything you type is public domain or CC BY-SA. Every source and licence is listed on the app's <b>About</b> screen."
   windows:
     heading: "Windows"
-    text: "On the Microsoft Store it is listed as “Typing Warrior: Bible &amp; Poetry”. It installs without a warning dialog and updates itself. If you would rather not use the Store, download the installer directly."
+    text: "On the Microsoft Store it is listed as “Typing Warrior: Bible &amp; Poetry”. It installs without a warning dialog and updates itself."
     image: "en-windows.webp"
     note: "Windows 10 · 11 (64-bit)"
   ipad:
     heading: "iPad"
     text: "The same screens as the desktop app, used with a Bluetooth keyboard or a Magic Keyboard. Because this is typing practice, a hardware keyboard is required."
     image: "en-ipad.webp"
-    note: "In App Store review"
+    note: "Coming soon"
   price:
     heading: "The whole receipt"
     rows:
       - { name: "The app", text: "Every feature, every text", amount: "Free" }
       - { name: "In-app purchases", text: "There are none", amount: "None" }
       - { name: "Ads · accounts · data collection", text: "Your records stay on your own computer", amount: "None" }
-    note: "The source code is open under the <a href=\"https://github.com/ccumgol/typing-warrior\">MIT licence</a>. If it helps you, you can <a href=\"https://buymeacoffee.com/ccumgol\">☕ buy me a coffee</a>."
+    note: "The source code is open under the MIT licence. If it helps you, you can <a href=\"https://buymeacoffee.com/ccumgol\">☕ buy me a coffee</a>."
   promise: "Line by line, your typing improves — and the words stay with you."
-  endButton: { url: "https://github.com/ccumgol/typing-warrior/releases", small: "macOS · Windows", label: "Download" }
+  endButton: { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Get it on the Microsoft Store" }
   links:
     - { label: "Support", url: "/typing-warrior/support/" }
     - { label: "Privacy Policy", url: "/typing-warrior/privacy/" }
-    - { label: "Source code", url: "https://github.com/ccumgol/typing-warrior" }
-    - { label: "Changelog", url: "https://github.com/ccumgol/typing-warrior/blob/main/CHANGELOG.md" }
     - { label: "한국어", url: "/typing-warrior/" }
 ---

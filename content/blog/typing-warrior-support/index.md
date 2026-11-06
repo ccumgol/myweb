@@ -15,11 +15,10 @@ draft: false
 
 ## 문의하기 · Contact
 
-궁금한 점, 버그, 오타 신고, 제안은 아래 두 곳 중 편한 쪽으로 보내 주세요. 보통 2~3일 안에 답장드립니다.
-Questions, bugs, typos or ideas? Use whichever is easier. We usually reply within 2–3 days.
+궁금한 점, 버그, 오타 신고, 제안은 이메일로 보내 주세요. 보통 2~3일 안에 답장드립니다.
+Questions, bugs, typos or ideas? Email us. We usually reply within 2–3 days.
 
 📧 [ccumgol@gmail.com](mailto:ccumgol@gmail.com?subject=Typing%20Warrior)
-🐙 [GitHub Issues](https://github.com/ccumgol/typing-warrior/issues)
 
 운영체제(macOS · Windows · iPad), 앱 버전(**소개** 화면 아래), 연습 중이던 메뉴를 적어 주시면 더 빨리 도와드릴 수 있습니다.
 Please include your system (macOS, Windows or iPad), the app version (at the bottom of the **About** screen) and which menu you were in.
@@ -32,8 +31,8 @@ Please include your system (macOS, Windows or iPad), the app version (at the bot
 **iPad에서 글자가 하나도 쳐지지 않아요.**
 타자 연습 앱이라 **하드웨어 키보드가 꼭 필요합니다.** Magic Keyboard, Smart Keyboard Folio, 블루투스 키보드 중 하나를 연결해 주세요. 화면 키보드로는 연습할 수 없습니다.
 
-**Windows에서 설치 파일을 열 때 경고가 나옵니다.**
-[Microsoft Store 판](https://apps.microsoft.com/detail/9N1907XRG6SQ)은 경고 없이 설치됩니다. Releases에서 받은 파일은 아직 코드 서명 전이라 "Windows의 PC 보호" 창이 나올 수 있습니다. **추가 정보 → 실행**을 누르면 설치됩니다. 맥 dmg는 Apple 공증을 받아 경고 없이 열립니다.
+**Windows에는 어떻게 설치하나요?**
+[Microsoft Store](https://apps.microsoft.com/detail/9N1907XRG6SQ)에서 "Typing Warrior: Bible & Poetry"를 받으시면 됩니다. 경고 창 없이 설치되고 업데이트도 자동으로 됩니다. 맥과 iPad 앱은 출시 준비 중입니다.
 
 **연습하던 자리를 어떻게 이어서 하나요?**
 긴 글은 어디까지 쳤는지 사용자별로 저장됩니다. 같은 작품·같은 책을 다시 고르면 그 자리에서 이어집니다.
@@ -55,8 +54,8 @@ No. The app reads the **physical key position** and composes 두벌식 Hangul it
 **Nothing types on my iPad.**
 This is a typing tutor, so a **hardware keyboard is required** — a Magic Keyboard, a Smart Keyboard Folio or any Bluetooth keyboard. The on-screen keyboard cannot be used for practice.
 
-**Windows warns me when I open the installer.**
-The [Microsoft Store edition](https://apps.microsoft.com/detail/9N1907XRG6SQ) installs without any warning. Files from Releases are not code-signed yet, so Windows may show "Windows protected your PC" — choose **More info → Run anyway**. The macOS dmg is notarised by Apple and opens without a warning.
+**How do I install it on Windows?**
+Get "Typing Warrior: Bible & Poetry" from the [Microsoft Store](https://apps.microsoft.com/detail/9N1907XRG6SQ). It installs without any warning dialog and updates itself. The Mac and iPad apps are coming soon.
 
 **How do I resume a long text?**
 Your position in every long text is saved per user. Choose the same work and book again and you carry on from there.
@@ -72,4 +71,4 @@ Yes. On the **Long texts** screen you can open a .txt file, upload a Bible as CS
 
 ---
 
-[개인정보 처리방침 · Privacy Policy](/typing-warrior/privacy/) · [소스 코드 · Source code](https://github.com/ccumgol/typing-warrior) · [바뀐 내용 · Changelog](https://github.com/ccumgol/typing-warrior/blob/main/CHANGELOG.md)
+[개인정보 처리방침 · Privacy Policy](/typing-warrior/privacy/) · [Typing Warrior 홈 · Home](/typing-warrior/)

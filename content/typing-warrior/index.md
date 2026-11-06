@@ -17,8 +17,7 @@ tw:
   lead: "성경 전권과 김소월·윤동주·한용운의 시, 셰익스피어 소네트와 에밀리 디킨슨을 한 줄씩 따라 치며 한글·영문 타자를 익힙니다. 무료이고 광고가 없습니다."
   buttons:
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store" }
-    - { url: "https://github.com/ccumgol/typing-warrior/releases", small: "macOS · Windows", label: "직접 내려받기" }
-    - { small: "Mac App Store · App Store", label: "심사 중" }
+    - { small: "Mac · iPad", label: "출시 준비 중" }
   platforms: "macOS(인텔·애플 실리콘) · Windows 10/11 · iPadOS(하드웨어 키보드 필요) &nbsp;·&nbsp; 화면 언어와 연습 언어를 따로 고릅니다"
   demo:
     text:
@@ -45,7 +44,7 @@ tw:
     label: "지금 상황"
     date: "2026. 11. 6"
     title: "Windows는 Microsoft Store에서 바로 받을 수 있어요"
-    pending: "Mac · iPad 앱은 App Store 심사 중"
+    pending: "Mac · iPad 앱은 출시 준비 중"
   shotsLabel: "Typing Warrior 화면"
   shots:
     - { src: "ko-longtext.webp", alt: "긴 글 — 성경" }
@@ -97,30 +96,28 @@ tw:
     - kind: "내 글"
       title: "내 텍스트 파일 · 내 성경"
       note: "txt 파일을 불러오거나, CSV·XML 성경을 올리거나, API.Bible에서 원하는 역본을 받아 연습합니다."
-  textsNote: "모든 연습 글은 퍼블릭 도메인이거나 CC BY-SA 자료입니다. 출처와 저작권은 앱의 <b>소개</b> 화면과 <a href=\"https://github.com/ccumgol/typing-warrior#연습-글과-저작권\">GitHub 설명</a>에 하나하나 적어 두었습니다."
+  textsNote: "모든 연습 글은 퍼블릭 도메인이거나 CC BY-SA 자료입니다. 출처와 저작권은 앱의 <b>소개</b> 화면에 하나하나 적어 두었습니다."
   windows:
     heading: "Windows"
-    text: "Microsoft Store에서 “Typing Warrior: Bible & Poetry”로 받으면 경고 창 없이 설치되고 업데이트도 자동으로 됩니다. 스토어를 쓰지 않는다면 설치 파일을 직접 받아도 됩니다."
+    text: "Microsoft Store에서 “Typing Warrior: Bible & Poetry”로 받으면 경고 창 없이 설치되고 업데이트도 자동으로 됩니다."
     image: "ko-windows.webp"
     note: "Windows 10 · 11 (64비트)"
   ipad:
     heading: "iPad"
     text: "맥·윈도우와 똑같은 화면을, 블루투스 키보드나 Magic Keyboard를 연결해 씁니다. 타자 연습이라 하드웨어 키보드가 꼭 필요합니다."
     image: "ko-ipad.webp"
-    note: "App Store 심사 중"
+    note: "출시 준비 중"
   price:
     heading: "값은 이게 전부입니다"
     rows:
       - { name: "프로그램", text: "모든 기능과 모든 연습 글", amount: "무료" }
       - { name: "앱 안 결제", text: "없습니다", amount: "없음" }
       - { name: "광고 · 계정 · 개인정보 수집", text: "기록은 이 컴퓨터에만 저장됩니다", amount: "없음" }
-    note: "프로그램 코드는 <a href=\"https://github.com/ccumgol/typing-warrior\">MIT 라이선스</a>로 공개합니다. 도움이 되셨다면 <a href=\"https://buymeacoffee.com/ccumgol\">☕ Buy Me a Coffee</a>로 응원해 주세요."
+    note: "프로그램 코드는 MIT 라이선스로 공개된 오픈 소스입니다. 도움이 되셨다면 <a href=\"https://buymeacoffee.com/ccumgol\">☕ Buy Me a Coffee</a>로 응원해 주세요."
   promise: "한 줄씩 따라 치다 보면, 타자가 늘고 말씀이 남습니다."
-  endButton: { url: "https://github.com/ccumgol/typing-warrior/releases", small: "macOS · Windows", label: "내려받기" }
+  endButton: { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store에서 받기" }
   links:
     - { label: "지원 · 문의", url: "/typing-warrior/support/" }
     - { label: "개인정보 처리방침", url: "/typing-warrior/privacy/" }
-    - { label: "소스 코드", url: "https://github.com/ccumgol/typing-warrior" }
-    - { label: "바뀐 내용", url: "https://github.com/ccumgol/typing-warrior/blob/main/CHANGELOG.md" }
     - { label: "English", url: "/en/typing-warrior/" }
 ---

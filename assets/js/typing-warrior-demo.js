@@ -6,8 +6,9 @@
  * physical key position (KeyboardEvent.code) and builds 두벌식 Hangul itself,
  * no matter which input method the visitor's computer has selected.
  *
- * Source: https://github.com/ccumgol/typing-warrior (MIT)
- *   src/renderer/core/hangul.js, keyboard-layout.js, typing-input.js
+ * Ported from the Typing Warrior app (MIT), from its
+ *   src/renderer/core/hangul.js, keyboard-layout.js and typing-input.js.
+ * Change the composition rules there and this file has to follow.
  */
 (function () {
   'use strict';
