@@ -1,0 +1,187 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+.tw {
+  --paper: #f6f1e6; --ink: #1f1b16; --soft: #6d6459; --rule: #1f1b16;
+  --card: #fffdf7; --gold: #c08a2e; --ok: #3f7d58; --bad: #c4453d; --cap: #2a2723; --capTop: #3d3933;
+  --serif: "Gowun Batang", ui-serif, Georgia, "Noto Serif KR", serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  background: var(--paper); color: var(--ink);
+  border: 3px solid var(--rule); border-radius: 6px;
+  padding: clamp(20px, 4vw, 56px); margin: 8px 0 40px;
+  background-image: repeating-linear-gradient(0deg, rgba(31,27,22,.045) 0 1px, transparent 1px 30px);
+  overflow: hidden;
+}
+html.dark .tw {
+  --paper: #17191d; --ink: #ece5d8; --soft: #a79c8c; --rule: #ece5d8;
+  --card: #1f2229; --gold: #e0ae55; --ok: #6fbf8e; --bad: #e8776e; --cap: #0f1114; --capTop: #272b32;
+  background-image: repeating-linear-gradient(0deg, rgba(236,229,216,.05) 0 1px, transparent 1px 30px);
+}
+.tw h1, .tw h2, .tw h3, .tw p { margin: 0; color: inherit; word-break: keep-all; overflow-wrap: break-word; }
+.tw a { text-decoration: none; }
+.tw-h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.5rem, 3.2vw, 2.1rem); line-height: 1.25; margin-bottom: 18px !important; }
+.tw-h2 span { color: var(--gold); }
+
+/* ---------------------------------------------------------------- Hero */
+.tw-hero { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(18px, 4vw, 48px); align-items: center; }
+.tw-kicker { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; }
+.tw-kicker img { border-radius: 10px; border: 2px solid var(--rule); margin: 0 !important; }
+.tw-title { font-family: var(--serif); font-weight: 700; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.18; margin: 18px 0 16px !important; }
+.tw-title em { font-style: normal; border-bottom: .14em solid var(--gold); }
+.tw-lead { font-size: 1.08rem; line-height: 1.85; color: var(--soft); max-width: 34em; }
+.tw-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.tw-btn {
+  display: inline-flex; flex-direction: column; justify-content: center; min-height: 56px;
+  padding: 8px 20px; border: 2.5px solid var(--rule); border-radius: 8px;
+  background: var(--ink); color: var(--paper) !important; font-family: var(--serif); font-weight: 700; font-size: 1.05rem; line-height: 1.2;
+  box-shadow: 4px 4px 0 var(--gold); transition: transform .12s, box-shadow .12s;
+}
+.tw-btn small { font-family: var(--mono); font-size: .68rem; font-weight: 400; letter-spacing: .06em; opacity: .85; text-transform: uppercase; }
+.tw-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--gold); }
+.tw-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--gold); }
+.tw-btn-off { background: transparent; color: var(--ink) !important; border-style: dashed; box-shadow: none; cursor: default; }
+.tw-btn-off:hover { transform: none; box-shadow: none; }
+.tw-platforms { margin-top: 16px !important; font-size: .88rem; color: var(--soft); line-height: 1.7; }
+
+/* ------------------------------------------------- Try-it practice card */
+.tw-demo {
+  background: var(--card); border: 3px solid var(--rule); border-radius: 10px;
+  box-shadow: 7px 7px 0 rgba(31,27,22,.18); padding: clamp(14px, 2.2vw, 22px); outline: 0;
+}
+html.dark .tw-demo { box-shadow: 7px 7px 0 rgba(0,0,0,.4); }
+.tw-demo.is-focused { box-shadow: 7px 7px 0 var(--gold); }
+.tw-demo-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
+.tw-badge { font-family: var(--mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: var(--gold); color: #1f1b16; padding: 4px 9px; border-radius: 4px; font-weight: 700; }
+.tw-tabs { display: flex; gap: 6px; margin-left: auto; }
+.tw-tab { font-family: var(--mono); font-size: .82rem; padding: 5px 12px; border: 2px solid var(--rule); border-radius: 6px; background: transparent; color: var(--ink); cursor: pointer; }
+.tw-tab.is-on { background: var(--ink); color: var(--card); }
+.tw-line {
+  font-family: var(--serif); font-size: clamp(1.1rem, 2.3vw, 1.5rem); line-height: 1.9; min-height: 3.8em;
+  word-break: keep-all; overflow-wrap: break-word;
+}
+.tw-ok { color: var(--ok); }
+.tw-bad { color: var(--bad); text-decoration: underline wavy var(--bad); }
+.tw-rest { color: var(--soft); opacity: .65; }
+.tw-caret { display: inline-block; width: 2px; height: 1.1em; vertical-align: -.18em; background: var(--gold); animation: tw-blink 1.05s step-end infinite; }
+@keyframes tw-blink { 50% { opacity: 0; } }
+.tw-source { font-family: var(--mono); font-size: .76rem; color: var(--soft); margin-top: 6px !important; }
+.tw-stats { display: flex; gap: 18px; margin: 14px 0 10px; padding: 10px 0; border-block: 2px dashed var(--soft); }
+.tw-stats span { display: flex; flex-direction: column; gap: 1px; }
+.tw-stats small { font-family: var(--mono); font-size: .64rem; letter-spacing: .09em; text-transform: uppercase; color: var(--soft); }
+.tw-stats b { font-family: var(--mono); font-size: 1.15rem; }
+.tw-msg { font-size: .9rem; line-height: 1.6; color: var(--soft); min-height: 2.8em; margin-top: 10px !important; }
+.tw-demo.is-done .tw-msg { color: var(--ink); font-weight: 700; }
+.tw-demo-foot { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+.tw-mini { font-family: var(--mono); font-size: .78rem; padding: 5px 11px; border: 2px solid var(--rule); border-radius: 6px; background: transparent; color: var(--ink); cursor: pointer; }
+.tw-mini:active { transform: translate(1px, 1px); }
+
+/* Keyboard */
+.tw-kb { font-size: clamp(6.5px, 1.3vw, 12px); display: flex; flex-direction: column; gap: .4em; margin-top: 4px; }
+.tw-kb-row { display: flex; gap: .4em; }
+.tw-key {
+  position: relative; flex: 1 1 0; min-width: 0; height: 3.1em;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--capTop); color: #efe9dc; border-radius: .4em;
+  box-shadow: inset 0 -.25em 0 rgba(0,0,0,.45); font-family: var(--mono); font-size: 1.15em;
+}
+.tw-key.is-special { background: var(--cap); font-size: .85em; color: #bdb5a7; }
+.tw-key.is-home::after { content: ""; position: absolute; bottom: .45em; width: 1.1em; height: .18em; border-radius: .1em; background: rgba(239,233,220,.5); }
+.tw-key b { font-weight: 400; }
+.tw-key i { position: absolute; top: .22em; right: .35em; font-style: normal; font-size: .62em; opacity: .5; }
+.tw-key.is-next { background: var(--gold); color: #1f1b16; box-shadow: inset 0 -.25em 0 rgba(0,0,0,.3), 0 0 0 .18em rgba(192,138,46,.35); }
+.tw-key.is-next i { opacity: .7; }
+.tw-key.is-shift { background: #6d6459; color: #fff; }
+
+/* ------------------------------------------------------------- Status bar */
+.tw-ticket {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px;
+  margin: clamp(32px, 6vw, 64px) 0 0; padding: 14px 20px;
+  background: var(--card); border: 3px solid var(--rule); border-left-width: 10px; border-radius: 6px;
+  box-shadow: 5px 5px 0 rgba(31,27,22,.16);
+}
+html.dark .tw-ticket { box-shadow: 5px 5px 0 rgba(0,0,0,.4); }
+.tw-ticket-date { font-family: var(--mono); font-size: .76rem; letter-spacing: .08em; color: var(--soft); text-transform: uppercase; }
+.tw-ticket-main { font-family: var(--serif); font-weight: 700; font-size: clamp(1.05rem, 2.4vw, 1.35rem); }
+.tw-ticket-side { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: .82rem; color: var(--soft); }
+.tw-dots { display: inline-flex; gap: 4px; }
+.tw-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); animation: tw-bounce 1.2s infinite; }
+.tw-dots i:nth-child(2) { animation-delay: .15s; } .tw-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes tw-bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+
+/* --------------------------------------------------------- Screenshots */
+.tw-table { display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0; margin: clamp(40px, 7vw, 76px) 0; }
+.tw-sticker { width: clamp(160px, 23%, 230px); margin: 0 -8px 20px !important; background: var(--card); padding: 8px 8px 0; border: 3px solid var(--rule); border-radius: 8px; box-shadow: 5px 6px 0 rgba(31,27,22,.22); transition: transform .2s; position: relative; }
+html.dark .tw-sticker { box-shadow: 5px 6px 0 rgba(0,0,0,.45); }
+.tw-sticker img { border-radius: 4px; margin: 0 !important; width: 100%; height: auto; }
+.tw-sticker figcaption { font-family: var(--mono); font-size: .76rem; text-align: center; padding: 8px 0 10px; color: var(--soft); }
+.tw-sticker-0 { transform: rotate(-3deg) translateY(16px); z-index: 1; }
+.tw-sticker-1 { transform: rotate(1.6deg); z-index: 2; }
+.tw-sticker-2 { transform: rotate(-1.2deg) translateY(24px); z-index: 3; }
+.tw-sticker-3 { transform: rotate(2.6deg) translateY(4px); z-index: 2; }
+.tw-sticker:hover { transform: rotate(0) translateY(-8px) scale(1.04); z-index: 5; }
+
+/* ------------------------------------------------------------- Features */
+.tw-feat-list { list-style: none; padding: 0 !important; margin: 0 !important; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 44px; }
+.tw-feat { display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: start; margin: 0 !important; }
+.tw-feat-cap {
+  width: 62px; height: 62px; display: flex; align-items: center; justify-content: center;
+  background: var(--capTop); color: #efe9dc; border-radius: 10px; box-shadow: inset 0 -5px 0 rgba(0,0,0,.45);
+  font-family: var(--mono); font-size: 1.3rem;
+}
+.tw-feat h3 { font-family: var(--serif); font-weight: 700; font-size: 1.2rem; margin-bottom: 6px !important; }
+.tw-feat p { color: var(--soft); line-height: 1.8; font-size: .97rem; }
+
+/* ------------------------------------------------------------ Text list */
+.tw-texts { margin-top: clamp(60px, 8vw, 100px); }
+.tw-text-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.tw-text-card { background: var(--card); border: 2.5px solid var(--rule); border-radius: 6px; padding: 16px 18px; }
+.tw-text-card h3 { font-family: var(--mono); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px !important; }
+.tw-text-card p { font-family: var(--serif); font-size: 1rem; line-height: 1.75; }
+.tw-text-card small { display: block; margin-top: 8px; font-size: .8rem; color: var(--soft); line-height: 1.6; }
+
+/* ------------------------------------------------------------- Platform */
+.tw-platform { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 3vw, 36px); margin-top: clamp(60px, 8vw, 100px); align-items: start; }
+.tw-frame { position: relative; }
+.tw-frame h3 { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; margin-bottom: 8px !important; }
+.tw-frame p { color: var(--soft); font-size: .95rem; line-height: 1.75; margin-bottom: 14px !important; }
+.tw-window { border: 3px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--card); box-shadow: 6px 6px 0 rgba(31,27,22,.2); }
+html.dark .tw-window { box-shadow: 6px 6px 0 rgba(0,0,0,.45); }
+.tw-window-bar { display: flex; gap: 6px; padding: 8px 11px; border-bottom: 3px solid var(--rule); }
+.tw-window-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--soft); }
+.tw-window img, .tw-slate img { display: block; margin: 0 !important; width: 100%; height: auto; }
+.tw-slate { border: 10px solid var(--cap); border-radius: 18px; overflow: hidden; background: var(--cap); box-shadow: 6px 6px 0 rgba(31,27,22,.2); }
+html.dark .tw-slate { border-color: var(--capTop); background: var(--capTop); box-shadow: 6px 6px 0 rgba(0,0,0,.45); }
+.tw-note { margin-top: 10px !important; font-family: var(--mono); font-size: .76rem; color: var(--soft); }
+
+/* -------------------------------------------------------------- Receipt */
+.tw-receipt { max-width: 560px; margin: clamp(60px, 8vw, 100px) auto 0; background: var(--card); border: 2.5px solid var(--rule); border-radius: 6px; padding: 26px 28px 22px; }
+.tw-receipt .tw-h2 { text-align: center; }
+.tw-receipt dl { margin: 0; }
+.tw-receipt dl div { display: flex; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 2px dashed var(--soft); }
+.tw-receipt dt { font-family: var(--serif); font-weight: 700; font-size: 1.05rem; }
+.tw-receipt dt span { display: block; font-family: inherit; font-weight: 400; font-size: .88rem; color: var(--soft); margin-top: 3px; line-height: 1.6; }
+.tw-receipt dd { margin: 0; font-family: var(--mono); font-size: 1.05rem; white-space: nowrap; }
+.tw-receipt-foot { text-align: center; margin-top: 14px !important; font-size: .86rem; color: var(--soft); line-height: 1.7; }
+.tw-receipt-foot a { color: var(--ink) !important; border-bottom: 2px solid var(--gold); }
+
+/* ------------------------------------------------------------------ End */
+.tw-end { text-align: center; margin-top: clamp(60px, 8vw, 100px); display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.tw-promise { font-family: var(--serif); font-weight: 700; font-size: clamp(1.15rem, 2.6vw, 1.55rem); max-width: 24em; line-height: 1.6; }
+.tw-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; }
+.tw-links a { color: var(--ink) !important; font-family: var(--mono); font-size: .85rem; border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
+
+/* The site's content column is a good deal narrower than the window, so the
+   two-column rows stack well before a phone-sized viewport. */
+@media (max-width: 1140px) {
+  .tw-hero, .tw-platform { grid-template-columns: 1fr; }
+  .tw-feat-list { grid-template-columns: 1fr; gap: 24px; }
+  .tw-ticket { grid-template-columns: 1fr; gap: 6px; }
+  .tw-sticker { width: 45%; margin: 0 2% 18px !important; }
+  .tw-stats { gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tw-dots i, .tw-caret { animation: none; }
+  .tw-btn, .tw-sticker { transition: none; }
+}
+</style>

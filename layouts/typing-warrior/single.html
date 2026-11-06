@@ -1,0 +1,151 @@
+{{ define "main" }}
+{{ partial "typing-warrior-styles.html" . }}
+{{ $p := .Params.tw }}
+<div class="tw">
+
+  <!-- Hero: the pitch on the left, a line you can actually type on the right -->
+  <section class="tw-hero">
+    <div class="tw-hero-copy">
+      <p class="tw-kicker">
+        {{ with .Resources.GetMatch "icon.webp" }}<img src="{{ .RelPermalink }}" width="40" height="40" alt="">{{ end }}
+        Typing Warrior
+      </p>
+      <h1 class="tw-title">{{ $p.title | safeHTML }}</h1>
+      <p class="tw-lead">{{ $p.lead }}</p>
+      <div class="tw-cta">
+        {{ range $p.buttons }}
+          {{ if .url }}
+            <a class="tw-btn" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>
+              <small>{{ .small }}</small>{{ .label }}
+            </a>
+          {{ else }}
+            <span class="tw-btn tw-btn-off" aria-disabled="true"><small>{{ .small }}</small>{{ .label }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+      <p class="tw-platforms">{{ $p.platforms | safeHTML }}</p>
+    </div>
+
+    {{/* The demo composes Hangul from physical key positions, exactly as the app does. */}}
+    <div class="tw-demo" data-lines="{{ $p.demo.lines | jsonify }}" data-text="{{ $p.demo.text | jsonify }}" role="group" aria-label="{{ $p.demo.text.label }}">
+      <div class="tw-demo-head">
+        <span class="tw-badge">{{ $p.demo.text.badge }}</span>
+        <div class="tw-tabs">
+          {{ range $i, $l := $p.demo.lines }}
+          <button class="tw-tab{{ if eq $i 0 }} is-on{{ end }}" type="button" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}">{{ $l.tab }}</button>
+          {{ end }}
+        </div>
+      </div>
+      <p class="tw-line">{{ (index $p.demo.lines 0).text }}</p>
+      <p class="tw-source">{{ (index $p.demo.lines 0).source }}</p>
+      <div class="tw-stats" aria-live="off"></div>
+      <div class="tw-kb-slot"></div>
+      <p class="tw-msg" aria-live="polite">{{ $p.demo.text.hint }}</p>
+      <div class="tw-demo-foot">
+        <button class="tw-mini" type="button" data-act="restart">{{ $p.demo.text.restart }}</button>
+      </div>
+    </div>
+    {{ with resources.Get "js/typing-warrior-demo.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+    {{ end }}
+  </section>
+
+  <!-- Where the app stands today -->
+  <section class="tw-ticket" aria-label="{{ $p.news.label }}">
+    <p class="tw-ticket-date">{{ $p.news.date }}</p>
+    <p class="tw-ticket-main">{{ $p.news.title }}</p>
+    <p class="tw-ticket-side"><span class="tw-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ $p.news.pending }}</p>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="tw-table" aria-label="{{ $p.shotsLabel }}">
+    {{ range $i, $s := $p.shots }}
+      {{ with $.Resources.GetMatch $s.src }}
+      <figure class="tw-sticker tw-sticker-{{ $i }}">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $s.alt }}" loading="lazy">
+        <figcaption>{{ $s.alt }}</figcaption>
+      </figure>
+      {{ end }}
+    {{ end }}
+  </section>
+
+  <!-- Features, each tagged with the key it belongs to -->
+  <section class="tw-feats">
+    <h2 class="tw-h2">{{ $p.featuresHeading | safeHTML }}</h2>
+    <ol class="tw-feat-list">
+      {{ range $p.features }}
+      <li class="tw-feat">
+        <span class="tw-feat-cap" aria-hidden="true">{{ .cap }}</span>
+        <div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .text }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+
+  <!-- What you get to type -->
+  <section class="tw-texts">
+    <h2 class="tw-h2">{{ $p.textsHeading | safeHTML }}</h2>
+    <div class="tw-text-grid">
+      {{ range $p.texts }}
+      <article class="tw-text-card">
+        <h3>{{ .kind }}</h3>
+        <p>{{ .title }}</p>
+        <small>{{ .note }}</small>
+      </article>
+      {{ end }}
+    </div>
+    <p class="tw-receipt-foot">{{ $p.textsNote | safeHTML }}</p>
+  </section>
+
+  <!-- Windows and iPad -->
+  <section class="tw-platform">
+    <div class="tw-frame">
+      <h3>{{ $p.windows.heading }}</h3>
+      <p>{{ $p.windows.text }}</p>
+      <div class="tw-window">
+        <div class="tw-window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        {{ with $.Resources.GetMatch $p.windows.image }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $p.windows.heading }}" loading="lazy">
+        {{ end }}
+      </div>
+      <p class="tw-note">{{ $p.windows.note }}</p>
+    </div>
+    <div class="tw-frame">
+      <h3>{{ $p.ipad.heading }}</h3>
+      <p>{{ $p.ipad.text }}</p>
+      <div class="tw-slate">
+        {{ with $.Resources.GetMatch $p.ipad.image }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $p.ipad.heading }}" loading="lazy">
+        {{ end }}
+      </div>
+      <p class="tw-note">{{ $p.ipad.note }}</p>
+    </div>
+  </section>
+
+  <!-- Price and licence -->
+  <section class="tw-receipt">
+    <h2 class="tw-h2">{{ $p.price.heading }}</h2>
+    <dl>
+      {{ range $p.price.rows }}
+      <div><dt>{{ .name }}<span>{{ .text }}</span></dt><dd>{{ .amount }}</dd></div>
+      {{ end }}
+    </dl>
+    <p class="tw-receipt-foot">{{ $p.price.note | safeHTML }}</p>
+  </section>
+
+  <!-- Close -->
+  <section class="tw-end">
+    <p class="tw-promise">{{ $p.promise }}</p>
+    {{ with $p.endButton }}
+    <a class="tw-btn" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
+    {{ end }}
+    <nav class="tw-links">
+      {{ range $p.links }}<a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
+    </nav>
+  </section>
+
+</div>
+{{ end }}
