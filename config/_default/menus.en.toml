@@ -51,6 +51,12 @@
     pageRef = "smartbean"
     weight = 1
 
+  [[main]]
+    name = "Typing Warrior"
+    parent = "app"
+    pageRef = "typing-warrior"
+    weight = 2
+
 # -- Footer Menu (English) --
 [[footer]]
   name = "Contact"

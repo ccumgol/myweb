@@ -77,12 +77,14 @@ myweb/
 - 블로그 → `/blog/`
 - **APP** (드롭다운, 자체 페이지 없는 우산 메뉴)
   - Smart Bean → `/smartbean/`
+  - Typing Warrior → `/typing-warrior/`
 
 **콘텐츠 섹션 (`content/`)**
 | 섹션 | URL | 성격 | 특이사항 |
 |---|---|---|---|
 | about | /about/ | 단일 페이지 | 소개+활동/프로젝트+강연·교육 안내+문의·연락처 통합(기존 lectures 흡수) |
 | smartbean | /smartbean/ | 단일 페이지(앱 소개) | 다른 프로젝트에서 제작, `type: smartbean` 전용 레이아웃. `build.list: never`(블로그 목록 비노출). 한/영 |
+| typing-warrior | /typing-warrior/ | 단일 페이지(앱 소개) | 다른 프로젝트에서 제작, `type: typing-warrior` 전용 레이아웃. `build.list: never`. 한/영 |
 | bible-study | /bible-study/ | 목록+글 | 노션에서 이관, 목록에 마커/구분선 |
 | new-believer | /new-believer/ | 목록+글 | 6부×학생/인도자 12편 + 인쇄용 디자인 HTML(`static/new-believer/design/`) |
 | bible-map | /bible-map/ | 목록+글 | 인터랙티브 성경지도(예수님의 생애). `mapframe` 숏코드로 `static/bible-map/*.html` iframe 임베드 + 사건별 교재 HTML(`static/bible-map/study/`) |
