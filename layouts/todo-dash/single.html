@@ -1,0 +1,103 @@
+{{ define "main" }}
+{{ partial "todo-dash-styles.html" . }}
+{{ $p := .Params.td }}
+<div class="td">
+
+  <!-- Hero: the pitch on the left, the app screen on the right -->
+  <section class="td-hero">
+    <div>
+      <p class="td-kicker">
+        {{ with .Resources.GetMatch "icon.webp" }}<img src="{{ .RelPermalink }}" width="44" height="44" alt="">{{ end }}
+        Todo Dash
+      </p>
+      <h1 class="td-title">{{ $p.title | safeHTML }}</h1>
+      <p class="td-lead">{{ $p.lead }}</p>
+      {{ partial "todo-dash-buttons.html" $p.buttons }}
+      <p class="td-platforms">{{ $p.platforms | safeHTML }}</p>
+    </div>
+    <figure class="td-hero-shot">
+      {{ with $.Resources.GetMatch $p.hero.image }}
+      <div class="td-phone"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $p.hero.alt }}"></div>
+      {{ end }}
+      <figcaption class="td-caption">{{ $p.hero.caption }}</figcaption>
+    </figure>
+  </section>
+
+  <!-- Example: what you say becomes tidy to-dos -->
+  <section>
+    <h2 class="td-h2">{{ $p.speak.heading | safeHTML }}</h2>
+    <p class="td-sub">{{ $p.speak.lead }}</p>
+    <div class="td-speech">
+      <p class="td-quote">{{ $p.speak.quote }}</p>
+      <span class="td-arrow" aria-hidden="true">↓</span>
+      <ul class="td-mini">
+        {{ range $p.speak.items }}
+        <li><span class="td-check" aria-hidden="true"></span><span><b>{{ .title }}</b><small><i class="td-dot" style="background: {{ .color | safeCSS }}"></i>{{ .meta }}</small></span></li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <h2 class="td-h2">{{ $p.featuresHeading | safeHTML }}</h2>
+    <ul class="td-feats">
+      {{ range $p.features }}
+      <li class="td-feat">
+        <span class="td-feat-icon" aria-hidden="true">{{ .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- Three looks -->
+  <section aria-label="{{ $p.looksLabel }}">
+    <h2 class="td-h2">{{ $p.looksHeading | safeHTML }}</h2>
+    <p class="td-sub">{{ $p.looksLead }}</p>
+    <div class="td-looks">
+      {{ range $p.looks }}
+      <figure>
+        {{ with $.Resources.GetMatch .src }}
+        <div class="td-phone td-phone-sm"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }}" loading="lazy"></div>
+        {{ end }}
+        <figcaption><b>{{ .name }}</b> {{ .text }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Where the data lives -->
+  <section>
+    <h2 class="td-h2">{{ $p.storeHeading | safeHTML }}</h2>
+    <p class="td-sub">{{ $p.storeLead }}</p>
+    <dl class="td-stores">
+      {{ range $p.stores }}
+      <div><dt>{{ .name }}</dt><dd>{{ .text }}</dd></div>
+      {{ end }}
+    </dl>
+  </section>
+
+  <!-- Price -->
+  <section class="td-receipt">
+    <h2 class="td-h2">{{ $p.price.heading }}</h2>
+    <dl>
+      {{ range $p.price.rows }}
+      <div><dt>{{ .name }}<span>{{ .text }}</span></dt><dd>{{ .amount }}</dd></div>
+      {{ end }}
+    </dl>
+    <p class="td-note">{{ $p.price.note | safeHTML }}</p>
+  </section>
+
+  <!-- Close -->
+  <section class="td-end">
+    <p class="td-promise">{{ $p.promise }}</p>
+    {{ partial "todo-dash-buttons.html" $p.buttons }}
+    <nav class="td-links">
+      {{ range $p.links }}<a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
+    </nav>
+  </section>
+
+</div>
+{{ end }}

@@ -1,0 +1,10 @@
+{{- /* Store and site buttons for the Todo Dash page. A button without url is shown as "coming soon". */ -}}
+<div class="td-cta">
+  {{ range . }}
+    {{ if .url }}
+      <a class="td-btn{{ if .ghost }} td-btn-ghost{{ end }}" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
+    {{ else }}
+      <span class="td-btn td-btn-off" aria-disabled="true"><small>{{ .small }}</small>{{ .label }}</span>
+    {{ end }}
+  {{ end }}
+</div>

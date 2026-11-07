@@ -69,6 +69,14 @@
     [main.params]
       iconImage = "/img/app/copybible.webp"
 
+  [[main]]
+    name = "Todo Dash"
+    parent = "app"
+    pageRef = "todo-dash"
+    weight = 4
+    [main.params]
+      iconImage = "/img/app/todo-dash.webp"
+
 # -- Footer Menu (English) --
 [[footer]]
   name = "Contact"
