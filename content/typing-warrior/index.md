@@ -114,7 +114,13 @@ tw:
       - { name: "프로그램", text: "모든 기능과 모든 연습 글", amount: "무료" }
       - { name: "앱 안 결제", text: "없습니다", amount: "없음" }
       - { name: "광고 · 계정 · 개인정보 수집", text: "기록은 이 컴퓨터에만 저장됩니다", amount: "없음" }
-    note: "프로그램 코드는 MIT 라이선스로 공개된 오픈 소스입니다. 도움이 되셨다면 <a href=\"https://buymeacoffee.com/ccumgol\">☕ Buy Me a Coffee</a>로 응원해 주세요."
+    note: "프로그램 코드는 MIT 라이선스로 공개된 오픈 소스입니다."
+  coffee:
+    text: "값은 안 받지만, 커피는 받습니다."
+    small: "☕ 후원하기"
+    label: "Buy Me a Coffee"
+    url: "https://buymeacoffee.com/ccumgol"
+    note: "한 잔이면 충분합니다 · buymeacoffee.com/ccumgol"
   promise: "한 줄씩 따라 치다 보면, 타자가 늘고 말씀이 남습니다."
   endButtons:
     - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store에서 받기" }

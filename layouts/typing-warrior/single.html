@@ -152,6 +152,16 @@
       {{ end }}
     </dl>
     <p class="tw-receipt-foot">{{ $p.price.note | safeHTML }}</p>
+    {{ with $p.coffee }}
+    <div class="tw-tip">
+      <p class="tw-tip-text">{{ .text }}</p>
+      <a class="tw-btn tw-btn-coffee" href="{{ .url }}" target="_blank" rel="noopener">
+        {{ with $.Resources.GetMatch "bmc-logo.svg" }}<img class="tw-bmc-logo" src="{{ .RelPermalink }}" width="35" height="50" alt="" aria-hidden="true">{{ end }}
+        <span><small>{{ .small }}</small>{{ .label }}</span>
+      </a>
+      <p class="tw-tip-note">{{ .note }}</p>
+    </div>
+    {{ end }}
   </section>
 
   <!-- Close -->

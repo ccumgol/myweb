@@ -4,7 +4,7 @@
 <style>
 .tw {
   --paper: #f6f1e6; --ink: #1f1b16; --soft: #6d6459; --rule: #1f1b16;
-  --card: #fffdf7; --gold: #c08a2e; --ok: #3f7d58; --bad: #c4453d; --cap: #2a2723; --capTop: #3d3933;
+  --card: #fffdf7; --gold: #c08a2e; --goldWash: rgba(192,138,46,.15); --ok: #3f7d58; --bad: #c4453d; --cap: #2a2723; --capTop: #3d3933;
   --serif: "Gowun Batang", ui-serif, Georgia, "Noto Serif KR", serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   background: var(--paper); color: var(--ink);
@@ -15,7 +15,7 @@
 }
 html.dark .tw {
   --paper: #17191d; --ink: #ece5d8; --soft: #a79c8c; --rule: #ece5d8;
-  --card: #1f2229; --gold: #e0ae55; --ok: #6fbf8e; --bad: #e8776e; --cap: #0f1114; --capTop: #272b32;
+  --card: #1f2229; --gold: #e0ae55; --goldWash: rgba(224,174,85,.17); --ok: #6fbf8e; --bad: #e8776e; --cap: #0f1114; --capTop: #272b32;
   background-image: repeating-linear-gradient(0deg, rgba(236,229,216,.05) 0 1px, transparent 1px 30px);
 }
 .tw h1, .tw h2, .tw h3, .tw p { margin: 0; color: inherit; word-break: keep-all; overflow-wrap: break-word; }
@@ -187,8 +187,18 @@ html.dark .tw-slate { border-color: var(--capTop); background: var(--capTop); bo
 .tw-receipt dt { font-family: var(--serif); font-weight: 700; font-size: 1.05rem; }
 .tw-receipt dt span { display: block; font-family: inherit; font-weight: 400; font-size: .88rem; color: var(--soft); margin-top: 3px; line-height: 1.6; }
 .tw-receipt dd { margin: 0; font-family: var(--mono); font-size: 1.05rem; white-space: nowrap; }
+.tw-receipt dl div:first-child dd { color: var(--gold); font-weight: 700; font-size: 1.18rem; }
 .tw-receipt-foot { text-align: center; margin-top: 14px !important; font-size: .86rem; color: var(--soft); line-height: 1.7; }
 .tw-receipt-foot a { color: var(--ink) !important; border-bottom: 2px solid var(--gold); }
+.tw-tip { margin: 20px -28px -22px; padding: 22px 24px 24px; border-top: 2.5px dashed var(--rule); background: var(--goldWash); border-radius: 0 0 3px 3px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.tw-tip-text { font-family: var(--serif); font-weight: 700; font-size: clamp(1.02rem, 2.1vw, 1.2rem); line-height: 1.6; max-width: 22em; }
+.tw-tip-note { font-family: var(--mono); font-size: .76rem; color: var(--soft); line-height: 1.6; }
+.tw-btn-coffee { flex-direction: row; align-items: center; gap: 14px; padding: 12px 30px; min-height: 68px; background: var(--gold); color: #1f1b16 !important; box-shadow: 5px 5px 0 var(--rule); font-size: 1.28rem; }
+.tw-btn-coffee span { display: flex; flex-direction: column; justify-content: center; }
+.tw-btn-coffee small { opacity: .95; }
+.tw-bmc-logo { width: 26px; height: 37px; margin: 0 !important; flex: none; }
+.tw-btn-coffee:hover { box-shadow: 6px 6px 0 var(--rule); }
+.tw-btn-coffee:active { box-shadow: 2px 2px 0 var(--rule); }
 
 /* ------------------------------------------------------------------ End */
 .tw-end .tw-cta { margin-top: 0; justify-content: center; }
@@ -213,6 +223,10 @@ html.dark .tw-slate { border-color: var(--capTop); background: var(--capTop); bo
   .tw-play-text { left: 9px; bottom: 9px; padding: 5px 10px; font-size: .85rem; }
   .tw-play-text small { font-size: .62rem; }
   .tw-video .tw-note { text-align: left; }
+  /* The coffee button keeps its name on one line at phone width. */
+  .tw-tip { margin-left: -20px; margin-right: -20px; padding-left: 16px; padding-right: 16px; }
+  .tw-btn-coffee { gap: 10px; padding: 11px 18px; font-size: 1.08rem; white-space: nowrap; }
+  .tw-bmc-logo { width: 22px; height: 31px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tw-dots i, .tw-caret { animation: none; }

@@ -114,7 +114,13 @@ tw:
       - { name: "The app", text: "Every feature, every text", amount: "Free" }
       - { name: "In-app purchases", text: "There are none", amount: "None" }
       - { name: "Ads · accounts · data collection", text: "Your records stay on your own computer", amount: "None" }
-    note: "The source code is open under the MIT licence. If it helps you, you can <a href=\"https://buymeacoffee.com/ccumgol\">☕ buy me a coffee</a>."
+    note: "The source code is open under the MIT licence."
+  coffee:
+    text: "The app is free. The coffee is optional."
+    small: "☕ Support"
+    label: "Buy Me a Coffee"
+    url: "https://buymeacoffee.com/ccumgol"
+    note: "One cup is plenty · buymeacoffee.com/ccumgol"
   promise: "Line by line, your typing improves — and the words stay with you."
   endButtons:
     - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "Get it on the App Store" }
