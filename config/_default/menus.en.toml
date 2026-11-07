@@ -61,6 +61,14 @@
     [main.params]
       iconImage = "/img/app/typing-warrior.webp"
 
+  [[main]]
+    name = "copyBible"
+    parent = "app"
+    pageRef = "copybible"
+    weight = 3
+    [main.params]
+      iconImage = "/img/app/copybible.webp"
+
 # -- Footer Menu (English) --
 [[footer]]
   name = "Contact"

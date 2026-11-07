@@ -1,0 +1,147 @@
+{{ define "main" }}
+{{ partial "copybible-styles.html" . }}
+{{ $p := .Params.cb }}
+<div class="cb">
+
+  <!-- Hero: the pitch on the left, the real app window on the right -->
+  <section class="cb-hero">
+    <div>
+      <p class="cb-kicker">
+        {{ with .Resources.GetMatch "icon.webp" }}<img src="{{ .RelPermalink }}" width="44" height="44" alt="">{{ end }}
+        copyBible
+      </p>
+      <h1 class="cb-title">{{ $p.title | safeHTML }}</h1>
+      <p class="cb-lead">{{ $p.lead }}</p>
+      <p class="cb-keys">
+        {{ range $p.hotkey.keys }}<span class="cb-key">{{ . }}</span>{{ end }}
+        <span>{{ $p.hotkey.text }}</span>
+      </p>
+      <div class="cb-cta">
+        {{ range $p.buttons }}
+          {{ if .url }}
+            <a class="cb-btn" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
+          {{ else }}
+            <span class="cb-btn cb-btn-off" aria-disabled="true"><small>{{ .small }}</small>{{ .label }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+      <p class="cb-platforms">{{ $p.platforms | safeHTML }}</p>
+    </div>
+    <figure style="margin:0">
+      <div class="cb-window">
+        <div class="cb-window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        {{ with $.Resources.GetMatch $p.hero.image }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $p.hero.alt }}">
+        {{ end }}
+      </div>
+      <figcaption class="cb-caption">{{ $p.hero.caption }}</figcaption>
+    </figure>
+  </section>
+
+  <!-- How it is used: three steps -->
+  <section>
+    <h2 class="cb-h2">{{ $p.stepsHeading | safeHTML }}</h2>
+    <ol class="cb-steps">
+      {{ range $p.steps }}
+      <li class="cb-step">
+        <p>{{ range .keys }}<span class="cb-key">{{ . }}</span> {{ end }}</p>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+
+  <!-- Copy formats. The examples come from the app's own formatter, not typed by hand. -->
+  <section>
+    <h2 class="cb-h2">{{ $p.formatsHeading | safeHTML }}</h2>
+    <p class="cb-sub">{{ $p.formatsLead }}</p>
+    <div class="cb-formats">
+      {{ range $p.formats }}
+      <article class="cb-format">
+        <h3>{{ .name }}</h3>
+        <pre>{{ .text }}</pre>
+      </article>
+      {{ end }}
+    </div>
+    <p class="cb-note">{{ $p.formatsNote }}</p>
+  </section>
+
+  <!-- Screens -->
+  <section aria-label="{{ $p.shotsLabel }}">
+    <h2 class="cb-h2">{{ $p.shotsHeading | safeHTML }}</h2>
+    <div class="cb-gallery">
+      {{ range $p.shots }}
+      <figure>
+        <div class="cb-window">
+          <div class="cb-window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          {{ with $.Resources.GetMatch .src }}
+          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }}" loading="lazy">
+          {{ end }}
+        </div>
+        <figcaption><b>{{ .title }}</b> — {{ .text }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <h2 class="cb-h2">{{ $p.featuresHeading | safeHTML }}</h2>
+    <ul class="cb-feats">
+      {{ range $p.features }}
+      <li class="cb-feat">
+        <span class="cb-feat-icon" aria-hidden="true">{{ .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- Translations: what is built in, and how others can be added -->
+  <section>
+    <h2 class="cb-h2">{{ $p.biblesHeading | safeHTML }}</h2>
+    <div class="cb-bibles">
+      {{ range $p.bibles }}
+      <div class="cb-bible">
+        <h3>{{ .heading }}</h3>
+        <ul>
+          {{ range .items }}<li><b>{{ .name }}</b><span>{{ .note }}</span></li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    <p class="cb-note">{{ $p.biblesNote | safeHTML }}</p>
+  </section>
+
+  <!-- Price and privacy -->
+  <section class="cb-receipt">
+    <h2 class="cb-h2">{{ $p.price.heading }}</h2>
+    <dl>
+      {{ range $p.price.rows }}
+      <div><dt>{{ .name }}<span>{{ .text }}</span></dt><dd>{{ .amount }}</dd></div>
+      {{ end }}
+    </dl>
+    <p class="cb-note">{{ $p.price.note | safeHTML }}</p>
+  </section>
+
+  <!-- Close -->
+  <section class="cb-end">
+    <p class="cb-promise">{{ $p.promise }}</p>
+    <div class="cb-cta">
+      {{ range $p.buttons }}
+        {{ if .url }}
+          <a class="cb-btn" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
+        {{ else }}
+          <span class="cb-btn cb-btn-off" aria-disabled="true"><small>{{ .small }}</small>{{ .label }}</span>
+        {{ end }}
+      {{ end }}
+    </div>
+    <nav class="cb-links">
+      {{ range $p.links }}<a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
+    </nav>
+  </section>
+
+</div>
+{{ end }}
