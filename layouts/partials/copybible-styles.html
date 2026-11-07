@@ -107,6 +107,8 @@ html.dark .cb-step::before { color: #2c3b5c; }
 .cb-receipt dt { font-weight: 700; }
 .cb-receipt dt span { display: block; font-weight: 400; font-size: .88rem; color: var(--soft); margin-top: 2px; }
 .cb-receipt dd { margin: 0; font-weight: 800; color: var(--deep); white-space: nowrap; }
+/* The first row is the price itself, so it reads a size up. */
+.cb-receipt dl > div:first-child dd { color: var(--blue); font-size: 1.18rem; }
 
 /* ---------------------------------------------------------------- Support */
 .cb section.cb-tip { margin-top: 28px; }
