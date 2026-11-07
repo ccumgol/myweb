@@ -31,8 +31,10 @@ Please include your system (macOS, Windows or iPad), the app version (at the bot
 **iPad에서 글자가 하나도 쳐지지 않아요.**
 타자 연습 앱이라 **하드웨어 키보드가 꼭 필요합니다.** Magic Keyboard, Smart Keyboard Folio, 블루투스 키보드 중 하나를 연결해 주세요. 화면 키보드로는 연습할 수 없습니다.
 
-**Windows에는 어떻게 설치하나요?**
-[Microsoft Store](https://apps.microsoft.com/detail/9N1907XRG6SQ)에서 "Typing Warrior: Bible & Poetry"를 받으시면 됩니다. 경고 창 없이 설치되고 업데이트도 자동으로 됩니다. 맥과 iPad 앱은 출시 준비 중입니다.
+**어디에서 받나요?**
+- **Windows** — [Microsoft Store](https://apps.microsoft.com/detail/9N1907XRG6SQ)에서 "Typing Warrior: Bible & Poetry". 경고 창 없이 설치되고 업데이트도 자동으로 됩니다.
+- **iPad** — [App Store](https://apps.apple.com/app/id6829546475)에서 "Typing Warrior". iPadOS 16.4 이상이 필요하고, 연습하려면 키보드를 연결해야 합니다.
+- **맥** — 출시 준비 중입니다.
 
 **연습하던 자리를 어떻게 이어서 하나요?**
 긴 글은 어디까지 쳤는지 사용자별로 저장됩니다. 같은 작품·같은 책을 다시 고르면 그 자리에서 이어집니다.
@@ -54,8 +56,10 @@ No. The app reads the **physical key position** and composes 두벌식 Hangul it
 **Nothing types on my iPad.**
 This is a typing tutor, so a **hardware keyboard is required** — a Magic Keyboard, a Smart Keyboard Folio or any Bluetooth keyboard. The on-screen keyboard cannot be used for practice.
 
-**How do I install it on Windows?**
-Get "Typing Warrior: Bible & Poetry" from the [Microsoft Store](https://apps.microsoft.com/detail/9N1907XRG6SQ). It installs without any warning dialog and updates itself. The Mac and iPad apps are coming soon.
+**Where do I get it?**
+- **Windows** — "Typing Warrior: Bible & Poetry" on the [Microsoft Store](https://apps.microsoft.com/detail/9N1907XRG6SQ). It installs without any warning dialog and updates itself.
+- **iPad** — "Typing Warrior" on the [App Store](https://apps.apple.com/app/id6829546475). It needs iPadOS 16.4 or later, and a keyboard to practise with.
+- **Mac** — coming soon.
 
 **How do I resume a long text?**
 Your position in every long text is saved per user. Choose the same work and book again and you carry on from there.

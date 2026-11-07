@@ -157,9 +157,11 @@
   <!-- Close -->
   <section class="tw-end">
     <p class="tw-promise">{{ $p.promise }}</p>
-    {{ with $p.endButton }}
-    <a class="tw-btn" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
-    {{ end }}
+    <div class="tw-cta">
+      {{ range $p.endButtons }}
+      <a class="tw-btn" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
+      {{ end }}
+    </div>
     <nav class="tw-links">
       {{ range $p.links }}<a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
     </nav>

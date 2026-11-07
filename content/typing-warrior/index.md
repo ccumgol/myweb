@@ -17,7 +17,8 @@ tw:
   lead: "성경 전권과 김소월·윤동주·한용운의 시, 셰익스피어 소네트와 에밀리 디킨슨을 한 줄씩 따라 치며 한글·영문 타자를 익힙니다. 무료이고 광고가 없습니다."
   buttons:
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store" }
-    - { small: "Mac · iPad", label: "출시 준비 중" }
+    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store" }
+    - { small: "Mac", label: "출시 준비 중" }
   platforms: "macOS(인텔·애플 실리콘) · Windows 10/11 · iPadOS(하드웨어 키보드 필요) &nbsp;·&nbsp; 화면 언어와 연습 언어를 따로 고릅니다"
   demo:
     text:
@@ -43,8 +44,8 @@ tw:
   news:
     label: "지금 상황"
     date: "2026. 11. 6"
-    title: "Windows는 Microsoft Store에서 바로 받을 수 있어요"
-    pending: "Mac · iPad 앱은 출시 준비 중"
+    title: "iPad 앱이 App Store에 올라왔습니다"
+    pending: "Mac 앱은 출시 준비 중"
   shotsLabel: "Typing Warrior 화면"
   shots:
     - { src: "ko-longtext.webp", alt: "긴 글 — 성경" }
@@ -106,7 +107,7 @@ tw:
     heading: "iPad"
     text: "맥·윈도우와 똑같은 화면을, 블루투스 키보드나 Magic Keyboard를 연결해 씁니다. 타자 연습이라 하드웨어 키보드가 꼭 필요합니다."
     image: "ko-ipad.webp"
-    note: "출시 준비 중"
+    note: "iPadOS 16.4 이상 · App Store에서 무료"
   price:
     heading: "값은 이게 전부입니다"
     rows:
@@ -115,7 +116,9 @@ tw:
       - { name: "광고 · 계정 · 개인정보 수집", text: "기록은 이 컴퓨터에만 저장됩니다", amount: "없음" }
     note: "프로그램 코드는 MIT 라이선스로 공개된 오픈 소스입니다. 도움이 되셨다면 <a href=\"https://buymeacoffee.com/ccumgol\">☕ Buy Me a Coffee</a>로 응원해 주세요."
   promise: "한 줄씩 따라 치다 보면, 타자가 늘고 말씀이 남습니다."
-  endButton: { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store에서 받기" }
+  endButtons:
+    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store에서 받기" }
+    - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store에서 받기" }
   links:
     - { label: "지원 · 문의", url: "/typing-warrior/support/" }
     - { label: "개인정보 처리방침", url: "/typing-warrior/privacy/" }

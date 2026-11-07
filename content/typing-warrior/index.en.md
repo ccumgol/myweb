@@ -17,7 +17,8 @@ tw:
   lead: "Learn Korean and English typing by copying the whole Bible, the poems of Kim Sowol, Yun Dong-ju and Han Yong-un, Shakespeare's sonnets and Emily Dickinson — one line at a time. Free, with no ads."
   buttons:
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store" }
-    - { small: "Mac · iPad", label: "Coming soon" }
+    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store" }
+    - { small: "Mac", label: "Coming soon" }
   platforms: "macOS (Intel and Apple silicon) · Windows 10/11 · iPadOS (hardware keyboard needed) &nbsp;·&nbsp; the interface language and the practice language are chosen separately"
   demo:
     text:
@@ -43,8 +44,8 @@ tw:
   news:
     label: "Where things stand"
     date: "Nov 6, 2026"
-    title: "On Windows, install it straight from the Microsoft Store"
-    pending: "Mac and iPad apps are coming soon"
+    title: "The iPad app is now on the App Store"
+    pending: "The Mac app is coming soon"
   shotsLabel: "Typing Warrior screens"
   shots:
     - { src: "en-longtext.webp", alt: "Long texts — the Bible" }
@@ -106,7 +107,7 @@ tw:
     heading: "iPad"
     text: "The same screens as the desktop app, used with a Bluetooth keyboard or a Magic Keyboard. Because this is typing practice, a hardware keyboard is required."
     image: "en-ipad.webp"
-    note: "Coming soon"
+    note: "iPadOS 16.4 or later · free on the App Store"
   price:
     heading: "The whole receipt"
     rows:
@@ -115,7 +116,9 @@ tw:
       - { name: "Ads · accounts · data collection", text: "Your records stay on your own computer", amount: "None" }
     note: "The source code is open under the MIT licence. If it helps you, you can <a href=\"https://buymeacoffee.com/ccumgol\">☕ buy me a coffee</a>."
   promise: "Line by line, your typing improves — and the words stay with you."
-  endButton: { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Get it on the Microsoft Store" }
+  endButtons:
+    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "Get it on the App Store" }
+    - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Get it on the Microsoft Store" }
   links:
     - { label: "Support", url: "/typing-warrior/support/" }
     - { label: "Privacy Policy", url: "/typing-warrior/privacy/" }
