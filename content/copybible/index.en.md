@@ -92,7 +92,14 @@ cb:
       - { name: "The program", text: "Every feature", amount: "Free" }
       - { name: "Ads · account · in-app purchases", text: "None", amount: "None" }
       - { name: "Personal data collected", text: "Settings and recent references stay on your computer", amount: "None" }
-    note: "If it helps you, you can <a href=\"https://buymeacoffee.com/ccumgol\">☕ buy me a coffee</a>."
+    note: "No account, and no internet needed (only API.Bible translations go online)."
+  coffee:
+    text: "It costs nothing — but coffee is welcome."
+    lead: "If copyBible has saved you some time preparing sermons or bulletins, a cup of coffee says thanks and helps build what comes next."
+    small: "☕ Support"
+    label: "Buy Me a Coffee"
+    url: "https://buymeacoffee.com/ccumgol"
+    note: "One cup is plenty · buymeacoffee.com/ccumgol"
   promise: "Less time looking for the verse, more care in sharing it."
   links:
     - { label: "Support", url: "/copyBible/support/" }

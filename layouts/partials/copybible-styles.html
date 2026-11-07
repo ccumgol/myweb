@@ -108,6 +108,30 @@ html.dark .cb-step::before { color: #2c3b5c; }
 .cb-receipt dt span { display: block; font-weight: 400; font-size: .88rem; color: var(--soft); margin-top: 2px; }
 .cb-receipt dd { margin: 0; font-weight: 800; color: var(--deep); white-space: nowrap; }
 
+/* ---------------------------------------------------------------- Support */
+.cb section.cb-tip { margin-top: 28px; }
+.cb-tip {
+  max-width: 640px; margin-left: auto; margin-right: auto; text-align: center;
+  background: linear-gradient(180deg, #fff8d6, #fff2b0); border: 1px solid #f0d664; border-radius: 18px;
+  padding: clamp(24px, 4vw, 36px) clamp(18px, 4vw, 40px); display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+html.dark .cb-tip { background: linear-gradient(180deg, #2b2716, #241f10); border-color: #5a4c18; }
+.cb-tip-text { font-family: var(--serif); font-weight: 700; font-size: clamp(1.2rem, 2.6vw, 1.5rem); line-height: 1.5; }
+.cb-tip-lead { color: var(--soft); line-height: 1.8; max-width: 30em; font-size: .97rem; }
+.cb-btn-coffee {
+  display: inline-flex; align-items: center; gap: 14px; margin-top: 6px; padding: 12px 30px; min-height: 66px;
+  border-radius: 14px; background: #ffdd00; color: #0d0c22 !important; border: 2px solid #0d0c22;
+  font-weight: 800; font-size: 1.25rem; line-height: 1.15; text-align: left;
+  box-shadow: 4px 4px 0 #0d0c22; transition: transform .12s, box-shadow .12s;
+}
+.cb-btn-coffee span { display: flex; flex-direction: column; }
+.cb-btn-coffee small { font-size: .72rem; font-weight: 700; letter-spacing: .03em; opacity: .85; }
+.cb-btn-coffee:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #0d0c22; }
+.cb-btn-coffee:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #0d0c22; }
+html.dark .cb-btn-coffee { border-color: #ffdd00; box-shadow: 4px 4px 0 rgba(0,0,0,.6); }
+.cb-bmc-logo { width: 26px; height: 37px; margin: 0 !important; flex: none; }
+.cb-tip-note { font-family: var(--mono); font-size: .78rem; color: var(--soft); }
+
 /* ---------------------------------------------------------------- End */
 .cb-end { text-align: center; }
 .cb-promise { font-family: var(--serif); font-size: clamp(1.2rem, 2.6vw, 1.6rem); line-height: 1.6; }
@@ -115,6 +139,10 @@ html.dark .cb-step::before { color: #2c3b5c; }
 .cb-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-top: 26px; font-size: .92rem; }
 .cb-links a { color: var(--blue); }
 
+@media (max-width: 520px) {
+  .cb-btn-coffee { gap: 10px; padding: 11px 18px; font-size: 1.08rem; white-space: nowrap; }
+  .cb-bmc-logo { width: 22px; height: 31px; }
+}
 @media (max-width: 860px) {
   .cb-hero, .cb-bibles, .cb-gallery { grid-template-columns: 1fr; }
   .cb-steps, .cb-formats, .cb-feats { grid-template-columns: 1fr; }

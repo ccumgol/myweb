@@ -126,6 +126,19 @@
     <p class="cb-note">{{ $p.price.note | safeHTML }}</p>
   </section>
 
+  <!-- Support: a clear invitation, with the Buy Me a Coffee logo -->
+  {{ with $p.coffee }}
+  <section class="cb-tip" aria-label="{{ .label }}">
+    <p class="cb-tip-text">{{ .text }}</p>
+    <p class="cb-tip-lead">{{ .lead }}</p>
+    <a class="cb-btn-coffee" href="{{ .url }}" target="_blank" rel="noopener">
+      {{ with $.Resources.GetMatch "bmc-logo.svg" }}<img class="cb-bmc-logo" src="{{ .RelPermalink }}" width="35" height="50" alt="" aria-hidden="true">{{ end }}
+      <span><small>{{ .small }}</small>{{ .label }}</span>
+    </a>
+    <p class="cb-tip-note">{{ .note }}</p>
+  </section>
+  {{ end }}
+
   <!-- Close -->
   <section class="cb-end">
     <p class="cb-promise">{{ $p.promise }}</p>

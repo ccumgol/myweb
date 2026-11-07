@@ -92,7 +92,14 @@ cb:
       - { name: "프로그램", text: "모든 기능", amount: "무료" }
       - { name: "광고 · 계정 · 앱 안 결제", text: "없습니다", amount: "없음" }
       - { name: "개인정보 수집", text: "설정과 최근 구절은 이 컴퓨터에만 저장됩니다", amount: "없음" }
-    note: "도움이 되셨다면 <a href=\"https://buymeacoffee.com/ccumgol\">☕ Buy Me a Coffee</a>로 응원해 주세요."
+    note: "계정을 만들 필요도, 인터넷에 연결할 필요도 없습니다 (API.Bible 역본을 쓸 때만 인터넷이 필요합니다)."
+  coffee:
+    text: "값은 안 받지만, 커피는 받습니다."
+    lead: "copyBible 이 설교 준비와 주보 만드는 시간을 조금이라도 덜어 드렸다면, 커피 한 잔으로 응원해 주세요. 다음 기능을 만드는 힘이 됩니다."
+    small: "☕ 후원하기"
+    label: "Buy Me a Coffee"
+    url: "https://buymeacoffee.com/ccumgol"
+    note: "한 잔이면 충분합니다 · buymeacoffee.com/ccumgol"
   promise: "말씀을 찾는 시간은 줄이고, 말씀을 나누는 데 더 마음을 쓰시도록."
   links:
     - { label: "지원 · 문의", url: "/copyBible/support/" }
