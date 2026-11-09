@@ -20,8 +20,8 @@ cb:
     keys: ["Ctrl", "Alt", "B"]
     text: "윈도우 · 맥은 ⌥ Space"
   buttons:
-    - { small: "Windows", label: "Microsoft Store · 출시 준비 중" }
-    - { small: "Mac", label: "출시 준비 중" }
+    - { small: "Windows", label: "Microsoft Store 에서 받기", url: "https://apps.microsoft.com/detail/9NMQGBJ22TN9" }
+    - { small: "Mac", label: "Mac App Store · 출시 준비 중" }
   platforms: "Windows 10/11 · macOS(인텔·애플 실리콘) &nbsp;·&nbsp; 개역한글·KJV 내장, 인터넷 없이 씁니다"
   hero:
     image: "panel-verse.webp"

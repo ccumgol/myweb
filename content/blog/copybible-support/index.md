@@ -27,7 +27,7 @@ Please include your system (Windows or macOS), the app version (Settings (환경
 ## 자주 묻는 질문
 
 **어디에서 받나요?**
-Windows는 Microsoft Store, 맥은 직접 받는 판으로 출시를 준비하고 있습니다. 나오는 대로 이 페이지와 [copyBible 홈](/copyBible/)에 알리겠습니다.
+Windows는 [Microsoft Store](https://apps.microsoft.com/detail/9NMQGBJ22TN9)에서 무료로 받을 수 있습니다. 맥은 Mac App Store 출시를 준비하고 있습니다. 나오는 대로 이 페이지와 [copyBible 홈](/copyBible/)에 알리겠습니다.
 
 **단축키를 눌러도 창이 뜨지 않아요.**
 다른 프로그램이 같은 단축키를 쓰고 있을 수 있습니다. 알림 영역(맥은 메뉴바)의 copyBible 아이콘 › **환경설정** › **일반**에서 다른 조합으로 바꿔 주세요. 기본값은 윈도우 Ctrl+Alt+B, 맥 ⌥Space입니다.
@@ -50,7 +50,7 @@ Windows는 Microsoft Store, 맥은 직접 받는 판으로 출시를 준비하�
 ## FAQ (English)
 
 **Where can I get it?**
-A Microsoft Store release for Windows and a direct download for the Mac are on the way. They will be announced here and on the [copyBible home page](/en/copyBible/).
+On Windows, get it free from the [Microsoft Store](https://apps.microsoft.com/detail/9NMQGBJ22TN9). The Mac version is on its way to the Mac App Store and will be announced here and on the [copyBible home page](/en/copyBible/).
 
 **Nothing happens when I press the shortcut.**
 Another program may be using the same shortcut. Click the copyBible icon in the notification area (the menu bar on a Mac) › **환경설정 (Settings)** › **일반 (General)** and pick another combination. The defaults are Ctrl+Alt+B on Windows and ⌥Space on a Mac.

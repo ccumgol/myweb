@@ -20,8 +20,8 @@ cb:
     keys: ["Ctrl", "Alt", "B"]
     text: "on Windows · ⌥ Space on a Mac"
   buttons:
-    - { small: "Windows", label: "Microsoft Store · coming soon" }
-    - { small: "Mac", label: "Coming soon" }
+    - { small: "Windows", label: "Get it from Microsoft Store", url: "https://apps.microsoft.com/detail/9NMQGBJ22TN9" }
+    - { small: "Mac", label: "Mac App Store · coming soon" }
   platforms: "Windows 10/11 · macOS (Intel and Apple silicon) &nbsp;·&nbsp; the interface is in Korean; the KJV is built in and works offline"
   hero:
     image: "panel-en.webp"
