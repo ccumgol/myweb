@@ -1,7 +1,7 @@
 ---
 title: "Smart Bean — 구슬 조각 퍼즐"
-description: "알록달록 구슬 조각 12개로 55칸을 꽉 채우는 퍼즐 게임 Smart Bean. iPhone·iPad 출시, Mac 앱은 출시 준비 중이에요."
-summary: "알록달록 구슬 조각 12개로 55칸을 꽉 채우는 퍼즐 게임. iPhone·iPad 출시, Mac 출시 준비 중."
+description: "알록달록 구슬 조각 12개로 55칸을 꽉 채우는 퍼즐 게임 Smart Bean. iPhone·iPad·Mac 출시."
+summary: "알록달록 구슬 조각 12개로 55칸을 꽉 채우는 퍼즐 게임. iPhone·iPad·Mac 출시."
 date: 2026-11-04T09:00:00-05:00
 type: smartbean
 url: "/smartbean/"
@@ -31,16 +31,16 @@ sb:
     flip: "뒤집기"
     hint: "힌트"
     reset: "다시"
-  platforms: "iPhone · iPad 지금 출시 · 한국어와 영어"
+  platforms: "iPhone · iPad · Mac 지금 출시 · 한국어와 영어"
   appstore:
     url: "https://apps.apple.com/app/id6830463805"
     small: "무료 다운로드"
     label: "App Store에서 받기"
   news:
     label: "출시 소식"
-    date: "2026. 11. 6"
-    title: "iPhone · iPad 앱 출시!"
-    mac: "Mac 앱은 출시 준비 중"
+    date: "2026. 11. 10"
+    title: "이제 Mac에서도!"
+    mac: "iPhone · iPad는 11월 6일 출시"
   shotsLabel: "Smart Bean 화면"
   shots:
     - { src: "ko-01-home.webp", alt: "세 가지 판" }
@@ -77,11 +77,12 @@ sb:
     fullAmount: "$1.99"
     note: "한국 ₩3,300 · 가족 공유 가능 · 구독 없음"
   mac:
+    url: "https://apps.apple.com/app/id6830463805?platform=mac"
     small: "Mac App Store"
-    label: "출시 준비 중"
-    badge: "출시 준비 중"
-    heading: "Mac에서도 곧 만나요"
-    text: "큰 화면에서 마우스로 조각을 옮기는 Mac 앱이 마지막 심사를 받고 있어요. 나오면 같은 App Store 링크에서 받을 수 있고, iPhone에서 산 전체 열기도 그대로 쓸 수 있어요."
+    label: "Mac에서 받기"
+    badge: "새로 나왔어요!"
+    heading: "Mac에서도 만나요"
+    text: "큰 화면에서 마우스로 조각을 옮기는 Mac 앱이 나왔어요. 같은 App Store 링크에서 받을 수 있고, iPhone에서 산 전체 열기도 그대로 쓸 수 있어요."
     image: "mac-ko-03-pyramid.webp"
   promise: "마지막 조각이 딱! 들어가는 순간, 직접 느껴 보세요."
   links:

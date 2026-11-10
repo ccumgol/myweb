@@ -1,7 +1,7 @@
 ---
 title: "Smart Bean — Bead Puzzle"
-description: "Smart Bean is a puzzle game where 12 colorful bead pieces fill 55 holes. Out now on iPhone and iPad; the Mac app is coming soon."
-summary: "Fill 55 holes with 12 colorful bead pieces. Out now on iPhone and iPad, coming soon to Mac."
+description: "Smart Bean is a puzzle game where 12 colorful bead pieces fill 55 holes. Out now on iPhone, iPad and Mac."
+summary: "Fill 55 holes with 12 colorful bead pieces. Out now on iPhone, iPad and Mac."
 date: 2026-11-04T09:00:00-05:00
 type: smartbean
 url: "/en/smartbean/"
@@ -31,16 +31,16 @@ sb:
     flip: "Flip"
     hint: "Hint"
     reset: "Restart"
-  platforms: "Out now on iPhone and iPad · English and Korean"
+  platforms: "Out now on iPhone, iPad and Mac · English and Korean"
   appstore:
     url: "https://apps.apple.com/app/id6830463805"
     small: "Free download"
     label: "Get it on the App Store"
   news:
     label: "Release news"
-    date: "Nov 6, 2026"
-    title: "Out now on iPhone and iPad!"
-    mac: "Mac app coming soon"
+    date: "Nov 10, 2026"
+    title: "Now on the Mac too!"
+    mac: "iPhone and iPad since Nov 6"
   shotsLabel: "Smart Bean screens"
   shots:
     - { src: "en-01-home.webp", alt: "Three boards" }
@@ -77,11 +77,12 @@ sb:
     fullAmount: "$1.99"
     note: "Family Sharing included · no subscription"
   mac:
+    url: "https://apps.apple.com/app/id6830463805?platform=mac"
     small: "Mac App Store"
-    label: "Coming soon"
-    badge: "Coming soon"
-    heading: "See you on the Mac soon"
-    text: "The Mac app, with the big screen and mouse-friendly pieces, is in its final review. It will arrive at the same App Store link, and an unlock bought on iPhone carries over."
+    label: "Get it for Mac"
+    badge: "Just landed!"
+    heading: "Now on the Mac"
+    text: "The Mac app is here, with the big screen and mouse-friendly pieces. It's at the same App Store link, and an unlock bought on iPhone carries over."
     image: "mac-en-03-pyramid.webp"
   promise: "Feel the click of the last piece for yourself."
   links:

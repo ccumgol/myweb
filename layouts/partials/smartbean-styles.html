@@ -41,6 +41,7 @@ html.dark .sb {
 .sb-btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--yolk); }
 .sb-btn-off { background: transparent; color: var(--ink) !important; border-style: dashed; box-shadow: none; cursor: default; }
 .sb-btn-off:hover { transform: none; box-shadow: none; }
+.sb-btn-alt { background: var(--paper); color: var(--ink) !important; }
 .sb-platforms { margin-top: 14px !important; font-size: .9rem; color: var(--soft); }
 
 .sb-board { width: 100%; max-width: 580px; justify-self: center; overflow: visible; filter: drop-shadow(6px 8px 0 rgba(43,33,24,.18)); }
@@ -131,6 +132,7 @@ html.dark .sb-traybox { fill: rgba(255,241,220,.05); }
 /* Mac */
 .sb-mac { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(20px, 4vw, 48px); align-items: center; margin-top: clamp(70px, 9vw, 110px); }
 .sb-mac-copy p { color: var(--soft); line-height: 1.7; }
+.sb-mac-copy .sb-btn { margin-top: 10px; }
 .sb-window { position: relative; border: 3px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--paper); box-shadow: 8px 8px 0 rgba(43,33,24,.25); transform: rotate(-1.5deg); }
 .sb-window-bar { display: flex; gap: 7px; padding: 9px 12px; border-bottom: 3px solid var(--line); }
 .sb-window-bar i { width: 12px; height: 12px; border-radius: 50%; background: var(--red); }

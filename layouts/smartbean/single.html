@@ -21,7 +21,11 @@
         <a class="sb-btn" href="{{ $store.url }}" target="_blank" rel="noopener">
           <small>{{ $store.small }}</small>{{ $store.label }}
         </a>
+        {{ with $p.mac.url }}
+        <a class="sb-btn sb-btn-alt" href="{{ . }}" target="_blank" rel="noopener"><small>{{ $p.mac.small }}</small>{{ $p.mac.label }}</a>
+        {{ else }}
         <span class="sb-btn sb-btn-off" aria-disabled="true"><small>{{ $p.mac.small }}</small>{{ $p.mac.label }}</span>
+        {{ end }}
       </div>
       <p class="sb-platforms">{{ $p.platforms }}</p>
     </div>
@@ -64,7 +68,7 @@
   <section class="sb-ticket" aria-label="{{ $p.news.label }}">
     <p class="sb-ticket-date">{{ $p.news.date }}</p>
     <p class="sb-ticket-main">{{ $p.news.title }}</p>
-    <p class="sb-ticket-side"><span class="sb-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ $p.news.mac }}</p>
+    <p class="sb-ticket-side">{{ if not $p.mac.url }}<span class="sb-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ end }}{{ $p.news.mac }}</p>
   </section>
 
   <!-- Screenshots scattered like stickers -->
@@ -121,6 +125,7 @@
     <div class="sb-mac-copy">
       <h2 class="sb-h2">{{ $p.mac.heading }}</h2>
       <p>{{ $p.mac.text }}</p>
+      {{ with $p.mac.url }}<a class="sb-btn" href="{{ . }}" target="_blank" rel="noopener"><small>{{ $p.mac.small }}</small>{{ $p.mac.label }}</a>{{ end }}
     </div>
     <div class="sb-window">
       <div class="sb-window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
