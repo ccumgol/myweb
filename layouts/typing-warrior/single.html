@@ -54,7 +54,9 @@
   <section class="tw-ticket" aria-label="{{ $p.news.label }}">
     <p class="tw-ticket-date">{{ $p.news.date }}</p>
     <p class="tw-ticket-main">{{ $p.news.title }}</p>
-    <p class="tw-ticket-side"><span class="tw-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ $p.news.pending }}</p>
+    {{ with $p.news.pending }}
+    <p class="tw-ticket-side"><span class="tw-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ . }}</p>
+    {{ end }}
   </section>
 
   <!-- Screenshots -->

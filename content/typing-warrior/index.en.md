@@ -1,7 +1,7 @@
 ---
 title: "Typing Warrior — Learn Typing with Scripture and Poetry"
-description: "A free typing tutor for Korean and English. Copy the whole Bible, Kim Sowol, Yun Dong-ju, Shakespeare's sonnets and Emily Dickinson line by line. On macOS and Windows today, with an iPad app on the way."
-summary: "Learn Korean and English typing by copying Scripture and poetry. Free on macOS and Windows, no ads."
+description: "A free typing tutor for Korean and English. Copy the whole Bible, Kim Sowol, Yun Dong-ju, Shakespeare's sonnets and Emily Dickinson line by line. On the Mac App Store, the Microsoft Store and the App Store."
+summary: "Learn Korean and English typing by copying Scripture and poetry. Free on Mac, Windows and iPad, no ads."
 date: 2026-11-06T09:00:00-05:00
 type: typing-warrior
 url: "/en/typing-warrior/"
@@ -16,9 +16,9 @@ tw:
   title: "Type a line at a time,<br>and <em>the words stay</em> in your hands."
   lead: "Learn Korean and English typing by copying the whole Bible, the poems of Kim Sowol, Yun Dong-ju and Han Yong-un, Shakespeare's sonnets and Emily Dickinson — one line at a time. Free, with no ads."
   buttons:
+    - { url: "https://apps.apple.com/app/id6829546475?platform=mac", small: "Mac", label: "Mac App Store" }
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store" }
     - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store" }
-    - { small: "Mac", label: "Coming soon" }
   platforms: "macOS (Intel and Apple silicon) · Windows 10/11 · iPadOS (hardware keyboard needed) &nbsp;·&nbsp; the interface language and the practice language are chosen separately"
   demo:
     text:
@@ -43,9 +43,8 @@ tw:
         source: "Matthew 6:33 · Korean Revised Version (1961)"
   news:
     label: "Where things stand"
-    date: "Nov 6, 2026"
-    title: "The iPad app is now on the App Store"
-    pending: "The Mac app is coming soon"
+    date: "Nov 11, 2026"
+    title: "The Mac app is now on the Mac App Store — Mac, Windows and iPad are all out"
   shotsLabel: "Typing Warrior screens"
   shots:
     - { src: "en-longtext.webp", alt: "Long texts — the Bible" }
@@ -123,8 +122,9 @@ tw:
     note: "One cup is plenty · buymeacoffee.com/ccumgol"
   promise: "Line by line, your typing improves — and the words stay with you."
   endButtons:
-    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "Get it on the App Store" }
+    - { url: "https://apps.apple.com/app/id6829546475?platform=mac", small: "Mac", label: "Get it on the Mac App Store" }
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Get it on the Microsoft Store" }
+    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "Get it on the App Store" }
   links:
     - { label: "Support", url: "/typing-warrior/support/" }
     - { label: "Privacy Policy", url: "/typing-warrior/privacy/" }

@@ -1,7 +1,7 @@
 ---
 title: "Typing Warrior — 말씀과 시로 배우는 타자 연습"
-description: "성경 전권과 김소월·윤동주·한용운의 시를 한 줄씩 따라 치며 한글·영문 타자를 익히는 무료 프로그램. macOS·Windows에서 쓸 수 있고 iPad 앱도 준비 중입니다."
-summary: "성경과 시를 따라 치며 익히는 한글·영문 타자 연습. macOS·Windows 무료, 광고 없음."
+description: "성경 전권과 김소월·윤동주·한용운의 시를 한 줄씩 따라 치며 한글·영문 타자를 익히는 무료 프로그램. Mac App Store·Microsoft Store·App Store에서 받을 수 있습니다."
+summary: "성경과 시를 따라 치며 익히는 한글·영문 타자 연습. 맥·윈도우·iPad 무료, 광고 없음."
 date: 2026-11-06T09:00:00-05:00
 type: typing-warrior
 url: "/typing-warrior/"
@@ -16,9 +16,9 @@ tw:
   title: "한 줄씩 따라 치면<br><em>말씀이 손끝에</em> 남습니다."
   lead: "성경 전권과 김소월·윤동주·한용운의 시, 셰익스피어 소네트와 에밀리 디킨슨을 한 줄씩 따라 치며 한글·영문 타자를 익힙니다. 무료이고 광고가 없습니다."
   buttons:
+    - { url: "https://apps.apple.com/app/id6829546475?platform=mac", small: "Mac", label: "Mac App Store" }
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store" }
     - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store" }
-    - { small: "Mac", label: "출시 준비 중" }
   platforms: "macOS(인텔·애플 실리콘) · Windows 10/11 · iPadOS(하드웨어 키보드 필요) &nbsp;·&nbsp; 화면 언어와 연습 언어를 따로 고릅니다"
   demo:
     text:
@@ -43,9 +43,8 @@ tw:
         source: "Psalm 119:105 · KJV"
   news:
     label: "지금 상황"
-    date: "2026. 11. 6"
-    title: "iPad 앱이 App Store에 올라왔습니다"
-    pending: "Mac 앱은 출시 준비 중"
+    date: "2026. 11. 11"
+    title: "Mac 앱이 Mac App Store에 올라왔습니다 — 이제 맥·윈도우·iPad 모두 받을 수 있습니다"
   shotsLabel: "Typing Warrior 화면"
   shots:
     - { src: "ko-longtext.webp", alt: "긴 글 — 성경" }
@@ -123,8 +122,9 @@ tw:
     note: "한 잔이면 충분합니다 · buymeacoffee.com/ccumgol"
   promise: "한 줄씩 따라 치다 보면, 타자가 늘고 말씀이 남습니다."
   endButtons:
-    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store에서 받기" }
+    - { url: "https://apps.apple.com/app/id6829546475?platform=mac", small: "Mac", label: "Mac App Store에서 받기" }
     - { url: "https://apps.microsoft.com/detail/9N1907XRG6SQ", small: "Windows", label: "Microsoft Store에서 받기" }
+    - { url: "https://apps.apple.com/app/id6829546475", small: "iPad", label: "App Store에서 받기" }
   links:
     - { label: "지원 · 문의", url: "/typing-warrior/support/" }
     - { label: "개인정보 처리방침", url: "/typing-warrior/privacy/" }
