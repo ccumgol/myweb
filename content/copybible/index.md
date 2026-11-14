@@ -84,7 +84,7 @@ cb:
     - heading: "원하면 직접 더할 수 있는 것"
       items:
         - { name: "API.Bible", note: "scripture.api.bible 에서 무료 키를 받아 넣으면, 그 키로 쓸 수 있는 역본을 더합니다. 찾는 장만 받아 쓰고 약관대로 30일까지만 보관합니다." }
-        - { name: "내 성경 파일", note: "TXT · CSV · XML(Zefania · OSIS · OpenSong) 파일을 올리면 새 역본으로 더해집니다. 개역한글을 내보내 교회에서 쓰는 표기로 고쳐 다시 올릴 수도 있습니다." }
+        - { name: "내 성경 파일", note: "TXT · CSV · XML(Zefania · OSIS · OpenSong) 파일이나 e-Sword 성경 모듈(.bbli · .bblx)을 올리면 새 역본으로 더해집니다. 개역한글을 내보내 교회에서 쓰는 표기로 고쳐 다시 올릴 수도 있습니다." }
   biblesNote: "앱에는 저작권이 끝난 개역한글과 KJV 만 들어 있습니다. 다른 역본은 <b>사용 권한이 있는 경우에만</b> 직접 더해 주세요."
   price:
     heading: "값은 이게 전부입니다"

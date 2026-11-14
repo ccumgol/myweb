@@ -39,7 +39,7 @@ Windows는 [Microsoft Store](https://apps.microsoft.com/detail/9NMQGBJ22TN9)에�
 **다른 역본을 쓰고 싶어요.**
 앱에는 저작권이 끝난 **개역한글과 KJV**만 들어 있습니다. 다른 역본은 사용 권한이 있는 경우에만 직접 더할 수 있습니다.
 - **API.Bible** — [scripture.api.bible](https://scripture.api.bible)에서 무료 키를 받아 환경설정 › **역본**에 넣으면, 그 키로 쓸 수 있는 역본 목록이 나옵니다.
-- **성경 파일** — 환경설정 › **역본** › **파일 선택…**으로 TXT · CSV · XML(Zefania · OSIS · OpenSong) 파일을 올립니다. 같은 화면의 **예시 파일 폴더 열기**에서 형식 예시를 볼 수 있습니다.
+- **성경 파일** — 환경설정 › **역본** › **파일 선택…**으로 TXT · CSV · XML(Zefania · OSIS · OpenSong) 파일이나 e-Sword 성경 모듈(.bbli · .bblx)을 올립니다. e-Sword 안에서만 열리도록 잠긴 모듈은 가져올 수 없습니다. 같은 화면의 **예시 파일 폴더 열기**에서 형식 예시를 볼 수 있습니다.
 
 **컴퓨터를 켤 때 자동으로 실행하려면?**
 환경설정 › **일반** › **컴퓨터를 켤 때 자동으로 실행**을 켭니다. Microsoft Store에서 받은 앱은 Windows 설정 › 앱 › **시작 프로그램**에서 copyBible을 켜 주세요.
@@ -60,7 +60,7 @@ Another program may be using the same shortcut. Click the copyBible icon in the 
 - Windows: Windows does not let other programs type into a program **running as administrator**. Press Ctrl+V yourself in that case.
 
 **Can I use other translations?**
-The app contains only the **Korean 개역한글 and the KJV**, whose copyrights have expired. You can add others yourself, but only if you have the right to use them — with your own free [API.Bible](https://scripture.api.bible) key, or by importing a TXT, CSV or XML (Zefania, OSIS, OpenSong) file under 환경설정 (Settings) › **역본 (Translations)**. The app's interface is in Korean.
+The app contains only the **Korean 개역한글 and the KJV**, whose copyrights have expired. You can add others yourself, but only if you have the right to use them — with your own free [API.Bible](https://scripture.api.bible) key, or by importing a TXT, CSV or XML (Zefania, OSIS, OpenSong) file or an e-Sword Bible module (.bbli, .bblx; locked modules cannot be read) under 환경설정 (Settings) › **역본 (Translations)**. The app's interface is in Korean.
 
 **Does it work offline?**
 Yes. The built-in translations work without the internet; only API.Bible translations need a connection.

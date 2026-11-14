@@ -84,7 +84,7 @@ cb:
     - heading: "Add your own, if you wish"
       items:
         - { name: "API.Bible", note: "Enter your own free key from scripture.api.bible to add the translations it allows. Only the chapters you look up are downloaded, and kept no longer than 30 days, as the terms require." }
-        - { name: "Your own Bible file", note: "Import a TXT, CSV or XML (Zefania, OSIS, OpenSong) file as a new translation. You can also export 개역한글, adjust it, and import it again." }
+        - { name: "Your own Bible file", note: "Import a TXT, CSV or XML (Zefania, OSIS, OpenSong) file or an e-Sword Bible module (.bbli, .bblx) as a new translation. You can also export 개역한글, adjust it, and import it again." }
   biblesNote: "The app contains only 개역한글 and the KJV, whose copyrights have expired. Please add other translations <b>only if you have the right to use them</b>."
   price:
     heading: "That's the whole price"
