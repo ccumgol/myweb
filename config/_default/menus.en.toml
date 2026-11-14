@@ -77,6 +77,14 @@
     [main.params]
       iconImage = "/img/app/todo-dash.webp"
 
+  [[main]]
+    name = "ScoreBox"
+    parent = "app"
+    pageRef = "scorebox"
+    weight = 5
+    [main.params]
+      iconImage = "/img/app/scorebox.webp"
+
 # -- Footer Menu (English) --
 [[footer]]
   name = "Contact"

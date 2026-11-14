@@ -1,0 +1,10 @@
+{{- /* Store and site buttons for the ScoreBox page. A button without url is shown as "coming soon". */ -}}
+<div class="sbx-cta">
+  {{ range . }}
+    {{ if .url }}
+      <a class="sbx-btn{{ if .ghost }} sbx-btn-ghost{{ end }}" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><small>{{ .small }}</small>{{ .label }}</a>
+    {{ else }}
+      <span class="sbx-btn sbx-btn-off" aria-disabled="true"><small>{{ .small }}</small>{{ .label }}</span>
+    {{ end }}
+  {{ end }}
+</div>

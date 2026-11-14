@@ -1,0 +1,96 @@
+{{ define "main" }}
+{{ partial "scorebox-styles.html" . }}
+{{ $p := .Params.sbx }}
+<div class="sbx">
+
+  <!-- Hero: the pitch on the left, the app icon (or a screen) on the right -->
+  <section class="sbx-hero">
+    <div>
+      <p class="sbx-kicker">
+        {{ with .Resources.GetMatch "icon.webp" }}<img src="{{ .RelPermalink }}" width="44" height="44" alt="">{{ end }}
+        {{ $p.name }}
+      </p>
+      <h1 class="sbx-title">{{ $p.title | safeHTML }}</h1>
+      <p class="sbx-lead">{{ $p.lead }}</p>
+      {{ partial "scorebox-buttons.html" $p.buttons }}
+      <p class="sbx-platforms">{{ $p.platforms | safeHTML }}</p>
+    </div>
+    <figure class="sbx-hero-shot">
+      {{ with $.Resources.GetMatch $p.hero.image }}
+      <img class="sbx-hero-icon" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $p.hero.alt }}">
+      {{ end }}
+      <figcaption class="sbx-caption">{{ $p.hero.caption }}</figcaption>
+    </figure>
+  </section>
+
+  <!-- One Sunday: import → setlist → turn pages -->
+  <section>
+    <h2 class="sbx-h2">{{ $p.stepsHeading | safeHTML }}</h2>
+    <p class="sbx-sub">{{ $p.stepsLead }}</p>
+    <ol class="sbx-steps">
+      {{ range $p.steps }}
+      <li><h3>{{ .title }}</h3><p>{{ .text }}</p></li>
+      {{ end }}
+    </ol>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <h2 class="sbx-h2">{{ $p.featuresHeading | safeHTML }}</h2>
+    <ul class="sbx-feats">
+      {{ range $p.features }}
+      <li class="sbx-feat">
+        <span class="sbx-feat-icon" aria-hidden="true">{{ .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- Devices -->
+  <section>
+    <h2 class="sbx-h2">{{ $p.devicesHeading | safeHTML }}</h2>
+    <p class="sbx-sub">{{ $p.devicesLead }}</p>
+    <dl class="sbx-stores">
+      {{ range $p.devices }}
+      <div><dt>{{ .name }}</dt><dd>{{ .text }}</dd></div>
+      {{ end }}
+    </dl>
+  </section>
+
+  <!-- Price -->
+  <section class="sbx-receipt">
+    <h2 class="sbx-h2">{{ $p.price.heading }}</h2>
+    <dl>
+      {{ range $p.price.rows }}
+      <div><dt>{{ .name }}<span>{{ .text }}</span></dt><dd>{{ .amount }}</dd></div>
+      {{ end }}
+    </dl>
+    <p class="sbx-note">{{ $p.price.note | safeHTML }}</p>
+  </section>
+
+  <!-- Support: a clear invitation, with the Buy Me a Coffee logo -->
+  {{ with $p.coffee }}
+  <section class="sbx-tip" aria-label="{{ .label }}">
+    <p class="sbx-tip-text">{{ .text }}</p>
+    <p class="sbx-tip-lead">{{ .lead }}</p>
+    <a class="sbx-btn-coffee" href="{{ .url }}" target="_blank" rel="noopener">
+      {{ with $.Resources.GetMatch "bmc-logo.svg" }}<img class="sbx-bmc-logo" src="{{ .RelPermalink }}" width="35" height="50" alt="" aria-hidden="true">{{ end }}
+      <span><small>{{ .small }}</small>{{ .label }}</span>
+    </a>
+    <p class="sbx-tip-note">{{ .note }}</p>
+  </section>
+  {{ end }}
+
+  <!-- Close -->
+  <section class="sbx-end">
+    <p class="sbx-promise">{{ $p.promise }}</p>
+    {{ partial "scorebox-buttons.html" $p.buttons }}
+    <nav class="sbx-links">
+      {{ range $p.links }}<a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
+    </nav>
+  </section>
+
+</div>
+{{ end }}
